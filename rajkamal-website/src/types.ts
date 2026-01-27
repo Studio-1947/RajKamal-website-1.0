@@ -20,4 +20,14 @@ export interface Book {
   authorDescription?: string;
   authorImage?: string;
   images?: string[];
+  reviewsList?: {
+    id: number;
+    user: string;
+    avatar?: string;
+    rating: number;
+    date: string;
+    content: string;
+    likes: number;
+    images?: string[];
+  }[];
 }

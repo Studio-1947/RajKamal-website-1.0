@@ -15,6 +15,42 @@ export const newArrivals: Book[] = [
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
     tag: { text: "New", color: "bg-red-500" },
+    isbn: "978-0143454212",
+    edition: "2024, 1st Edition",
+    description:
+      "Aapka Bunty is a timeless classic by Mannu Bhandari that explores the impact of divorce on a child's psyche. Through the eyes of young Bunty, the novel poignantly captures the confusion, loneliness, and emotional turmoil of a child caught between two parents starting new lives. A masterpiece of modern Hindi literature.",
+    authorDescription:
+      "Mannu Bhandari was a prominent Indian author, known for her realistic and compelling portrayal of the middle-class Indian woman. She was a pioneer of the 'Nayi Kahani' movement in Hindi literature.",
+    authorImage:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+    reviewsList: [
+      {
+        id: 1,
+        user: "Akash Patel",
+        avatar:
+          "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+        rating: 5,
+        date: "2 days ago",
+        content:
+          "A heart-wrenching tale that explores the journey of a young boy. The narrative beautifully intertwines themes of love, separation, and self-discovery. Mannu Bhandari's storytelling is rich and engaging.",
+        likes: 124,
+        images: [
+          "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+          "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+        ],
+      },
+      {
+        id: 2,
+        user: "Priya Sharma",
+        rating: 4,
+        date: "1 week ago",
+        content:
+          "A poignant exploration of the complexities of family dynamics. The characters are deeply drawn and the story addresses the struggles of love and belonging.",
+        likes: 85,
+        avatar:
+          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+      },
+    ],
   },
   {
     id: 2,
