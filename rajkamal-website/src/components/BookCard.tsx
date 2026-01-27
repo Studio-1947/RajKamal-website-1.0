@@ -8,9 +8,9 @@ interface BookCardProps {
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
     return (
-        <div className="bg-white rounded-xl p-4 relative group h-full flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div className="bg-white rounded-xl p-4 relative group/card h-full flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             {/* Wishlist Button */}
-            <button className="absolute top-4 right-4 z-10 p-1.5 bg-white/80 rounded-full hover:bg-white transition-colors">
+            <button className="absolute top-6 right-6 z-10 p-1.5 bg-white/80 rounded-full hover:bg-white transition-colors">
                 <Heart
                     className={`h-5 w-5 ${book.isLiked ? 'fill-red-500 text-red-500' : 'text-gray-400'}`}
                 />
@@ -21,7 +21,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                 <img
                     src={book.image}
                     alt={book.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover transform group-hover/card:scale-105 transition-transform duration-300"
                 />
                 {/* Tag (e.g., Best Seller) */}
                 {book.tag && (
@@ -52,9 +52,9 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     {book.formats?.map((format, index) => (
                         <span
                             key={index}
-                            className={`text-[10px] px-2 py-1 rounded border font-medium ${index === 0
-                                ? 'bg-blue-600 text-white border-blue-600'
-                                : 'bg-white text-blue-500 border-blue-200'
+                            className={`text-[10px] px-2 py-1 rounded-[10px] border font-medium ${index === 0
+                                ? 'bg-[#00508A] text-white border-[#00508A]'
+                                : 'bg-white text-[#00508A] '
                                 }`}
                         >
                             {format}
@@ -71,10 +71,10 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
 
                 {/* Buttons */}
                 <div className="flex gap-3 mt-auto">
-                    <button className="flex-1 bg-blue-100 text-blue-700 py-2 rounded-lg font-bold text-sm hover:bg-blue-200 transition-colors">
+                    <button className="flex-1 bg-[#CCEAFF] text-[#00508A] py-2 rounded-lg font-medium text-sm hover:bg-[#CCEAFF]/80 transition-colors">
                         Buy Now
                     </button>
-                    <button className="flex-1 bg-white border border-red-300 text-red-500 py-2 rounded-lg font-bold text-sm hover:bg-red-50 transition-colors">
+                    <button className="flex-1 bg-white border border-red-300 text-red-500 py-2 rounded-lg font-medium text-sm hover:bg-red-50 transition-colors">
                         Add to Cart
                     </button>
                 </div>

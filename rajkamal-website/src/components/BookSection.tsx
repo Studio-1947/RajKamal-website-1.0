@@ -43,10 +43,10 @@ const BookSection: React.FC<BookSectionProps> = ({
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                     <div className="flex items-center gap-2">
                         {titleIcon}
-                        <h2 className="text-3xl font-bold text-red-500">{title}</h2>
+                        <h2 className="text-3xl font-medium text-red-500">{title}</h2>
                     </div>
 
-                    <button className="bg-blue-100 text-blue-900 px-4 py-2 rounded-full text-sm font-semibold flex items-center hover:bg-blue-200 transition-colors w-fit">
+                    <button className="bg-[#CCEAFF] text-[#006BB8] px-4 py-2 rounded-full text-sm font-medium flex items-center hover:bg-[#CCEAFF]/80 transition-colors w-fit">
                         View All <ArrowRight className="ml-2 h-4 w-4" />
                     </button>
                 </div>
@@ -59,8 +59,8 @@ const BookSection: React.FC<BookSectionProps> = ({
                                 key={filter}
                                 onClick={() => onFilterChange?.(filter)}
                                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${activeFilter === filter
-                                    ? 'bg-blue-600 text-white'
-                                    : 'bg-blue-100 text-blue-800 hover:bg-blue-200'
+                                    ? 'bg-[#006BB8] text-white'
+                                    : 'bg-[#CCEAFF] text-[#006BB8] hover:bg-[#CCEAFF]/80'
                                     }`}
                             >
                                 {filter}
@@ -70,17 +70,17 @@ const BookSection: React.FC<BookSectionProps> = ({
                 )}
 
                 {/* Navigation Buttons (Absolute positioned relative to container) */}
-                <div className="relative group">
+                <div className="relative group/section">
                     <button
                         onClick={() => scroll('left')}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 -ml-4 hidden md:block"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#CCEAFF]/80 hover:bg-[#CCEAFF]/80 p-2 rounded-full shadow-md transition-all opacity-0 group-hover/section:opacity-100 disabled:opacity-0 -ml-4 hidden md:block"
                     >
                         <ArrowLeft className="h-6 w-6 text-gray-600" />
                     </button>
 
                     <button
                         onClick={() => scroll('right')}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 -mr-4 hidden md:block"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#CCEAFF]/80 hover:bg-[#CCEAFF]/80 p-2 rounded-full shadow-md transition-all opacity-0 group-hover/section:opacity-100 disabled:opacity-0 -mr-4 hidden md:block"
                     >
                         <ArrowRight className="h-6 w-6 text-gray-600" />
                     </button>
