@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Star, Heart, Share2, Minus, Plus, ChevronRight, ShoppingCart, Truck, ShieldCheck, Tag, ThumbsUp, Play } from 'lucide-react';
+import { Star, Heart, Share2, Minus, Plus, ChevronRight, ShoppingCart, Truck, Tag, ThumbsUp, Play } from 'lucide-react';
 import { newArrivals, hotDeals, genreBooks } from '../data/mockData';
 import { useCart } from '../context/CartContext';
 import type { Book } from '../types';
@@ -135,8 +135,8 @@ const BookDetails = () => {
                                         <button
                                             key={format}
                                             onClick={() => setSelectedFormat(format)}
-                                            className={`px-4 py-1.5 rounded text-sm font-medium transition-all ${selectedFormat === format
-                                                ? 'bg-[#00508A] text-white'
+                                            className={`px-4 py-1.5 rounded-[10px] text-sm font-medium transition-all ${selectedFormat === format
+                                                ? 'bg-[#00508A] text-white border border-[#00508A]'
                                                 : 'bg-white text-[#00508A] border border-gray-200 hover:border-[#00508A]'
                                                 }`}
                                         >
@@ -148,11 +148,11 @@ const BookDetails = () => {
 
                             {/* Actions */}
                             <div className="flex gap-4 mb-8">
-                                <button className="flex-1 bg-[#CCEAFF] text-[#00508A] py-3 rounded-xl font-bold hover:bg-[#CCEAFF]/80 transition-colors">
+                                <button className="flex-1 bg-[#CCEAFF] text-[#00508A] py-3 rounded-lg font-bold hover:bg-[#CCEAFF]/80 transition-colors">
                                     Buy Now
                                 </button>
                                 {quantityInCart > 0 ? (
-                                    <div className="flex-1 flex items-center justify-between bg-white border border-red-300 rounded-xl px-4 py-3">
+                                    <div className="flex-1 flex items-center justify-between bg-white border border-red-300 rounded-lg px-4 py-3">
                                         <button onClick={handleDecrement} className="p-1 hover:bg-red-50 text-red-500 rounded transition-colors">
                                             <Minus className="h-5 w-5" />
                                         </button>
@@ -164,10 +164,10 @@ const BookDetails = () => {
                                 ) : (
                                     <button
                                         onClick={() => addToCart(book)}
-                                        className="flex-1 bg-[#FFD1D1] text-red-500 py-3 rounded-xl font-bold hover:bg-[#FFD1D1]/80 transition-colors flex items-center justify-center gap-2"
+                                        className="flex-1 bg-white border border-red-300 text-red-500 py-3 rounded-lg font-bold hover:bg-red-50 transition-colors flex items-center justify-center gap-2"
                                     >
+                                        <ShoppingCart className="h-5 w-5" />
                                         Add to Cart
-                                        <Heart className="h-5 w-5" />
                                     </button>
                                 )}
                             </div>
@@ -191,7 +191,7 @@ const BookDetails = () => {
                                 </div>
                                 <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
                                     {['RAJ100', 'RAJ200', 'RAJ300'].map((code) => (
-                                        <div key={code} className="bg-[#CCEAFF] px-3 py-1 rounded text-xs font-medium text-[#00508A] whitespace-nowrap">
+                                        <div key={code} className="bg-[#CCEAFF] px-3 py-1 rounded-[50px] text-xs font-medium text-[#00508A] whitespace-nowrap">
                                             {code} <span className="text-gray-500 ml-1">₹{code.replace('RAJ', '')} off</span>
                                         </div>
                                     ))}
