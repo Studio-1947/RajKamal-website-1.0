@@ -73,14 +73,14 @@ const BookSection: React.FC<BookSectionProps> = ({
                 <div className="relative group">
                     <button
                         onClick={() => scroll('left')}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 -ml-4"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 -ml-4 hidden md:block"
                     >
                         <ArrowLeft className="h-6 w-6 text-gray-600" />
                     </button>
 
                     <button
                         onClick={() => scroll('right')}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 -mr-4"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 -mr-4 hidden md:block"
                     >
                         <ArrowRight className="h-6 w-6 text-gray-600" />
                     </button>

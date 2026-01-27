@@ -19,9 +19,9 @@ const Hero: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                     {/* Left Content */}
-                    <div className="text-center lg:text-left space-y-8">
+                    <div className="text-center lg:text-left space-y-6 sm:space-y-8">
                         <div>
-                            <h1 className="text-5xl sm:text-6xl font-bold text-primary mb-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-3 sm:mb-4 flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3">
                                 <span>साथ</span>
                                 <div className="relative h-[1em] w-[3ch] text-left">
                                     <AnimatePresence mode="wait">
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
                                     </AnimatePresence>
                                 </div>
                             </h1>
-                            <p className="text-xl text-gray-600 font-medium">
+                            <p className="text-lg sm:text-xl text-gray-600 font-medium px-4 sm:px-0">
                                 हर किताब में है एक नई दुनिया
                             </p>
                         </div>

@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
                         <h2 className="text-3xl font-bold mb-2">Get newsletter offers and news</h2>
                         <p className="text-lg opacity-90">नवीनतम पुस्तकों और ऑफ़र्स की जानकारी पाएं</p>
                     </div>
-                    <div className="flex w-full md:w-auto gap-4">
+                    <div className="flex flex-col sm:flex-row w-full md:w-auto gap-4">
                         <div className="relative flex-grow md:w-96">
                             <input
                                 type="email"
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
                                 className="w-full bg-transparent border border-dotted border-white/40 rounded-full py-3 px-6 text-white placeholder-white/60 focus:outline-none focus:border-white transition-colors"
                             />
                         </div>
-                        <button className="bg-white text-[#A4343A] px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors flex items-center gap-2 whitespace-nowrap">
+                        <button className="bg-white text-[#A4343A] px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors flex items-center justify-center gap-2 whitespace-nowrap w-full sm:w-auto">
                             Subscribe <ArrowRight className="w-4 h-4" />
                         </button>
                     </div>

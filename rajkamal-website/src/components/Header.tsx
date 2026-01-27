@@ -86,31 +86,40 @@ const Header: React.FC = () => {
             </div>
 
             {/* Mobile Menu */}
-            {isMenuOpen && (
-                <div className="xl:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className={`xl:hidden fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
+                <div className="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-2xl flex flex-col">
+                    <div className="p-4 flex justify-end border-b border-gray-100">
+                        <button
+                            onClick={() => setIsMenuOpen(false)}
+                            className="p-2 rounded-full hover:bg-gray-100 text-gray-500 transition-colors"
+                        >
+                            <X className="h-6 w-6" />
+                        </button>
+                    </div>
+                    <div className="flex-1 overflow-y-auto py-4 px-6 space-y-4">
                         {navItems.map((item) => (
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="block text-gray-700 hover:text-primary hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
+                                className="block text-lg font-medium text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-50 last:border-0"
                             >
                                 {item.name}
                             </a>
                         ))}
-                        <div className="border-t border-gray-100 mt-4 pt-4 px-3 space-y-3">
-                            <a href="#" className="flex items-center text-gray-600">
-                                <User className="h-5 w-5 mr-2" />
-                                My Account
-                            </a>
-                            <button className="flex items-center justify-center w-full bg-primary text-white px-4 py-2 rounded-full">
-                                <span className="mr-2">Cart</span>
-                                <ShoppingCart className="h-4 w-4" />
-                            </button>
-                        </div>
+                    </div>
+                    <div className="p-6 border-t border-gray-100 bg-gray-50 space-y-4">
+                        <a href="#" className="flex items-center justify-center w-full py-3 px-4 rounded-xl border border-gray-200 text-gray-700 font-medium hover:bg-white hover:border-gray-300 transition-all shadow-sm">
+                            <User className="h-5 w-5 mr-2" />
+                            My Account
+                        </a>
+                        <button className="flex items-center justify-center w-full bg-primary text-white py-3 px-4 rounded-xl font-medium hover:bg-red-700 transition-all shadow-md hover:shadow-lg">
+                            <span className="mr-2">View Cart</span>
+                            <ShoppingCart className="h-5 w-5" />
+                        </button>
                     </div>
                 </div>
-            )}
+            </div>
         </header>
     );
 };

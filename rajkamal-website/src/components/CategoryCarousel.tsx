@@ -58,14 +58,14 @@ const CategoryCarousel: React.FC = () => {
                 {/* Navigation Buttons */}
                 <button
                     onClick={() => scroll('left')}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-100 hover:bg-gray-200 p-2 rounded-full shadow-md transition-colors"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-100 hover:bg-gray-200 p-2 rounded-full shadow-md transition-colors hidden md:block"
                 >
                     <ArrowLeft className="h-6 w-6 text-gray-600" />
                 </button>
 
                 <button
                     onClick={() => scroll('right')}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-100 hover:bg-gray-200 p-2 rounded-full shadow-md transition-colors"
+                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-100 hover:bg-gray-200 p-2 rounded-full shadow-md transition-colors hidden md:block"
                 >
                     <ArrowRight className="h-6 w-6 text-gray-600" />
                 </button>
