@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Star } from 'lucide-react';
+import { Heart, Star, Minus, Plus } from 'lucide-react';
 import type { Book } from '../types';
 import { useCart } from '../context/CartContext';
 
@@ -8,7 +8,28 @@ interface BookCardProps {
 }
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
-    const { addToCart } = useCart();
+    const { addToCart, cartItems, updateQuantity } = useCart();
+
+    const cartItem = cartItems.find(item => item.id === book.id);
+    const quantityInCart = cartItem?.quantity || 0;
+
+    const handleIncrement = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (quantityInCart === 0) {
+            addToCart(book);
+        } else {
+            updateQuantity(book.id, quantityInCart + 1);
+        }
+    };
+
+    const handleDecrement = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (quantityInCart > 0) {
+            updateQuantity(book.id, quantityInCart - 1);
+        }
+    };
 
     return (
         <div className="bg-white rounded-xl p-4 relative group/card h-full flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
@@ -77,12 +98,31 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     <button className="flex-1 bg-[#CCEAFF] text-[#00508A] py-2 rounded-lg font-medium text-sm hover:bg-[#CCEAFF]/80 transition-colors">
                         Buy Now
                     </button>
-                    <button
-                        onClick={() => addToCart(book)}
-                        className="flex-1 bg-white border border-red-300 text-red-500 py-2 rounded-lg font-medium text-sm hover:bg-red-50 transition-colors"
-                    >
-                        Add to Cart
-                    </button>
+
+                    {quantityInCart > 0 ? (
+                        <div className="flex-1 flex items-center justify-between bg-white border border-red-300 rounded-lg px-2 py-1">
+                            <button
+                                onClick={handleDecrement}
+                                className="p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
+                            >
+                                <Minus className="h-4 w-4" />
+                            </button>
+                            <span className="font-medium text-gray-900">{quantityInCart}</span>
+                            <button
+                                onClick={handleIncrement}
+                                className="p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
+                            >
+                                <Plus className="h-4 w-4" />
+                            </button>
+                        </div>
+                    ) : (
+                        <button
+                            onClick={() => addToCart(book)}
+                            className="flex-1 bg-white border border-red-300 text-red-500 py-2 rounded-lg font-medium text-sm hover:bg-red-50 transition-colors"
+                        >
+                            Add to Cart
+                        </button>
+                    )}
                 </div>
             </div>
         </div>

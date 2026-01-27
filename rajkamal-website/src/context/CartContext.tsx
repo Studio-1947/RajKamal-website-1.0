@@ -8,7 +8,8 @@ interface CartItem extends Book {
 interface CartContextType {
     cartItems: CartItem[];
     isCartOpen: boolean;
-    addToCart: (book: Book) => void;
+    addToCart: (book: Book, quantity?: number) => void;
+    updateQuantity: (bookId: number, quantity: number) => void;
     removeFromCart: (bookId: number) => void;
     toggleCart: () => void;
     cartTotal: number;
@@ -21,23 +22,35 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
 
-    const addToCart = (book: Book) => {
+    const addToCart = (book: Book, quantity: number = 1) => {
         setCartItems(prev => {
             const existingItem = prev.find(item => item.id === book.id);
             if (existingItem) {
                 return prev.map(item =>
                     item.id === book.id
-                        ? { ...item, quantity: item.quantity + 1 }
+                        ? { ...item, quantity: item.quantity + quantity }
                         : item
                 );
             }
-            return [...prev, { ...book, quantity: 1 }];
+            return [...prev, { ...book, quantity }];
         });
         setIsCartOpen(true); // Open cart when item is added
     };
 
     const removeFromCart = (bookId: number) => {
         setCartItems(prev => prev.filter(item => item.id !== bookId));
+    };
+
+    const updateQuantity = (bookId: number, quantity: number) => {
+        if (quantity < 1) {
+            removeFromCart(bookId);
+            return;
+        }
+        setCartItems(prev =>
+            prev.map(item =>
+                item.id === bookId ? { ...item, quantity } : item
+            )
+        );
     };
 
     const toggleCart = () => {
@@ -52,6 +65,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             cartItems,
             isCartOpen,
             addToCart,
+            updateQuantity,
             removeFromCart,
             toggleCart,
             cartTotal,

@@ -1,9 +1,9 @@
 import React from 'react';
-import { X, Trash2, ShoppingBag } from 'lucide-react';
+import { X, Trash2, ShoppingBag, Minus, Plus } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 
 const CartSidebar: React.FC = () => {
-    const { isCartOpen, toggleCart, cartItems, removeFromCart, cartTotal } = useCart();
+    const { isCartOpen, toggleCart, cartItems, removeFromCart, cartTotal, updateQuantity } = useCart();
 
     return (
         <>
@@ -75,8 +75,20 @@ const CartSidebar: React.FC = () => {
                                             <p className="mt-1 text-sm text-gray-500 line-clamp-1">{item.author}</p>
                                         </div>
                                         <div className="flex flex-1 items-end justify-between text-sm">
-                                            <div className="flex items-center gap-2 text-gray-500 bg-gray-50 px-2 py-1 rounded-md">
-                                                <span>Qty {item.quantity}</span>
+                                            <div className="flex items-center border border-gray-200 rounded-lg">
+                                                <button
+                                                    onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                                                    className="p-1 hover:bg-gray-50 text-gray-600 transition-colors"
+                                                >
+                                                    <Minus className="h-3 w-3" />
+                                                </button>
+                                                <span className="w-6 text-center text-xs font-medium text-gray-900">{item.quantity}</span>
+                                                <button
+                                                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                                                    className="p-1 hover:bg-gray-50 text-gray-600 transition-colors"
+                                                >
+                                                    <Plus className="h-3 w-3" />
+                                                </button>
                                             </div>
 
                                             <button
