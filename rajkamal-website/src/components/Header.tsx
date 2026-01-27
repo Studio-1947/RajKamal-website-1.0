@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Menu, X, ShoppingCart, User } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { cartCount, toggleCart } = useCart();
 
     const navItems = [
         { name: 'Books', href: '#' },
@@ -65,11 +67,19 @@ const Header: React.FC = () => {
                             <User className="h-5 w-5 mr-2" />
                             My Account
                         </a>
-                        <button className="flex items-center bg-primary text-white px-5 py-2 rounded-full hover:bg-red-700 transition-colors shadow-md">
+                        <button
+                            onClick={toggleCart}
+                            className="flex items-center bg-primary text-white px-5 py-2 rounded-full hover:bg-red-700 transition-colors shadow-md relative"
+                        >
                             <span className="mr-2 text-sm font-medium">Cart</span>
                             <div className="bg-white/20 rounded-full p-1">
                                 <ShoppingCart className="h-4 w-4" />
                             </div>
+                            {cartCount > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-yellow-400 text-red-700 text-[10px] font-bold h-5 w-5 flex items-center justify-center rounded-full border-2 border-white">
+                                    {cartCount}
+                                </span>
+                            )}
                         </button>
                     </div>
 
@@ -113,8 +123,14 @@ const Header: React.FC = () => {
                             <User className="h-5 w-5 mr-2" />
                             My Account
                         </a>
-                        <button className="flex items-center justify-center w-full bg-primary text-white py-3 px-4 rounded-xl font-medium hover:bg-red-700 transition-all shadow-md hover:shadow-lg">
-                            <span className="mr-2">View Cart</span>
+                        <button
+                            onClick={() => {
+                                setIsMenuOpen(false);
+                                toggleCart();
+                            }}
+                            className="flex items-center justify-center w-full bg-primary text-white py-3 px-4 rounded-xl font-medium hover:bg-red-700 transition-all shadow-md hover:shadow-lg"
+                        >
+                            <span className="mr-2">View Cart {cartCount > 0 && `(${cartCount})`}</span>
                             <ShoppingCart className="h-5 w-5" />
                         </button>
                     </div>

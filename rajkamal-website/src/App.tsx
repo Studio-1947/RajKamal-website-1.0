@@ -5,6 +5,8 @@ import CategoryCarousel from './components/CategoryCarousel';
 // import ProductGrid from './components/ProductGrid'; // Hiding ProductGrid as per new requirement
 import Footer from './components/Footer';
 import BookSection from './components/BookSection';
+import CartSidebar from './components/CartSidebar';
+import { CartProvider } from './context/CartContext';
 
 import { Sparkles } from 'lucide-react';
 
@@ -16,40 +18,43 @@ function App() {
   const [activeGenreFilter, setActiveGenreFilter] = useState('Fiction');
 
   return (
-    <Layout>
-      <Hero />
-      <CategoryCarousel />
+    <CartProvider>
+      <Layout>
+        <CartSidebar />
+        <Hero />
+        <CategoryCarousel />
 
-      {/* New Arrivals */}
-      <BookSection
-        title="New Arrivals"
-        filters={['December', 'November', 'October', 'September', 'August']}
-        activeFilter={activeArrivalFilter}
-        onFilterChange={setActiveArrivalFilter}
-        books={newArrivals}
-      />
+        {/* New Arrivals */}
+        <BookSection
+          title="New Arrivals"
+          filters={['December', 'November', 'October', 'September', 'August']}
+          activeFilter={activeArrivalFilter}
+          onFilterChange={setActiveArrivalFilter}
+          books={newArrivals}
+        />
 
-      {/* Hot Deals */}
-      <BookSection
-        title="Hot Deals"
-        titleIcon={<Sparkles className="h-6 w-6 text-red-500 fill-red-500" />}
-        filters={['25% off', '30% off', '35% off']}
-        activeFilter={activeDealFilter}
-        onFilterChange={setActiveDealFilter}
-        books={hotDeals}
-      />
+        {/* Hot Deals */}
+        <BookSection
+          title="Hot Deals"
+          titleIcon={<Sparkles className="h-6 w-6 text-red-500 fill-red-500" />}
+          filters={['25% off', '30% off', '35% off']}
+          activeFilter={activeDealFilter}
+          onFilterChange={setActiveDealFilter}
+          books={hotDeals}
+        />
 
-      {/* Shop by genre */}
-      <BookSection
-        title="Shop by genre"
-        filters={['Fiction', 'Non - Fiction', 'Romance', 'Crime', 'Classic', 'Biographies', 'Health & Fitness', 'Business', 'Economics']}
-        activeFilter={activeGenreFilter}
-        onFilterChange={setActiveGenreFilter}
-        books={genreBooks}
-      />
+        {/* Shop by genre */}
+        <BookSection
+          title="Shop by genre"
+          filters={['Fiction', 'Non - Fiction', 'Romance', 'Crime', 'Classic', 'Biographies', 'Health & Fitness', 'Business', 'Economics']}
+          activeFilter={activeGenreFilter}
+          onFilterChange={setActiveGenreFilter}
+          books={genreBooks}
+        />
 
-      <Footer />
-    </Layout>
+        <Footer />
+      </Layout>
+    </CartProvider>
   )
 }
 

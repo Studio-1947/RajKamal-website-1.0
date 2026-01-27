@@ -1,12 +1,15 @@
 import React from 'react';
 import { Heart, Star } from 'lucide-react';
 import type { Book } from '../types';
+import { useCart } from '../context/CartContext';
 
 interface BookCardProps {
     book: Book;
 }
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
+    const { addToCart } = useCart();
+
     return (
         <div className="bg-white rounded-xl p-4 relative group/card h-full flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             {/* Wishlist Button */}
@@ -74,7 +77,10 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     <button className="flex-1 bg-[#CCEAFF] text-[#00508A] py-2 rounded-lg font-medium text-sm hover:bg-[#CCEAFF]/80 transition-colors">
                         Buy Now
                     </button>
-                    <button className="flex-1 bg-white border border-red-300 text-red-500 py-2 rounded-lg font-medium text-sm hover:bg-red-50 transition-colors">
+                    <button
+                        onClick={() => addToCart(book)}
+                        className="flex-1 bg-white border border-red-300 text-red-500 py-2 rounded-lg font-medium text-sm hover:bg-red-50 transition-colors"
+                    >
                         Add to Cart
                     </button>
                 </div>
