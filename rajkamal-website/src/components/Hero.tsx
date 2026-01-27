@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
                             <div className="flex items-center border border-pink-200 rounded-full p-2 shadow-sm hover:shadow-md transition-shadow bg-white">
                                 <div className="pl-3 pr-2">
                                     {/* Placeholder for the red character icon */}
-                                    <svg width="73" height="78" viewBox="0 0 73 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                                    <svg className="w-12 h-12 sm:w-[73px] sm:h-[78px]" viewBox="0 0 73 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                                         <rect y="-5.5" width="73" height="83" fill="url(#pattern0_215_830)" />
                                         <defs>
                                             <pattern id="pattern0_215_830" patternContentUnits="objectBoundingBox" width="1" height="1">
