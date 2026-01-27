@@ -14,4 +14,10 @@ export interface Book {
     text: string;
     color: string; // e.g., 'bg-red-500'
   };
+  isbn?: string;
+  edition?: string;
+  description?: string;
+  authorDescription?: string;
+  authorImage?: string;
+  images?: string[];
 }
