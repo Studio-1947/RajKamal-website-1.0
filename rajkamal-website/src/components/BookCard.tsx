@@ -2,6 +2,7 @@ import React from 'react';
 import { Heart, Star, Minus, Plus } from 'lucide-react';
 import type { Book } from '../types';
 import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 interface BookCardProps {
     book: Book;
@@ -40,8 +41,10 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                 />
             </button>
 
+
+
             {/* Book Image */}
-            <div className="relative aspect-[3/4] mb-4 rounded-lg overflow-hidden bg-gray-100 shrink-0">
+            <Link to={`/book/${book.id}`} className="block relative aspect-[3/4] mb-4 rounded-lg overflow-hidden bg-gray-100 shrink-0">
                 <img
                     src={book.image}
                     alt={book.title}
@@ -53,7 +56,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                         {book.tag.text}
                     </div>
                 )}
-            </div>
+            </Link>
 
             {/* Content Container */}
             <div className="flex flex-col flex-grow">
@@ -62,12 +65,14 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     <div className="bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded flex items-center">
                         {book.rating} <Star className="h-3 w-3 ml-0.5 fill-current" />
                     </div>
-                    <span className="text-gray-400 text-xs ml-2 font-medium">{book.reviews.toLocaleString()}</span>
+                    <span className="text-gray-400 text-xs ml-2 font-medium">{book.reviews.toLocaleString()} Reviews</span>
                 </div>
 
                 {/* Title & Author */}
                 <div className="mb-3">
-                    <h3 className="font-bold text-gray-900 text-lg leading-tight mb-1 line-clamp-1" title={book.title}>{book.title}</h3>
+                    <Link to={`/book/${book.id}`}>
+                        <h3 className="font-bold text-gray-900 text-lg leading-tight mb-1 line-clamp-1 hover:text-red-500 transition-colors" title={book.title}>{book.title}</h3>
+                    </Link>
                     <p className="text-gray-500 text-xs line-clamp-2" title={book.author}>{book.author}</p>
                 </div>
 

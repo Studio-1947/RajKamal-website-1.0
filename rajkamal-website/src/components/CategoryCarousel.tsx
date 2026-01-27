@@ -1,36 +1,32 @@
 import React, { useRef } from 'react';
 import { ArrowLeft, ArrowRight, ArrowRight as ArrowIcon } from 'lucide-react';
+import characterImage from '../assets/3d-ch.png';
 
 const categories = [
     {
         id: 1,
         title: 'Best Sellers',
-        color: 'from-red-800 to-red-600',
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' // Placeholder for 3D character
+        image: characterImage
     },
     {
         id: 2,
         title: 'Award Winners',
-        color: 'from-red-900 to-red-700',
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        image: characterImage
     },
     {
         id: 3,
         title: 'Gifting Sets',
-        color: 'from-red-800 to-red-600',
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        image: characterImage
     },
     {
         id: 4,
         title: 'World Classics',
-        color: 'from-red-900 to-red-700',
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        image: characterImage
     },
     {
         id: 5,
         title: 'Representative Stories',
-        color: 'from-red-800 to-red-600',
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        image: characterImage
     }
 ];
 
@@ -82,20 +78,16 @@ const CategoryCarousel: React.FC = () => {
                             className="flex-none w-64 sm:w-72 h-96 relative rounded-3xl overflow-hidden shadow-lg snap-center group cursor-pointer"
                         >
                             {/* Background Gradient */}
-                            <div className={`absolute inset-0 bg-gradient-to-b ${category.color} opacity-90`}></div>
+                            <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(41, 41, 41, 0) 0%, #292929 100%)' }}></div>
 
-                            {/* 3D Character Image (Placeholder) */}
+                            {/* 3D Character Image */}
                             <div className="absolute inset-0 flex items-center justify-center pt-10">
                                 <div className="w-48 h-48 bg-red-400 rounded-full blur-3xl opacity-50 absolute top-10"></div>
                                 <img
                                     src={category.image}
                                     alt={category.title}
-                                    className="relative z-10 w-48 h-48 object-cover rounded-full mix-blend-overlay opacity-80"
+                                    className="relative z-10 w-64 h-64 object-contain drop-shadow-2xl transform transition-transform duration-300 group-hover:scale-110"
                                 />
-                                {/* Simulated 3D Character */}
-                                <div className="absolute z-20 top-20 w-32 h-32 bg-red-500 rounded-full shadow-inner flex items-center justify-center text-white font-bold">
-                                    3D Char
-                                </div>
                             </div>
 
                             {/* Content */}
