@@ -38,18 +38,18 @@ const products = [
 
 const ProductGrid: React.FC = () => {
     return (
-        <div className="bg-gray-50 py-16">
+        <div className="bg-gray-50 py-12 sm:py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                <div className="text-center mb-8 sm:mb-12">
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 sm:text-4xl">
                         Featured Products
                     </h2>
-                    <p className="mt-4 text-xl text-gray-500">
+                    <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-gray-500">
                         Check out our most popular items, curated just for you.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                     {products.map((product) => (
                         <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
                             <div className="relative pb-[100%]">

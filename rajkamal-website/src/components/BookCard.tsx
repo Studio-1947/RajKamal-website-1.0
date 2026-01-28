@@ -100,7 +100,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
 
                 {/* Buttons */}
                 <div className="flex gap-3 mt-auto">
-                    <button className="flex-1 bg-[#CCEAFF] text-[#00508A] py-2 rounded-lg font-medium text-sm hover:bg-[#CCEAFF]/80 transition-colors">
+                    <button className="flex-1 bg-[#CCEAFF] text-[#00508A] py-2.5 sm:py-2 rounded-lg font-medium text-sm hover:bg-[#CCEAFF]/80 transition-colors">
                         Buy Now
                     </button>
 
@@ -108,14 +108,14 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                         <div className="flex-1 flex items-center justify-between bg-white border border-red-300 rounded-lg px-2 py-1">
                             <button
                                 onClick={handleDecrement}
-                                className="p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
+                                className="p-1.5 sm:p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
                             >
                                 <Minus className="h-4 w-4" />
                             </button>
                             <span className="font-medium text-gray-900">{quantityInCart}</span>
                             <button
                                 onClick={handleIncrement}
-                                className="p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
+                                className="p-1.5 sm:p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
                             >
                                 <Plus className="h-4 w-4" />
                             </button>
@@ -123,7 +123,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     ) : (
                         <button
                             onClick={() => addToCart(book)}
-                            className="flex-1 bg-white border border-red-300 text-red-500 py-2 rounded-lg font-medium text-sm hover:bg-red-50 transition-colors"
+                            className="flex-1 bg-white border border-red-300 text-red-500 py-2.5 sm:py-2 rounded-lg font-medium text-sm hover:bg-red-50 transition-colors"
                         >
                             Add to Cart
                         </button>

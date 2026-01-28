@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
                     {/* Left Content */}
                     <div className="text-center lg:text-left space-y-6 sm:space-y-8">
                         <div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-3 sm:mb-4 flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3">
+                            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-primary mb-3 sm:mb-4 flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3">
                                 <span>साथ</span>
                                 <div className="relative h-[1em] w-[3ch] text-left">
                                     <AnimatePresence mode="wait">
@@ -46,11 +46,11 @@ const Hero: React.FC = () => {
                         </div>
 
                         {/* Search Bar */}
-                        <div className="max-w-md mx-auto lg:mx-0 relative">
-                            <div className="flex items-center border border-pink-200 rounded-full p-1  shadow-sm hover:shadow-md transition-shadow bg-white">
-                                <div className="pl-4 pr-2 -mt-4 ">
+                        <div className="max-w-md mx-auto lg:mx-0 relative w-full px-4 sm:px-0">
+                            <div className="flex items-center border border-pink-200 rounded-full p-1 shadow-sm hover:shadow-md transition-shadow bg-white w-full">
+                                <div className="pl-4 pr-2 md:-mt-4  ">
                                     {/* Placeholder for the red character icon */}
-                                    <svg className="w-12 h-12 sm:w-[73px] sm:h-[78px]" viewBox="0 0 73 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                                    <svg className="w-10 h-10 sm:w-[73px] sm:h-[78px]" viewBox="0 0 73 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                                         <rect y="-5.5" width="73" height="83" fill="url(#pattern0_215_830)" />
                                         <defs>
                                             <pattern id="pattern0_215_830" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
                                         alt=""
                                     />
 
-                                    <div className="absolute inset-0 bg-black/20 flex flex-col justify-end p-5">
+                                    <div className="absolute inset-0 bg-black/20 flex flex-col justify-end p-2 md:p-5">
                                         <h3 className="text-white font-bold text-lg">
                                             नयी आमद
                                         </h3>
@@ -146,7 +146,7 @@ const Hero: React.FC = () => {
                                         alt=""
                                     />
 
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-5">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-2 md:p-5">
                                         <h3 className="text-white font-bold text-lg">
                                             किताब ख़बर
                                         </h3>
