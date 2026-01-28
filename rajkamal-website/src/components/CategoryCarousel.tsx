@@ -86,7 +86,7 @@ const CategoryCarousel: React.FC = () => {
                                 <img
                                     src={category.image}
                                     alt={category.title}
-                                    className="relative z-10 w-64 h-64 object-contain drop-shadow-2xl transform transition-transform duration-300 group-hover:scale-110"
+                                    className="relative z-10 w-64 h-64 object-contain drop-shadow-2xl transform transition-transform duration-300 group-hover:scale-110 top-12"
                                 />
                             </div>
 
