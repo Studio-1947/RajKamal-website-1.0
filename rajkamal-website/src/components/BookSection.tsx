@@ -60,7 +60,7 @@ const BookSection: React.FC<BookSectionProps> = ({
                                 onClick={() => onFilterChange?.(filter)}
                                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${activeFilter === filter
                                     ? 'bg-[#006BB8] text-white'
-                                    : 'bg-[#CCEAFF] text-[#006BB8] hover:bg-[#CCEAFF]/80'
+                                    : 'bg-[#E3E3E3] text-[#666666] hover:bg-[#E3E3E3]/80'
                                     }`}
                             >
                                 {filter}

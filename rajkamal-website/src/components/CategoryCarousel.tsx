@@ -75,7 +75,7 @@ const CategoryCarousel: React.FC = () => {
                     {categories.map((category) => (
                         <div
                             key={category.id}
-                            className="flex-none w-64 sm:w-72 h-96 relative rounded-3xl overflow-hidden shadow-lg snap-center group cursor-pointer"
+                            className="flex-none w-[260px] sm:w-72 h-96 relative rounded-3xl overflow-hidden shadow-lg snap-center group cursor-pointer"
                         >
                             {/* Background Gradient */}
                             <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(41, 41, 41, 0) 0%, #292929 100%)' }}></div>
@@ -86,7 +86,7 @@ const CategoryCarousel: React.FC = () => {
                                 <img
                                     src={category.image}
                                     alt={category.title}
-                                    className="relative z-10 w-64 h-64 object-contain drop-shadow-2xl transform transition-transform duration-300 group-hover:scale-110"
+                                    className="relative z-10 w-[260px] h-[260px] sm:w-64 sm:h-64 object-contain drop-shadow-2xl transform transition-transform duration-300 group-hover:scale-110 top-12"
                                 />
                             </div>
 

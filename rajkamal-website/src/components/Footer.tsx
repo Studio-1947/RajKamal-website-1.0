@@ -5,10 +5,10 @@ const Footer: React.FC = () => {
     return (
         <footer className="w-full">
             {/* Newsletter Section */}
-            <div className="bg-[#A4343A] py-[88px] px-4 sm:px-6 lg:px-8">
+            <div className="bg-[#A4343A] py-12 sm:py-[88px] px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-white">
-                        <h2 className="text-3xl font-bold mb-2">Get newsletter offers and news</h2>
+                    <div className="text-white text-center md:text-left">
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-2">Get newsletter offers and news</h2>
                         <p className="text-lg opacity-90">नवीनतम पुस्तकों और ऑफ़र्स की जानकारी पाएं</p>
                     </div>
                     <div className="flex flex-col sm:flex-row w-full md:w-auto gap-4">
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Main Footer Content */}
-            <div className="bg-[#0F172A] text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+            <div className="bg-[#0F172A] text-gray-300 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* Brand Column */}
                     <div className="space-y-6">

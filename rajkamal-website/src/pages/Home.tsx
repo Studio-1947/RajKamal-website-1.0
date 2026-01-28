@@ -36,7 +36,7 @@ const Home = () => {
 
             {/* Shop by genre */}
             <BookSection
-                title="Shop by genre"
+                title="Shop by Genre"
                 filters={['Fiction', 'Non - Fiction', 'Romance', 'Crime', 'Classic', 'Biographies', 'Health & Fitness', 'Business', 'Economics']}
                 activeFilter={activeGenreFilter}
                 onFilterChange={setActiveGenreFilter}
