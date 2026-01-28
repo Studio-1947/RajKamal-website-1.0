@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
                     {/* Right Content - Image Grid */}
                     <div className="w-full max-w-[700px]">
                         {/* LOCKED CONTAINER */}
-                        <div className="grid grid-cols-2 gap-6 aspect-[697/500] w-full">
+                        <div className="grid grid-cols-2 gap-6 aspect-[660/450] w-full">
 
                             {/* LEFT CARD – FULL HEIGHT */}
                             <div className="relative rounded-[32px] overflow-hidden shadow-lg">
