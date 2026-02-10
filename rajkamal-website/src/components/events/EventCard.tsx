@@ -1,6 +1,7 @@
 import React from 'react';
 import type { EventItem } from '../../data/events';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface EventCardProps {
     event: EventItem;
@@ -8,12 +9,12 @@ interface EventCardProps {
 
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 group">
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
                 <img
                     src={event.image}
                     alt={event.title}
-                    className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
             </div>
 
@@ -22,7 +23,10 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
 
                 <div className="flex items-center gap-3">
                     <h3 className="text-xl font-bold text-gray-900">{event.title}</h3>
-                    <span className="rounded-full bg-[#FEF3C7] px-3 py-1 text-xs font-medium text-[#D97706]">
+                    <span className={`rounded-full px-3 py-1 text-xs font-medium ${event.status === 'Ongoing' ? 'bg-green-100 text-green-800' :
+                        event.status === 'Upcoming' ? 'bg-[#FEF3C7] text-[#D97706]' :
+                            'bg-gray-100 text-gray-800'
+                        }`}>
                         {event.status}
                     </span>
                 </div>
@@ -32,9 +36,12 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                 </p>
 
                 <div className="flex gap-3 pt-2">
-                    <button className="flex items-center gap-2 rounded-full bg-[#D1E9FF] px-6 py-2 text-sm font-medium text-[#0066CC] transition-colors hover:bg-[#B3D9FF]">
+                    <Link
+                        to={`/event/${event.id}`}
+                        className="flex items-center gap-2 rounded-full bg-[#D1E9FF] px-6 py-2 text-sm font-medium text-[#0066CC] transition-colors hover:bg-[#B9D9FF]"
+                    >
                         Read More <ArrowRight className="h-4 w-4" />
-                    </button>
+                    </Link>
                     <button className="rounded-full bg-[#FFD1D1] px-6 py-2 text-sm font-medium text-[#CC0000] transition-colors hover:bg-[#FFB3B3]">
                         Not Interested
                     </button>

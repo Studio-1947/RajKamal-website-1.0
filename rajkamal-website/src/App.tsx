@@ -6,19 +6,23 @@ import { CartProvider } from './context/CartContext';
 import Home from './pages/Home';
 import BookDetails from './pages/BookDetails';
 import Events from './pages/Events';
+import EventDetails from './pages/EventDetails';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
     <CartProvider>
       <Router>
         <ScrollToTop />
+        <ScrollToTopButton />
         <Layout>
           <CartSidebar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/book/:id" element={<BookDetails />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/event/:id" element={<EventDetails />} />
           </Routes>
           <Footer />
         </Layout>
