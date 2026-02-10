@@ -14,6 +14,8 @@ export const newArrivals: Book[] = [
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
     tag: { text: "New", color: "bg-red-500" },
+    prices: { Paperback: 350, Hardcover: 550, "E-Book": 180 },
+    originalPrices: { Paperback: 500, Hardcover: 700, "E-Book": 250 },
     isbn: "978-0143454212",
     edition: "2024, 1st Edition",
     description:
@@ -63,6 +65,8 @@ export const newArrivals: Book[] = [
     discount: 100,
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
+    prices: { Paperback: 250, Hardcover: 450, "E-Book": 160 },
+    originalPrices: { Paperback: 300, Hardcover: 600, "E-Book": 200 },
     reviewsList: [
       {
         id: 1,
@@ -89,6 +93,8 @@ export const newArrivals: Book[] = [
     discount: 100,
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
+    prices: { Paperback: 350, Hardcover: 500, "E-Book": 190 },
+    originalPrices: { Paperback: 500, Hardcover: 650, "E-Book": 250 },
     reviewsList: [
       {
         id: 1,
@@ -115,6 +121,8 @@ export const newArrivals: Book[] = [
     discount: 33,
     isLiked: false,
     formats: ["Paperback", "E-Book"],
+    prices: { Paperback: 299, "E-Book": 150 },
+    originalPrices: { Paperback: 450, "E-Book": 200 },
     reviewsList: [
       {
         id: 1,
@@ -141,6 +149,8 @@ export const newArrivals: Book[] = [
     discount: 20,
     isLiked: false,
     formats: ["Paperback"],
+    prices: { Paperback: 199 },
+    originalPrices: { Paperback: 250 },
     reviewsList: [
       {
         id: 1,
@@ -167,6 +177,8 @@ export const newArrivals: Book[] = [
     discount: 25,
     isLiked: true,
     formats: ["Paperback", "Hardcover"],
+    prices: { Paperback: 150, Hardcover: 300 },
+    originalPrices: { Paperback: 200, Hardcover: 400 },
     reviewsList: [
       {
         id: 1,
@@ -196,6 +208,8 @@ export const hotDeals: Book[] = [
     discount: 100,
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
+    prices: { Paperback: 350, Hardcover: 550, "E-Book": 180 },
+    originalPrices: { Paperback: 500, Hardcover: 700, "E-Book": 250 },
     reviewsList: [
       {
         id: 1,
@@ -233,6 +247,8 @@ export const hotDeals: Book[] = [
     discount: 100,
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
+    prices: { Paperback: 250, Hardcover: 450, "E-Book": 160 },
+    originalPrices: { Paperback: 300, Hardcover: 600, "E-Book": 200 },
     reviewsList: [
       {
         id: 1,
@@ -259,6 +275,8 @@ export const hotDeals: Book[] = [
     discount: 100,
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
+    prices: { Paperback: 350, Hardcover: 500, "E-Book": 190 },
+    originalPrices: { Paperback: 500, Hardcover: 650, "E-Book": 250 },
     reviewsList: [
       {
         id: 1,
@@ -285,6 +303,8 @@ export const hotDeals: Book[] = [
     discount: 20,
     isLiked: false,
     formats: ["Paperback"],
+    prices: { Paperback: 320 },
+    originalPrices: { Paperback: 400 },
     reviewsList: [
       {
         id: 1,
@@ -311,6 +331,8 @@ export const hotDeals: Book[] = [
     discount: 20,
     isLiked: true,
     formats: ["Paperback", "E-Book"],
+    prices: { Paperback: 280, "E-Book": 170 },
+    originalPrices: { Paperback: 350, "E-Book": 220 },
     reviewsList: [
       {
         id: 1,
@@ -340,6 +362,8 @@ export const genreBooks: Book[] = [
     discount: 100,
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
+    prices: { Paperback: 350, Hardcover: 550, "E-Book": 180 },
+    originalPrices: { Paperback: 500, Hardcover: 700, "E-Book": 250 },
     reviewsList: [
       {
         id: 1,
@@ -365,6 +389,8 @@ export const genreBooks: Book[] = [
     discount: 100,
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
+    prices: { Paperback: 250, Hardcover: 450, "E-Book": 160 },
+    originalPrices: { Paperback: 300, Hardcover: 600, "E-Book": 200 },
     reviewsList: [
       {
         id: 1,
@@ -388,6 +414,8 @@ export const genreBooks: Book[] = [
     discount: 100,
     isLiked: true,
     formats: ["Paperback", "Hardcover", "E-Book"],
+    prices: { Paperback: 350, Hardcover: 500, "E-Book": 190 },
+    originalPrices: { Paperback: 500, Hardcover: 650, "E-Book": 250 },
     reviewsList: [
       {
         id: 1,
@@ -411,6 +439,8 @@ export const genreBooks: Book[] = [
     discount: 26,
     isLiked: true,
     formats: ["Paperback", "Hardcover"],
+    prices: { Paperback: 220, Hardcover: 400 },
+    originalPrices: { Paperback: 300, Hardcover: 550 },
     reviewsList: [
       {
         id: 1,
@@ -448,6 +478,8 @@ export const genreBooks: Book[] = [
     discount: 28,
     isLiked: false,
     formats: ["Paperback"],
+    prices: { Paperback: 180 },
+    originalPrices: { Paperback: 250 },
     reviewsList: [
       {
         id: 1,

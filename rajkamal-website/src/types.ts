@@ -10,6 +10,8 @@ export interface Book {
   discount: number;
   isLiked?: boolean;
   formats?: string[]; // e.g., ['Paperback', 'Hardcover', 'E-Book']
+  prices?: { [key: string]: number };
+  originalPrices?: { [key: string]: number };
   tag?: {
     text: string;
     color: string; // e.g., 'bg-red-500'

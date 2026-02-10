@@ -10,6 +10,11 @@ interface BookCardProps {
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
     const { addToCart, cartItems, updateQuantity } = useCart();
+    const [selectedFormat, setSelectedFormat] = React.useState<string>(book.formats?.[0] || 'Paperback');
+
+    const currentPrice = book.prices?.[selectedFormat] || book.price;
+    const currentOriginalPrice = book.originalPrices?.[selectedFormat] || book.originalPrice;
+    const currentDiscount = Math.round(((currentOriginalPrice - currentPrice) / currentOriginalPrice) * 100);
 
     const cartItem = cartItems.find(item => item.id === book.id);
     const quantityInCart = cartItem?.quantity || 0;
@@ -79,23 +84,27 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                 {/* Formats */}
                 <div className="flex flex-wrap gap-2 mb-4 mt-auto">
                     {book.formats?.map((format, index) => (
-                        <span
+                        <button
                             key={index}
-                            className={`text-[10px] px-2 py-1 rounded-[10px] border font-medium ${index === 0
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setSelectedFormat(format);
+                            }}
+                            className={`text-[10px] px-2 py-1 rounded-[10px] border font-medium transition-colors ${selectedFormat === format
                                 ? 'bg-[#00508A] text-white border-[#00508A]'
-                                : 'bg-white text-[#00508A] '
+                                : 'bg-white text-[#00508A] hover:bg-blue-50'
                                 }`}
                         >
                             {format}
-                        </span>
+                        </button>
                     ))}
                 </div>
 
                 {/* Price */}
                 <div className="flex items-baseline mb-4">
-                    <span className="text-red-500 text-xl font-bold">₹{book.price}</span>
-                    <span className="text-gray-400 text-sm line-through ml-2">₹{book.originalPrice}</span>
-                    <span className="text-green-600 text-xs font-bold ml-2">{book.discount}% off</span>
+                    <span className="text-red-500 text-xl font-bold">₹{currentPrice}</span>
+                    <span className="text-gray-400 text-sm line-through ml-2">₹{currentOriginalPrice}</span>
+                    <span className="text-green-600 text-xs font-bold ml-2">{currentDiscount}% off</span>
                 </div>
 
                 {/* Buttons */}
