@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import NavigationButton from './ui/NavigationButton';
 import BookCard from './BookCard';
 import type { Book } from '../types';
 
@@ -71,19 +72,17 @@ const BookSection: React.FC<BookSectionProps> = ({
 
                 {/* Navigation Buttons (Absolute positioned relative to container) */}
                 <div className="relative group/section">
-                    <button
+                    <NavigationButton
+                        direction="left"
                         onClick={() => scroll('left')}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#CCEAFF]/80 hover:bg-[#CCEAFF]/80 p-2 rounded-full shadow-md transition-all opacity-0 group-hover/section:opacity-100 disabled:opacity-0 -ml-4 hidden md:block"
-                    >
-                        <ArrowLeft className="h-6 w-6 text-gray-600" />
-                    </button>
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 -ml-4 hidden md:flex"
+                    />
 
-                    <button
+                    <NavigationButton
+                        direction="right"
                         onClick={() => scroll('right')}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#CCEAFF]/80 hover:bg-[#CCEAFF]/80 p-2 rounded-full shadow-md transition-all opacity-0 group-hover/section:opacity-100 disabled:opacity-0 -mr-4 hidden md:block"
-                    >
-                        <ArrowRight className="h-6 w-6 text-gray-600" />
-                    </button>
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 -mr-4 hidden md:flex"
+                    />
 
                     {/* Scrollable Container */}
                     <div
