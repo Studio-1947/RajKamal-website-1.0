@@ -1,7 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { Mic, ArrowRight } from 'lucide-react';
+import { Mic } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FlipWords } from './FlipWords';
+import HeroCard from './HeroCard';
+
+const heroCards = [
+    {
+        id: 1,
+        title: "साहित्य उत्सव",
+        subtitle: "Check out for new book launches",
+        image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+        className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full",
+    },
+    {
+        id: 2,
+        title: "नयी आमद",
+        subtitle: "Check out our new releases",
+        image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e",
+        // Specific styling for the second card
+        overlayClassName: "bg-black/20 bg-gradient-to-br from-orange-500/20 to-red-500/20",
+        className: "min-h-[200px]"
+    },
+    {
+        id: 3,
+        title: "किताब ख़बर",
+        subtitle: "Check out our latest blogs",
+        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794",
+        className: "min-h-[200px]"
+    }
+];
 
 const Hero: React.FC = () => {
     const words = ["जुड़ें", "पढ़ें"];
@@ -86,81 +113,20 @@ const Hero: React.FC = () => {
                         </div>
                     </div>
 
+
                     {/* Right Content - Image Grid */}
-                    <div className="w-full max-w-[700px]">
-                        {/* LOCKED CONTAINER */}
-                        <div className="grid grid-cols-2 gap-6 aspect-[660/450] w-full">
-
-                            {/* LEFT CARD – FULL HEIGHT */}
-                            <div className="relative rounded-[32px] overflow-hidden shadow-lg">
-                                <img
-                                    src="https://images.unsplash.com/photo-1544947950-fa07a98d237f"
-                                    className="absolute inset-0 w-full h-full object-cover"
-                                    alt=""
+                    <div className="w-full max-w-[700px] lg:h-[500px]">
+                        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-2 gap-4 md:gap-6 w-full h-full">
+                            {heroCards.map((card) => (
+                                <HeroCard
+                                    key={card.id}
+                                    title={card.title}
+                                    subtitle={card.subtitle}
+                                    image={card.image}
+                                    className={card.className}
+                                    overlayClassName={card.overlayClassName}
                                 />
-
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
-                                    <h3 className="text-white text-xl font-bold">
-                                        साहित्य उत्सव
-                                    </h3>
-                                    <p className="text-gray-200 text-sm mb-4">
-                                        Check out for new book launches
-                                    </p>
-
-                                    <button className="ml-auto w-11 h-11 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white">
-                                        <ArrowRight />
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* RIGHT COLUMN */}
-                            <div className="grid grid-rows-2 gap-6 h-full">
-
-                                {/* TOP RIGHT */}
-                                <div className="relative rounded-[32px] overflow-hidden shadow-lg bg-gradient-to-br from-orange-500 to-red-500">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e"
-                                        className="absolute inset-0 w-full h-full object-cover"
-                                        alt=""
-                                    />
-
-                                    <div className="absolute inset-0 bg-black/20 flex flex-col justify-end p-2 md:p-5">
-                                        <h3 className="text-white font-bold text-lg">
-                                            नयी आमद
-                                        </h3>
-                                        <p className="text-white/90 text-sm mb-2">
-                                            Check out our new releases
-                                        </p>
-
-                                        <button className="ml-auto w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white">
-                                            <ArrowRight size={18} />
-                                        </button>
-                                    </div>
-                                </div>
-
-                                {/* BOTTOM RIGHT */}
-                                <div className="relative rounded-[32px] overflow-hidden shadow-lg">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1512820790803-83ca734da794"
-                                        className="absolute inset-0 w-full h-full object-cover"
-                                        alt=""
-                                    />
-
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-2 md:p-5">
-                                        <h3 className="text-white font-bold text-lg">
-                                            किताब ख़बर
-                                        </h3>
-                                        <p className="text-gray-200 text-sm mb-2">
-                                            Check out our latest blogs
-                                        </p>
-
-                                        <button className="ml-auto w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white">
-                                            <ArrowRight size={18} />
-                                        </button>
-                                    </div>
-                                </div>
-
-                            </div>
+                            ))}
                         </div>
                     </div>
 
