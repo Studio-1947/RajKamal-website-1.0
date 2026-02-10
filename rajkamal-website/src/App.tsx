@@ -7,12 +7,14 @@ import Home from './pages/Home';
 import BookDetails from './pages/BookDetails';
 import Events from './pages/Events';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
     <CartProvider>
       <Router>
         <ScrollToTop />
+        <ScrollToTopButton />
         <Layout>
           <CartSidebar />
           <Routes>
