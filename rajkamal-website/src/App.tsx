@@ -7,6 +7,11 @@ import Home from './pages/Home';
 import BookDetails from './pages/BookDetails';
 import Events from './pages/Events';
 import EventDetails from './pages/EventDetails';
+import Authors from './pages/Authors';
+import EBooks from './pages/EBooks';
+import StudentCorner from './pages/StudentCorner';
+import Blog from './pages/Blog';
+import PressCorner from './pages/PressCorner';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
@@ -23,6 +28,11 @@ function App() {
             <Route path="/book/:id" element={<BookDetails />} />
             <Route path="/events" element={<Events />} />
             <Route path="/event/:id" element={<EventDetails />} />
+            <Route path="/authors" element={<Authors />} />
+            <Route path="/ebooks" element={<EBooks />} />
+            <Route path="/student-corner" element={<StudentCorner />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/press" element={<PressCorner />} />
           </Routes>
           <Footer />
         </Layout>

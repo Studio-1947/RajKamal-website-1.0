@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import { ArrowLeft, ArrowRight, ArrowRight as ArrowIcon } from 'lucide-react';
+import { ArrowRight as ArrowIcon } from 'lucide-react';
+import NavigationButton from './ui/NavigationButton';
 import characterImage from '../assets/3d-ch.png';
 
 const categories = [
@@ -52,19 +53,18 @@ const CategoryCarousel: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
                 {/* Navigation Buttons */}
-                <button
+                {/* Navigation Buttons */}
+                <NavigationButton
+                    direction="left"
                     onClick={() => scroll('left')}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-100 hover:bg-gray-200 p-2 rounded-full shadow-md transition-colors hidden md:block"
-                >
-                    <ArrowLeft className="h-6 w-6 text-gray-600" />
-                </button>
+                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 hidden md:flex -ml-4"
+                />
 
-                <button
+                <NavigationButton
+                    direction="right"
                     onClick={() => scroll('right')}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-100 hover:bg-gray-200 p-2 rounded-full shadow-md transition-colors hidden md:block"
-                >
-                    <ArrowRight className="h-6 w-6 text-gray-600" />
-                </button>
+                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 hidden md:flex -mr-4"
+                />
 
                 {/* Carousel Container */}
                 <div
