@@ -7,13 +7,13 @@ const Header: React.FC = () => {
     const { cartCount, toggleCart } = useCart();
 
     const navItems = [
-        { name: 'Books', href: '#' },
-        { name: 'Authors', href: '#' },
-        { name: 'E-Books', href: '#' },
-        { name: 'Student Corner', href: '#' },
-        { name: 'Blog', href: '#' },
+        { name: 'Books', href: '/' },
+        { name: 'Authors', href: '/authors' },
+        { name: 'E-Books', href: '/ebooks' },
+        { name: 'Student Corner', href: '/student-corner' },
+        { name: 'Blog', href: '/blog' },
         { name: 'Events', href: '/events' },
-        { name: 'Press Corner', href: '#' },
+        { name: 'Press Corner', href: '/press' },
     ];
 
     return (
