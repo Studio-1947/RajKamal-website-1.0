@@ -24,6 +24,7 @@ const Home = () => {
                 activeFilter={activeArrivalFilter}
                 onFilterChange={setActiveArrivalFilter}
                 books={newArrivals}
+                bgColor="#FFF8F0"
             />
 
             {/* Hot Deals */}
@@ -34,6 +35,7 @@ const Home = () => {
                 activeFilter={activeDealFilter}
                 onFilterChange={setActiveDealFilter}
                 books={hotDeals}
+                bgColor="#FFF0F0"
             />
 
             {/* Best Sellers */}
@@ -41,6 +43,7 @@ const Home = () => {
                 title="Best Sellers"
                 titleIcon={<Trophy className="h-6 w-6 text-yellow-500" />}
                 books={bestSellers}
+                bgColor="#FFFBEB"
             />
 
             {/* Super Saving Combos */}
@@ -48,6 +51,7 @@ const Home = () => {
                 title="Super Saving Combos"
                 titleIcon={<Tag className="h-6 w-6 text-green-500" />}
                 books={superSavingCombos}
+                bgColor="#ECFDF5"
             />
 
             {/* Shop by Genre */}
@@ -58,6 +62,7 @@ const Home = () => {
                 activeFilter={activeGenreFilter}
                 onFilterChange={setActiveGenreFilter}
                 books={genreBooks}
+                bgColor="#F5F0FF"
             />
 
             {/* Shop By Price */}
@@ -68,6 +73,7 @@ const Home = () => {
                 activeFilter={activePriceFilter}
                 onFilterChange={setActivePriceFilter}
                 books={shopByPriceBooks}
+                bgColor="#FFF4EB"
             />
 
             {/* Exam Prep Reference Book */}
@@ -78,6 +84,7 @@ const Home = () => {
                 activeFilter={activeExamFilter}
                 onFilterChange={setActiveExamFilter}
                 books={examPrepBooks}
+                bgColor="#EFF6FF"
             />
 
             {/* People also Bought this */}
@@ -85,6 +92,7 @@ const Home = () => {
                 title="People also Bought this"
                 titleIcon={<Users className="h-6 w-6 text-pink-500" />}
                 books={peopleAlsoBought}
+                bgColor="#FDF2F8"
             />
         </>
     );

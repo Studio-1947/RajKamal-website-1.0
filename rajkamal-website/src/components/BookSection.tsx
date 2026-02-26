@@ -11,6 +11,7 @@ interface BookSectionProps {
     onFilterChange?: (filter: string) => void;
     activeFilter?: string;
     titleIcon?: React.ReactNode;
+    bgColor?: string;
 }
 
 const BookSection: React.FC<BookSectionProps> = ({
@@ -19,7 +20,8 @@ const BookSection: React.FC<BookSectionProps> = ({
     books,
     onFilterChange,
     activeFilter,
-    titleIcon
+    titleIcon,
+    bgColor
 }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -38,7 +40,7 @@ const BookSection: React.FC<BookSectionProps> = ({
     };
 
     return (
-        <div className="py-12">
+        <div className="py-12" style={bgColor ? { backgroundColor: bgColor } : undefined}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
@@ -70,7 +72,7 @@ const BookSection: React.FC<BookSectionProps> = ({
                     </div>
                 )}
 
-                {/* Navigation Buttons (Absolute positioned relative to container) */}
+                {/* Navigation Buttons */}
                 <div className="relative group/section">
                     <NavigationButton
                         direction="left"
