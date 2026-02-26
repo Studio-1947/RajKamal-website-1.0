@@ -4,6 +4,14 @@ import type { Book } from '../types';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
+const formatReviewCount = (count: number): string => {
+    if (count >= 1000) {
+        const k = count / 1000;
+        return k % 1 === 0 ? `${k}k` : `${parseFloat(k.toFixed(1))}k`;
+    }
+    return count.toString();
+};
+
 interface BookCardProps {
     book: Book;
 }
@@ -70,7 +78,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     <div className="bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded flex items-center">
                         {book.rating} <Star className="h-3 w-3 ml-0.5 fill-current" />
                     </div>
-                    <span className="text-gray-400 text-xs ml-2 font-medium">{book.reviews.toLocaleString()} Reviews</span>
+                    <span className="text-gray-400 text-xs ml-2 font-medium">{formatReviewCount(book.reviews)} Reviews</span>
                 </div>
 
                 {/* Title & Author */}
