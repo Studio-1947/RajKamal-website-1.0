@@ -86,7 +86,14 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     <Link to={`/book/${book.id}`}>
                         <h3 className="font-bold text-gray-900 text-lg leading-tight mb-1 line-clamp-1 hover:text-red-500 transition-colors" title={book.title}>{book.title}</h3>
                     </Link>
-                    <p className="text-gray-500 text-xs line-clamp-2" title={book.author.split(',').pop()?.trim()}>{book.author.split(',').pop()?.trim()}</p>
+                    <Link
+                        to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-gray-500 text-xs line-clamp-2 hover:text-[#00508A] hover:underline transition-colors"
+                        title={book.author.split(',').pop()?.trim()}
+                    >
+                        {book.author.split(',').pop()?.trim()}
+                    </Link>
                 </div>
 
                 {/* Formats */}
