@@ -28,6 +28,21 @@ const categories = [
         id: 5,
         title: 'Representative Stories',
         image: characterImage
+    },
+    {
+        id: 6,
+        title: 'Representative Poems',
+        image: characterImage
+    },
+    {
+        id: 7,
+        title: 'Children Books',
+        image: characterImage
+    },
+    {
+        id: 8,
+        title: 'Magazines',
+        image: characterImage
     }
 ];
 
