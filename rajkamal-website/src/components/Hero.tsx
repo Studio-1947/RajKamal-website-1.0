@@ -75,9 +75,9 @@ const Hero: React.FC = () => {
                         {/* Search Bar */}
                         <div className="max-w-md mr-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
                             <div className="flex items-center border border-pink-200 rounded-full p-1 shadow-sm hover:shadow-md transition-shadow bg-white w-full">
-                                <div className="pl-4 pr-2 md:-mt-4  ">
+                                <div className="pl-4 pr-2 self-end -mb-[5px]">
                                     {/* Placeholder for the red character icon */}
-                                    <svg className="w-10 h-10 sm:w-[73px] sm:h-[78px]" viewBox="0 0 73 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                                    <svg className="w-[40px] h-[45px] md:w-[73px] md:h-[78px]  -translate-y-[2px]" viewBox="0 0 73 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                                         <rect y="-5.5" width="73" height="83" fill="url(#pattern0_215_830)" />
                                         <defs>
                                             <pattern id="pattern0_215_830" patternContentUnits="objectBoundingBox" width="1" height="1">
