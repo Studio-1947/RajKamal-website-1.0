@@ -42,3 +42,46 @@ export const getAuthorInfo = (
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
   };
 };
+
+/**
+ * Returns a list of all unique authors with their basic info.
+ */
+export const getAllAuthors = (): {
+  name: string;
+  description: string;
+  image: string;
+  bookCount: number;
+}[] => {
+  const allBooks = [...newArrivals, ...hotDeals, ...genreBooks];
+  const authorsMap = new Map<
+    string,
+    { name: string; description: string; image: string; bookCount: number }
+  >();
+
+  allBooks.forEach((book) => {
+    const authorName = getAuthorName(book.author);
+    if (!authorsMap.has(authorName)) {
+      authorsMap.set(authorName, {
+        name: authorName,
+        description:
+          book.authorDescription ||
+          "A celebrated author known for their vivid storytelling and rich portrayal of life. Their works often explore themes of human relationships and the complexities of society.",
+        image:
+          book.authorImage ||
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        bookCount: 1,
+      });
+    } else {
+      // Note: This simple count might count the same book multiple times if it appears in multiple lists,
+      // but getAuthorBooks handles deduping. For simplicity in the listing, let's just use the length of getAuthorBooks.
+    }
+  });
+
+  // Re-calculate accurate book counts using the deduplicating helper
+  return Array.from(authorsMap.values())
+    .map((author) => ({
+      ...author,
+      bookCount: getAuthorBooks(author.name).length,
+    }))
+    .sort((a, b) => b.bookCount - a.bookCount); // Sort by number of books descending
+};

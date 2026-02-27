@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Star, Heart, Share2, Minus, Plus, ChevronRight, ShoppingCart, Truck, Tag, ThumbsUp, Play } from 'lucide-react';
 import { newArrivals, hotDeals, genreBooks } from '../data/mockData';
 import { useCart } from '../context/CartContext';
@@ -102,7 +102,12 @@ const BookDetails = () => {
                                 <div className="flex justify-between items-start">
                                     <div>
                                         <h1 className="text-3xl font-bold text-gray-900 mb-1">{book.title}</h1>
-                                        <p className="text-lg text-gray-600 mb-2">{book.author}</p>
+                                        <Link
+                                            to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
+                                            className="text-lg text-gray-600 mb-2 hover:text-[#00508A] hover:underline"
+                                        >
+                                            {book.author}
+                                        </Link>
                                     </div>
                                     <button className="text-[#00508A] bg-[#CCEAFF] px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
                                         <Share2 className="h-3 w-3" /> Share
@@ -243,17 +248,28 @@ const BookDetails = () => {
                                     />
                                     <div className="flex-1">
                                         <div className="flex justify-between items-center mb-2">
-                                            <h3 className="font-bold text-gray-900">{book.author.split(',').pop()?.trim()}</h3>
-                                            <button className="bg-[#00508A] text-white px-4 py-1 rounded-full text-xs font-medium hover:bg-[#003d6b] transition-colors">
+                                            <Link
+                                                to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
+                                                className="font-bold text-gray-900 hover:text-[#00508A] hover:underline"
+                                            >
+                                                {book.author.split(',').pop()?.trim()}
+                                            </Link>
+                                            <Link
+                                                to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
+                                                className="bg-[#00508A] text-white px-4 py-1 rounded-full text-xs font-medium hover:bg-[#003d6b] transition-colors"
+                                            >
                                                 Follow
-                                            </button>
+                                            </Link>
                                         </div>
                                         <p className="text-xs text-gray-600 leading-relaxed mb-2">
                                             {book.authorDescription || "A celebrated author known for their vivid storytelling and rich portrayal of life. Their works often explore themes of human relationships and the complexities of society."}
                                         </p>
-                                        <button className="text-[#00508A] text-xs font-bold hover:underline">
-                                            Read More
-                                        </button>
+                                        <Link
+                                            to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
+                                            className="text-[#00508A] text-xs font-bold hover:underline"
+                                        >
+                                            View Profile
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
