@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
                         <div className="w-full flex flex-col items-center px-4 sm:px-8 lg:px-0">
                             <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 leading-tight w-full">
                                 <span>साथ</span>
-                                <div className="relative h-[1em] w-[3ch] text-left">
+                                <div className="relative h-[1.24em] md:h-[1em] w-[2ch] md:w-[3ch] text-left">
                                     <AnimatePresence mode="wait">
                                         <motion.span
                                             key={index}
