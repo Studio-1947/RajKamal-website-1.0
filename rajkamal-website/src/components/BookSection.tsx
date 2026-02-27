@@ -12,6 +12,7 @@ interface BookSectionProps {
     activeFilter?: string;
     titleIcon?: React.ReactNode;
     bgColor?: string;
+    bgClassName?: string;
 }
 
 const BookSection: React.FC<BookSectionProps> = ({
@@ -21,7 +22,8 @@ const BookSection: React.FC<BookSectionProps> = ({
     onFilterChange,
     activeFilter,
     titleIcon,
-    bgColor
+    bgColor,
+    bgClassName
 }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -40,8 +42,8 @@ const BookSection: React.FC<BookSectionProps> = ({
     };
 
     return (
-        <div className="py-12" style={bgColor ? { backgroundColor: bgColor } : undefined}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className={`py-12 relative overflow-hidden ${bgClassName || ''}`} style={bgColor ? { backgroundColor: bgColor } : undefined}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                     <div className="flex items-center gap-2">

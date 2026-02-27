@@ -24,7 +24,7 @@ const Home = () => {
                 activeFilter={activeArrivalFilter}
                 onFilterChange={setActiveArrivalFilter}
                 books={newArrivals}
-                bgColor="#FFF8F0"
+                bgClassName="bg-gradient-to-r from-cyan-100 via-teal-400 to-cyan-500"
             />
 
             {/* Hot Deals */}
@@ -35,7 +35,7 @@ const Home = () => {
                 activeFilter={activeDealFilter}
                 onFilterChange={setActiveDealFilter}
                 books={hotDeals}
-                bgColor="#FFF0F0"
+                bgClassName="bg-gradient-to-r from-red-100 via-red-400 to-red-500"
             />
 
             {/* Best Sellers */}
@@ -43,7 +43,7 @@ const Home = () => {
                 title="Best Sellers"
                 titleIcon={<Trophy className="h-6 w-6 text-yellow-500" />}
                 books={bestSellers}
-                bgColor="#FFFBEB"
+                bgClassName="bg-gradient-to-r from-yellow-100 via-amber-400 to-yellow-500"
             />
 
             {/* Super Saving Combos */}
@@ -51,7 +51,7 @@ const Home = () => {
                 title="Super Saving Combos"
                 titleIcon={<Tag className="h-6 w-6 text-green-500" />}
                 books={superSavingCombos}
-                bgColor="#ECFDF5"
+                bgClassName="bg-gradient-to-r from-green-100 via-emerald-400 to-green-500"
             />
 
             {/* Shop by Genre */}
@@ -62,7 +62,7 @@ const Home = () => {
                 activeFilter={activeGenreFilter}
                 onFilterChange={setActiveGenreFilter}
                 books={genreBooks}
-                bgColor="#F5F0FF"
+                bgClassName="bg-gradient-to-r from-purple-100 via-violet-400 to-purple-500"
             />
 
             {/* Shop By Price */}
@@ -73,7 +73,7 @@ const Home = () => {
                 activeFilter={activePriceFilter}
                 onFilterChange={setActivePriceFilter}
                 books={shopByPriceBooks}
-                bgColor="#FFF4EB"
+                bgClassName="bg-gradient-to-r from-orange-100 via-orange-400 to-orange-500"
             />
 
             {/* Exam Prep Reference Book */}
@@ -84,7 +84,7 @@ const Home = () => {
                 activeFilter={activeExamFilter}
                 onFilterChange={setActiveExamFilter}
                 books={examPrepBooks}
-                bgColor="#EFF6FF"
+                bgClassName="bg-gradient-to-r from-blue-100 via-blue-400 to-blue-500"
             />
 
             {/* People also Bought this */}
@@ -92,7 +92,7 @@ const Home = () => {
                 title="People also Bought this"
                 titleIcon={<Users className="h-6 w-6 text-pink-500" />}
                 books={peopleAlsoBought}
-                bgColor="#FDF2F8"
+                bgClassName="bg-gradient-to-r from-pink-100 via-pink-400 to-pink-500"
             />
         </>
     );
