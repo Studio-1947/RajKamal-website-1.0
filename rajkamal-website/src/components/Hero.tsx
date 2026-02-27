@@ -88,9 +88,9 @@ const Hero: React.FC = () => {
                                     </svg>
 
                                 </div>
-                                <div className="flex-grow relative flex items-center h-full">
+                                <div className="flex-grow relative flex items-center h-full px-4">
                                     {!searchValue && (
-                                        <div className="absolute inset-0 flex items-center pointer-events-none pl-2">
+                                        <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-6">
                                             <span className="text-gray-400">Search by</span>
                                             <FlipWords
                                                 words={["Publications", "Story Books", "Best Selling", "Authors"]}
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
                                         type="text"
                                         value={searchValue}
                                         onChange={(e) => setSearchValue(e.target.value)}
-                                        className="w-full bg-transparent focus:outline-none text-gray-600 px-2 py-2"
+                                        className="w-full bg-transparent focus:outline-none text-gray-600 px-2 py-4"
                                     />
                                 </div>
                                 {/* Search button removed as per design */}
