@@ -24,7 +24,7 @@ const Home = () => {
                 activeFilter={activeArrivalFilter}
                 onFilterChange={setActiveArrivalFilter}
                 books={newArrivals}
-                bgClassName="bg-gradient-to-r from-cyan-100 via-teal-400 to-cyan-500"
+                bgClassName="bg-gradient-to-r from-cyan-100 via-teal-100 to-cyan-100"
             />
 
             {/* Hot Deals */}
@@ -35,7 +35,7 @@ const Home = () => {
                 activeFilter={activeDealFilter}
                 onFilterChange={setActiveDealFilter}
                 books={hotDeals}
-                bgClassName="bg-gradient-to-r from-red-100 via-red-400 to-red-500"
+                bgClassName="bg-gradient-to-r from-red-100 via-red-100 to-red-100"
             />
 
             {/* Best Sellers */}
@@ -43,7 +43,7 @@ const Home = () => {
                 title="Best Sellers"
                 titleIcon={<Trophy className="h-6 w-6 text-yellow-500" />}
                 books={bestSellers}
-                bgClassName="bg-gradient-to-r from-yellow-100 via-amber-400 to-yellow-500"
+                bgClassName="bg-gradient-to-r from-yellow-100 via-amber-100 to-yellow-100"
             />
 
             {/* Super Saving Combos */}
@@ -51,7 +51,7 @@ const Home = () => {
                 title="Super Saving Combos"
                 titleIcon={<Tag className="h-6 w-6 text-green-500" />}
                 books={superSavingCombos}
-                bgClassName="bg-gradient-to-r from-green-100 via-emerald-400 to-green-500"
+                bgClassName="bg-gradient-to-r from-green-100 via-emerald-100 to-green-100"
             />
 
             {/* Shop by Genre */}
@@ -62,7 +62,7 @@ const Home = () => {
                 activeFilter={activeGenreFilter}
                 onFilterChange={setActiveGenreFilter}
                 books={genreBooks}
-                bgClassName="bg-gradient-to-r from-purple-100 via-violet-400 to-purple-500"
+                bgClassName="bg-gradient-to-r from-purple-100 via-violet-100 to-purple-100"
             />
 
             {/* Shop By Price */}
@@ -73,7 +73,7 @@ const Home = () => {
                 activeFilter={activePriceFilter}
                 onFilterChange={setActivePriceFilter}
                 books={shopByPriceBooks}
-                bgClassName="bg-gradient-to-r from-orange-100 via-orange-400 to-orange-500"
+                bgClassName="bg-gradient-to-r from-orange-100 via-orange-100 to-orange-100"
             />
 
             {/* Exam Prep Reference Book */}
@@ -84,7 +84,7 @@ const Home = () => {
                 activeFilter={activeExamFilter}
                 onFilterChange={setActiveExamFilter}
                 books={examPrepBooks}
-                bgClassName="bg-gradient-to-r from-blue-100 via-blue-400 to-blue-500"
+                bgClassName="bg-gradient-to-r from-blue-100 via-blue-100 to-blue-100"
             />
 
             {/* People also Bought this */}
@@ -92,7 +92,7 @@ const Home = () => {
                 title="People also Bought this"
                 titleIcon={<Users className="h-6 w-6 text-pink-500" />}
                 books={peopleAlsoBought}
-                bgClassName="bg-gradient-to-r from-pink-100 via-pink-400 to-pink-500"
+                bgClassName="bg-gradient-to-r from-pink-100 via-pink-100 to-pink-100"
             />
         </>
     );

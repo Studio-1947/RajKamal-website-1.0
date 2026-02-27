@@ -48,9 +48,9 @@ const Hero: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                     {/* Left Content */}
-                    <div className="flex flex-col justify-center text-center space-y-8 sm:space-y-12 lg:col-span-6 w-full">
-                        <div className="w-full flex flex-col items-center px-4 sm:px-8 lg:px-0">
-                            <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 leading-tight w-full">
+                    <div className="flex flex-col justify-center text-left space-y-8 sm:space-y-12 lg:col-span-6 w-full">
+                        <div className="w-full flex flex-col items-start px-4 sm:px-8 lg:px-0">
+                            <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-start gap-3 sm:gap-4 leading-tight w-full">
                                 <span>साथ</span>
                                 <div className="relative h-[1.24em] md:h-[1em] w-[2ch] md:w-[3ch] text-left">
                                     <AnimatePresence mode="wait">
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
                         </div>
 
                         {/* Search Bar */}
-                        <div className="max-w-3xl mx-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
+                        <div className="max-w-3xl mr-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
                             <div className="flex items-center border border-pink-200 rounded-full p-1 shadow-sm hover:shadow-md transition-shadow bg-white w-full">
                                 <div className="pl-4 pr-2 md:-mt-4  ">
                                     {/* Placeholder for the red character icon */}
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
 
                     {/* Right Content - Image Grid */}
                     <div className="w-full lg:col-span-6 lg:h-[500px] mt-12 lg:mt-0">
-                        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-2 gap-4 md:gap-6 w-full h-full">
+                        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] grid-rows-[auto_auto] md:grid-rows-2 gap-4 md:gap-6 w-full h-full">
                             {heroCards.map((card) => (
                                 <HeroCard
                                     key={card.id}
