@@ -79,13 +79,13 @@ const BookSection: React.FC<BookSectionProps> = ({
                     <NavigationButton
                         direction="left"
                         onClick={() => scroll('left')}
-                        className="absolute left-0 top-[186px] -translate-y-1/2 -translate-x-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 hidden md:flex shadow-lg"
+                        className="absolute -left-4 md:-left-12 lg:-left-16 top-[200px] -translate-y-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 hidden md:flex shadow-lg"
                     />
 
                     <NavigationButton
                         direction="right"
                         onClick={() => scroll('right')}
-                        className="absolute right-0 top-[186px] -translate-y-1/2 translate-x-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 hidden md:flex shadow-lg"
+                        className="absolute -right-4 md:-right-12 lg:-right-16 top-[200px] -translate-y-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 hidden md:flex shadow-lg"
                     />
 
                     {/* Scrollable Container */}
