@@ -1,48 +1,46 @@
 import React, { useRef } from 'react';
 import { ArrowRight as ArrowIcon } from 'lucide-react';
 import NavigationButton from './ui/NavigationButton';
-import characterImage from '../assets/3d-ch.png';
-
 const categories = [
     {
         id: 1,
         title: 'Best Sellers',
-        image: characterImage
+        image: '/carousel/Frame 5111.png'
     },
     {
         id: 2,
         title: 'Award Winners',
-        image: characterImage
+        image: '/carousel/Frame 5112.png'
     },
     {
         id: 3,
         title: 'Gifting Sets',
-        image: characterImage
+        image: '/carousel/Frame 5113.png'
     },
     {
         id: 4,
         title: 'World Classics',
-        image: characterImage
+        image: '/carousel/Frame 511340.png'
     },
     {
         id: 5,
         title: 'Representative Stories',
-        image: characterImage
+        image: '/carousel/Frame 5111.png'
     },
     {
         id: 6,
         title: 'Representative Poems',
-        image: characterImage
+        image: '/carousel/Frame 5112.png'
     },
     {
         id: 7,
         title: 'Children Books',
-        image: characterImage
+        image: '/carousel/Frame 5113.png'
     },
     {
         id: 8,
         title: 'Magazines',
-        image: characterImage
+        image: '/carousel/Frame 511340.png'
     }
 ];
 
@@ -92,23 +90,20 @@ const CategoryCarousel: React.FC = () => {
                             key={category.id}
                             className="flex-none w-[260px] sm:w-72 h-96 relative rounded-3xl overflow-hidden shadow-lg snap-center group cursor-pointer"
                         >
-                            {/* Background Gradient */}
-                            <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(41, 41, 41, 0) 0%, #292929 100%)' }}></div>
+                            {/* Background Image */}
+                            <img
+                                src={category.image}
+                                alt={category.title}
+                                className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+                            />
 
-                            {/* 3D Character Image */}
-                            <div className="absolute inset-0 flex items-center justify-center pt-10">
-                                <div className="w-48 h-48 bg-red-400 rounded-full blur-3xl opacity-50 absolute top-10"></div>
-                                <img
-                                    src={category.image}
-                                    alt={category.title}
-                                    className="relative z-10 w-[260px] h-[260px] sm:w-64 sm:h-64 object-contain drop-shadow-2xl transform transition-transform duration-300 group-hover:scale-110 top-12"
-                                />
-                            </div>
+                            {/* Background Gradient Text Overlay */}
+                            <div className="absolute inset-0 z-10 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
 
                             {/* Content */}
-                            <div className="absolute bottom-0 left-0 right-0 p-6 z-30">
+                            <div className="absolute bottom-0 left-0 right-0 p-6 z-30 transition-transform duration-300 group-hover:-translate-y-2">
                                 <h3 className="text-white text-2xl font-bold mb-4 leading-tight">{category.title}</h3>
-                                <button className="bg-blue-100 text-blue-900 px-4 py-2 rounded-full text-sm font-semibold flex items-center hover:bg-white transition-colors">
+                                <button className="bg-blue-100 text-blue-900 px-4 py-2 rounded-full text-sm font-semibold flex items-center hover:bg-white transition-colors shadow-md">
                                     Explore <ArrowIcon className="ml-2 h-4 w-4" />
                                 </button>
                             </div>
