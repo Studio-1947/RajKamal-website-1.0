@@ -45,12 +45,12 @@ const Hero: React.FC = () => {
     return (
         <div className="bg-white overflow-hidden py-12 sm:py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                     {/* Left Content */}
-                    <div className="text-center lg:text-left space-y-6 sm:space-y-8">
-                        <div>
-                            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-primary mb-3 sm:mb-4 flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3">
+                    <div className="flex flex-col justify-center text-center space-y-8 sm:space-y-12 lg:col-span-6 w-full">
+                        <div className="w-full flex flex-col items-center px-4 sm:px-8 lg:px-0">
+                            <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 leading-tight w-full">
                                 <span>साथ</span>
                                 <div className="relative h-[1em] w-[3ch] text-left">
                                     <AnimatePresence mode="wait">
@@ -67,13 +67,13 @@ const Hero: React.FC = () => {
                                     </AnimatePresence>
                                 </div>
                             </h1>
-                            <p className="text-lg sm:text-xl text-gray-600 font-medium px-4 sm:px-0">
+                            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 font-medium px-4 sm:px-0 mt-2 lg:-mt-2">
                                 हर किताब में है एक नई दुनिया
                             </p>
                         </div>
 
                         {/* Search Bar */}
-                        <div className="max-w-md mx-auto lg:mx-0 relative w-full px-4 sm:px-0">
+                        <div className="max-w-3xl mx-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
                             <div className="flex items-center border border-pink-200 rounded-full p-1 shadow-sm hover:shadow-md transition-shadow bg-white w-full">
                                 <div className="pl-4 pr-2 md:-mt-4  ">
                                     {/* Placeholder for the red character icon */}
@@ -88,9 +88,9 @@ const Hero: React.FC = () => {
                                     </svg>
 
                                 </div>
-                                <div className="flex-grow relative flex items-center h-full">
+                                <div className="flex-grow relative flex items-center h-full px-4">
                                     {!searchValue && (
-                                        <div className="absolute inset-0 flex items-center pointer-events-none pl-2">
+                                        <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-6">
                                             <span className="text-gray-400">Search by</span>
                                             <FlipWords
                                                 words={["Publications", "Story Books", "Best Selling", "Authors"]}
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
                                         type="text"
                                         value={searchValue}
                                         onChange={(e) => setSearchValue(e.target.value)}
-                                        className="w-full bg-transparent focus:outline-none text-gray-600 px-2 py-2"
+                                        className="w-full bg-transparent focus:outline-none text-gray-600 px-2 py-4"
                                     />
                                 </div>
                                 {/* Search button removed as per design */}
@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
 
 
                     {/* Right Content - Image Grid */}
-                    <div className="w-full max-w-[700px] lg:h-[500px]">
+                    <div className="w-full lg:col-span-6 lg:h-[500px] mt-12 lg:mt-0">
                         <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-2 gap-4 md:gap-6 w-full h-full">
                             {heroCards.map((card) => (
                                 <HeroCard

@@ -29,15 +29,16 @@ const HeroCard: React.FC<HeroCardProps> = ({
                 alt={title}
             />
 
-            <div className={`absolute inset-0 flex flex-col justify-end p-5 md:p-6 ${overlayClassName}`}>
-                <h3 className="text-white text-xl md:text-2xl font-bold mb-1 transform transition-transform duration-300 group-hover:-translate-y-1">
-                    {title}
-                </h3>
-                <p className="text-gray-100/90 text-sm md:text-base mb-4 transform transition-transform duration-300 group-hover:-translate-y-1">
-                    {subtitle}
-                </p>
-
-                <button className="ml-auto w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-primary group-hover:scale-110">
+            <div className={`absolute inset-0 p-5 md:p-6 flex items-end justify-between ${overlayClassName}`}>
+                <div className="flex-1 pr-4">
+                    <h3 className="text-white text-xl md:text-2xl font-bold mb-1 transform transition-transform duration-300 group-hover:-translate-y-1">
+                        {title}
+                    </h3>
+                    <p className="text-gray-100/90 text-sm md:text-base transform transition-transform duration-300 group-hover:-translate-y-1">
+                        {subtitle}
+                    </p>
+                </div>
+                <button className="flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-primary group-hover:scale-110">
                     <ArrowRight size={20} />
                 </button>
             </div>

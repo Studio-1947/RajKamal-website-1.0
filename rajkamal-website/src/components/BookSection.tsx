@@ -11,6 +11,8 @@ interface BookSectionProps {
     onFilterChange?: (filter: string) => void;
     activeFilter?: string;
     titleIcon?: React.ReactNode;
+    bgColor?: string;
+    bgClassName?: string;
 }
 
 const BookSection: React.FC<BookSectionProps> = ({
@@ -19,7 +21,9 @@ const BookSection: React.FC<BookSectionProps> = ({
     books,
     onFilterChange,
     activeFilter,
-    titleIcon
+    titleIcon,
+    bgColor,
+    bgClassName
 }) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -38,8 +42,8 @@ const BookSection: React.FC<BookSectionProps> = ({
     };
 
     return (
-        <div className="py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className={`py-12 relative overflow-hidden ${bgClassName || ''}`} style={bgColor ? { backgroundColor: bgColor } : undefined}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                     <div className="flex items-center gap-2">
@@ -70,18 +74,18 @@ const BookSection: React.FC<BookSectionProps> = ({
                     </div>
                 )}
 
-                {/* Navigation Buttons (Absolute positioned relative to container) */}
+                {/* Navigation Buttons */}
                 <div className="relative group/section">
                     <NavigationButton
                         direction="left"
                         onClick={() => scroll('left')}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 -ml-4 hidden md:flex"
+                        className="absolute -left-4 md:-left-12 lg:-left-16 top-[200px] -translate-y-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 hidden md:flex shadow-lg"
                     />
 
                     <NavigationButton
                         direction="right"
                         onClick={() => scroll('right')}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 -mr-4 hidden md:flex"
+                        className="absolute -right-4 md:-right-12 lg:-right-16 top-[200px] -translate-y-1/2 z-10 opacity-0 group-hover/section:opacity-100 disabled:opacity-0 hidden md:flex shadow-lg"
                     />
 
                     {/* Scrollable Container */}

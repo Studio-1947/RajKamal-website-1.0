@@ -4,6 +4,14 @@ import type { Book } from '../types';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
+const formatReviewCount = (count: number): string => {
+    if (count >= 1000) {
+        const k = count / 1000;
+        return k % 1 === 0 ? `${k}k` : `${parseFloat(k.toFixed(1))}k`;
+    }
+    return count.toString();
+};
+
 interface BookCardProps {
     book: Book;
 }
@@ -70,7 +78,7 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     <div className="bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded flex items-center">
                         {book.rating} <Star className="h-3 w-3 ml-0.5 fill-current" />
                     </div>
-                    <span className="text-gray-400 text-xs ml-2 font-medium">{book.reviews.toLocaleString()} Reviews</span>
+                    <span className="text-gray-400 text-xs ml-2 font-medium">{formatReviewCount(book.reviews)} Reviews</span>
                 </div>
 
                 {/* Title & Author */}
@@ -78,7 +86,14 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     <Link to={`/book/${book.id}`}>
                         <h3 className="font-bold text-gray-900 text-lg leading-tight mb-1 line-clamp-1 hover:text-red-500 transition-colors" title={book.title}>{book.title}</h3>
                     </Link>
-                    <p className="text-gray-500 text-xs line-clamp-2" title={book.author}>{book.author}</p>
+                    <Link
+                        to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-gray-500 text-xs line-clamp-2 hover:text-[#00508A] hover:underline transition-colors"
+                        title={book.author.split(',').pop()?.trim()}
+                    >
+                        {book.author.split(',').pop()?.trim()}
+                    </Link>
                 </div>
 
                 {/* Formats */}
