@@ -10,7 +10,7 @@ const heroCards = [
         title: "साहित्य उत्सव",
         subtitle: "Check out for new book launches",
         image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
-        className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full",
+        className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full lg:-ml-32 lg:w-[calc(100%+8rem)] xl:-ml-48 xl:w-[calc(100%+12rem)]",
     },
     {
         id: 2,
@@ -48,9 +48,9 @@ const Hero: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                     {/* Left Content */}
-                    <div className="flex flex-col justify-center text-center space-y-8 sm:space-y-12 lg:col-span-6 w-full">
-                        <div className="w-full flex flex-col items-center px-4 sm:px-8 lg:px-0">
-                            <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 leading-tight w-full">
+                    <div className="flex flex-col justify-center text-left space-y-8 sm:space-y-12 lg:col-span-6 w-full">
+                        <div className="w-full flex flex-col items-start px-4 sm:px-8 lg:px-0">
+                            <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-start gap-3 sm:gap-4 leading-tight w-full">
                                 <span>साथ</span>
                                 <div className="relative h-[1.24em] md:h-[1em] w-[2ch] md:w-[3ch] text-left">
                                     <AnimatePresence mode="wait">
@@ -73,11 +73,11 @@ const Hero: React.FC = () => {
                         </div>
 
                         {/* Search Bar */}
-                        <div className="max-w-3xl mx-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
+                        <div className="max-w-sm mr-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
                             <div className="flex items-center border border-pink-200 rounded-full p-1 shadow-sm hover:shadow-md transition-shadow bg-white w-full">
-                                <div className="pl-4 pr-2 md:-mt-4  ">
+                                <div className="pl-4 pr-2 self-end -mb-[5px]">
                                     {/* Placeholder for the red character icon */}
-                                    <svg className="w-10 h-10 sm:w-[73px] sm:h-[78px]" viewBox="0 0 73 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                                    <svg className="w-[40px] h-[45px] md:w-[73px] md:h-[78px]  -translate-y-[2px]" viewBox="0 0 73 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                                         <rect y="-5.5" width="73" height="83" fill="url(#pattern0_215_830)" />
                                         <defs>
                                             <pattern id="pattern0_215_830" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
 
 
                     {/* Right Content - Image Grid */}
-                    <div className="w-full lg:col-span-6 lg:h-[500px] mt-12 lg:mt-0">
+                    <div className="w-full lg:col-span-6 lg:h-[500px] mt-12 lg:mt-0 relative">
                         <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-2 gap-4 md:gap-6 w-full h-full">
                             {heroCards.map((card) => (
                                 <HeroCard
