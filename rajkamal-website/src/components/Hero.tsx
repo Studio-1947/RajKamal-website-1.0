@@ -10,7 +10,7 @@ const heroCards = [
         title: "साहित्य उत्सव",
         subtitle: "Check out for new book launches",
         image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
-        className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full",
+        className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full lg:-ml-24 lg:w-[calc(100%+6rem)] xl:-ml-32 xl:w-[calc(100%+8rem)]",
     },
     {
         id: 2,
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
                         </div>
 
                         {/* Search Bar */}
-                        <div className="max-w-lg mr-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
+                        <div className="max-w-md mr-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
                             <div className="flex items-center border border-pink-200 rounded-full p-1 shadow-sm hover:shadow-md transition-shadow bg-white w-full">
                                 <div className="pl-4 pr-2 md:-mt-4  ">
                                     {/* Placeholder for the red character icon */}
@@ -115,8 +115,8 @@ const Hero: React.FC = () => {
 
 
                     {/* Right Content - Image Grid */}
-                    <div className="w-full lg:col-span-6 lg:h-[500px] mt-12 lg:mt-0">
-                        <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] grid-rows-[auto_auto] md:grid-rows-2 gap-4 md:gap-6 w-full h-full">
+                    <div className="w-full lg:col-span-6 lg:h-[500px] mt-12 lg:mt-0 relative">
+                        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-2 gap-4 md:gap-6 w-full h-full">
                             {heroCards.map((card) => (
                                 <HeroCard
                                     key={card.id}
