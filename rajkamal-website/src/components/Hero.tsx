@@ -10,7 +10,7 @@ const heroCards = [
         title: "साहित्य उत्सव",
         subtitle: "Check out for new book launches",
         image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
-        className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full lg:-ml-24 lg:w-[calc(100%+6rem)] xl:-ml-32 xl:w-[calc(100%+8rem)]",
+        className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full lg:-ml-32 lg:w-[calc(100%+8rem)] xl:-ml-48 xl:w-[calc(100%+12rem)]",
     },
     {
         id: 2,
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
                         </div>
 
                         {/* Search Bar */}
-                        <div className="max-w-md mr-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
+                        <div className="max-w-sm mr-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
                             <div className="flex items-center border border-pink-200 rounded-full p-1 shadow-sm hover:shadow-md transition-shadow bg-white w-full">
                                 <div className="pl-4 pr-2 self-end -mb-[5px]">
                                     {/* Placeholder for the red character icon */}
