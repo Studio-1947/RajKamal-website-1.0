@@ -351,6 +351,7 @@ const BookDetails = () => {
                         title="Similar Books"
                         books={genreBooks.filter(b => b.id !== book.id).slice(0, 5)}
                         bgClassName="bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-200 rounded-2xl"
+                        viewAllLink="/books/genres"
                     />
                 </div>
             </div>

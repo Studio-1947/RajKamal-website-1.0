@@ -13,6 +13,7 @@ import StudentCorner from './pages/StudentCorner';
 import Blog from './pages/Blog';
 import PressCorner from './pages/PressCorner';
 import AuthorProfile from './pages/AuthorProfile';
+import AllBooks from './pages/AllBooks';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/book/:id" element={<BookDetails />} />
+            <Route path="/books/:category" element={<AllBooks />} />
             <Route path="/events" element={<Events />} />
             <Route path="/event/:id" element={<EventDetails />} />
             <Route path="/authors" element={<Authors />} />
