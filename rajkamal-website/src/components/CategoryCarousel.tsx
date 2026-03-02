@@ -5,42 +5,42 @@ const categories = [
     {
         id: 1,
         title: 'Best Sellers',
-        image: '/carousel/Frame 5111.png'
+        image: '/carousel/Best sellers.png'
     },
     {
         id: 2,
         title: 'Award Winners',
-        image: '/carousel/Frame 5112.png'
+        image: '/carousel/award winners.png'
     },
     {
         id: 3,
         title: 'Gifting Sets',
-        image: '/carousel/Frame 5113.png'
+        image: '/carousel/gift.png'
     },
     {
         id: 4,
         title: 'World Classics',
-        image: '/carousel/Frame 511340.png'
+        image: '/carousel/world classics.png'
     },
     {
         id: 5,
         title: 'Representative Stories',
-        image: '/carousel/Frame 5111.png'
+        image: '/carousel/stories.png'
     },
     {
         id: 6,
         title: 'Representative Poems',
-        image: '/carousel/Frame 5112.png'
+        image: '/carousel/poems-pic.png'
     },
     {
         id: 7,
         title: 'Children Books',
-        image: '/carousel/Frame 5113.png'
+        image: '/carousel/childrens books.png'
     },
     {
         id: 8,
         title: 'Magazines',
-        image: '/carousel/Frame 511340.png'
+        image: '/carousel/magazines.png'
     }
 ];
 
