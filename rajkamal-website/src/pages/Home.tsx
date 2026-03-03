@@ -75,7 +75,7 @@ const Home = () => {
             {/* Best Sellers */}
             <BookSection
                 title="Best Sellers"
-                titleIcon={<Trophy className="h-6 w-6 text-yellow-500" />}
+                titleIcon={<Trophy className="h-6 w-6 text-red-500" />}
                 books={bestSellers}
                 bgClassName="bg-gradient-to-r from-red-100 via-red-100 to-red-100"
                 viewAllLink="/books/best-sellers"
@@ -84,7 +84,7 @@ const Home = () => {
             {/* Super Saving Combos */}
             <BookSection
                 title="Super Saving Combos"
-                titleIcon={<Tag className="h-6 w-6 text-green-500" />}
+                titleIcon={<Tag className="h-6 w-6 text-red-500 fill-red-500/20" />}
                 books={superSavingCombos}
                 viewAllLink="/books/combos"
             />
@@ -92,7 +92,7 @@ const Home = () => {
             {/* Shop by Genre */}
             <BookSection
                 title="Shop By Genre"
-                titleIcon={<BookOpen className="h-6 w-6 text-purple-500" />}
+                titleIcon={<BookOpen className="h-6 w-6 text-red-500" />}
                 filters={['Fiction', 'Non Fiction', 'Romance', 'Crime Fiction', 'Classic Fiction', 'Biographies & Memories', 'Health & Fitness', 'Business', 'Economics', 'Self Help']}
                 activeFilter={activeGenreFilter}
                 onFilterChange={setActiveGenreFilter}
@@ -104,7 +104,7 @@ const Home = () => {
             {/* Shop By Price */}
             <BookSection
                 title="Shop By Price"
-                titleIcon={<ShoppingBag className="h-6 w-6 text-orange-500" />}
+                titleIcon={<ShoppingBag className="h-6 w-6 text-red-500" />}
                 filters={['Under 299', '300 - 499', '499 - 799', 'Above 800']}
                 activeFilter={activePriceFilter}
                 onFilterChange={setActivePriceFilter}
@@ -115,7 +115,7 @@ const Home = () => {
             {/* Exam Prep Reference Book */}
             <BookSection
                 title="Exam Prep Reference Book"
-                titleIcon={<GraduationCap className="h-6 w-6 text-blue-500" />}
+                titleIcon={<GraduationCap className="h-6 w-6 text-red-500" />}
                 filters={['UGC', 'UPSC', 'SSC', 'CTET', 'Banking']}
                 activeFilter={activeExamFilter}
                 onFilterChange={setActiveExamFilter}
@@ -127,7 +127,7 @@ const Home = () => {
             {/* People also Bought this */}
             <BookSection
                 title="People also Bought this"
-                titleIcon={<Users className="h-6 w-6 text-pink-500" />}
+                titleIcon={<Users className="h-6 w-6 text-red-500" />}
                 books={peopleAlsoBought}
                 viewAllLink="/books/people-also-bought"
             />
