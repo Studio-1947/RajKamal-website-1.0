@@ -49,7 +49,7 @@ const EventDetails: React.FC = () => {
                 <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/40 to-transparent" />
 
-                <div className="absolute bottom-0 left-0 w-full pb-12 pt-32 px-4 z-10">
+                <div className="absolute bottom-0 left-0 w-full pb-24 md:pb-32 pt-32 px-4 z-10">
                     <div className="max-w-7xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
