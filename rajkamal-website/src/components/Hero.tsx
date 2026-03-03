@@ -7,25 +7,28 @@ import HeroCard from './HeroCard';
 const heroCards = [
     {
         id: 1,
-        title: "साहित्य उत्सव",
-        subtitle: "Check out for new book launches",
-        image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+        title: "मुंबई किताब उत्सव",
+        subtitle: "6 फरवरी से 10 फरवरी",
+        image: "/events/kitav_utsav.jpg",
+        link: "/events",
         className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full lg:-ml-32 lg:w-[calc(100%+8rem)] xl:-ml-48 xl:w-[calc(100%+12rem)]",
     },
     {
         id: 2,
-        title: "नयी आमद",
-        subtitle: "Check out our new releases",
-        image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e",
+        title: "मुंबई किताब उत्सव",
+        subtitle: "6 फरवरी से 10 फरवरी",
+        image: "/events/kitav_itsav.jpg",
+        link: "/events",
         // Specific styling for the second card
         overlayClassName: "bg-black/20 bg-gradient-to-br from-orange-500/20 to-red-500/20",
         className: "min-h-[200px]"
     },
     {
         id: 3,
-        title: "किताब ख़बर",
-        subtitle: "Check out our latest blogs",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794",
+        title: "मुंबई किताब उत्सव",
+        subtitle: "6 फरवरी से 10 फरवरी",
+        image: "/events/kitav_utsav_javed.jpg",
+        link: "/events",
         className: "min-h-[200px]"
     }
 ];
@@ -48,9 +51,9 @@ const Hero: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                     {/* Left Content */}
-                    <div className="flex flex-col justify-center text-left space-y-8 sm:space-y-12 lg:col-span-6 w-full">
-                        <div className="w-full flex flex-col items-start px-4 sm:px-8 lg:px-0">
-                            <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-start gap-3 sm:gap-4 leading-tight w-full">
+                    <div className="flex flex-col justify-center text-center lg:text-left space-y-4 sm:space-y-6 lg:space-y-12 lg:col-span-6 w-full">
+                        <div className="w-full flex flex-col items-center lg:items-start px-4 sm:px-8 lg:px-0">
+                            <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 leading-tight w-full">
                                 <span>साथ</span>
                                 <div className="relative h-[1.24em] md:h-[1em] w-[2ch] md:w-[3ch] text-left">
                                     <AnimatePresence mode="wait">
@@ -73,7 +76,7 @@ const Hero: React.FC = () => {
                         </div>
 
                         {/* Search Bar */}
-                        <div className="max-w-sm mr-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
+                        <div className="max-w-sm mx-auto lg:mr-auto lg:ml-0 relative w-full px-4 sm:px-0 mt-3 lg:mt-6">
                             <div className="flex items-center border border-pink-200 rounded-full p-1 shadow-sm hover:shadow-md transition-shadow bg-white w-full">
                                 <div className="pl-4 pr-2 self-end -mb-[5px]">
                                     {/* Placeholder for the red character icon */}
@@ -106,7 +109,7 @@ const Hero: React.FC = () => {
                                     />
                                 </div>
                                 {/* Search button removed as per design */}
-                                <button className="p-2 bg-pink-100 text-primary rounded-full hover:bg-pink-200 transition-colors ml-1">
+                                <button className="p-2 bg-pink-100 text-primary rounded-full hover:bg-pink-200 transition-colors md:mr-2">
                                     <Mic className="h-5 w-5" />
                                 </button>
                             </div>
@@ -123,6 +126,7 @@ const Hero: React.FC = () => {
                                     title={card.title}
                                     subtitle={card.subtitle}
                                     image={card.image}
+                                    link={card.link}
                                     className={card.className}
                                     overlayClassName={card.overlayClassName}
                                 />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface HeroCardProps {
     title: string;
@@ -8,6 +9,7 @@ interface HeroCardProps {
     className?: string; // For layout positioning (e.g. row-span-2)
     overlayClassName?: string; // For gradient/background overlays
     onClick?: () => void;
+    link?: string;
 }
 
 const HeroCard: React.FC<HeroCardProps> = ({
@@ -16,13 +18,11 @@ const HeroCard: React.FC<HeroCardProps> = ({
     image,
     className = "",
     overlayClassName = "bg-gradient-to-t from-black/80 via-black/30 to-transparent",
-    onClick
+    onClick,
+    link
 }) => {
-    return (
-        <div
-            onClick={onClick}
-            className={`relative rounded-[32px] overflow-hidden shadow-lg group cursor-pointer ${className}`}
-        >
+    const CardContent = (
+        <>
             <img
                 src={image}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -38,10 +38,30 @@ const HeroCard: React.FC<HeroCardProps> = ({
                         {subtitle}
                     </p>
                 </div>
-                <button className="flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-primary group-hover:scale-110">
+                <button className="flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-full bg-[#E4B9B9] flex items-center justify-center text-[#714040] font-semibold transition-all duration-300 hover:bg-[#F16F6F] hover:text-white group-hover:scale-110 shadow-sm">
                     <ArrowRight size={20} />
                 </button>
             </div>
+        </>
+    );
+
+    if (link) {
+        return (
+            <Link
+                to={link}
+                className={`relative rounded-[32px] overflow-hidden shadow-lg group cursor-pointer block ${className}`}
+            >
+                {CardContent}
+            </Link>
+        );
+    }
+
+    return (
+        <div
+            onClick={onClick}
+            className={`relative rounded-[32px] overflow-hidden shadow-lg group cursor-pointer ${className}`}
+        >
+            {CardContent}
         </div>
     );
 };
