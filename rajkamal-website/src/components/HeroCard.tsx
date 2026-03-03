@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface HeroCardProps {
     title: string;
@@ -8,6 +9,7 @@ interface HeroCardProps {
     className?: string; // For layout positioning (e.g. row-span-2)
     overlayClassName?: string; // For gradient/background overlays
     onClick?: () => void;
+    link?: string;
 }
 
 const HeroCard: React.FC<HeroCardProps> = ({
@@ -16,13 +18,11 @@ const HeroCard: React.FC<HeroCardProps> = ({
     image,
     className = "",
     overlayClassName = "bg-gradient-to-t from-black/80 via-black/30 to-transparent",
-    onClick
+    onClick,
+    link
 }) => {
-    return (
-        <div
-            onClick={onClick}
-            className={`relative rounded-[32px] overflow-hidden shadow-lg group cursor-pointer ${className}`}
-        >
+    const CardContent = (
+        <>
             <img
                 src={image}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -42,6 +42,26 @@ const HeroCard: React.FC<HeroCardProps> = ({
                     <ArrowRight size={20} />
                 </button>
             </div>
+        </>
+    );
+
+    if (link) {
+        return (
+            <Link
+                to={link}
+                className={`relative rounded-[32px] overflow-hidden shadow-lg group cursor-pointer block ${className}`}
+            >
+                {CardContent}
+            </Link>
+        );
+    }
+
+    return (
+        <div
+            onClick={onClick}
+            className={`relative rounded-[32px] overflow-hidden shadow-lg group cursor-pointer ${className}`}
+        >
+            {CardContent}
         </div>
     );
 };

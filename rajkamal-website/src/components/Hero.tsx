@@ -7,25 +7,28 @@ import HeroCard from './HeroCard';
 const heroCards = [
     {
         id: 1,
-        title: "साहित्य उत्सव",
-        subtitle: "Check out for new book launches",
+        title: "मुंबई किताब उत्सव",
+        subtitle: "6 फरवरी से 10 फरवरी",
         image: "/events/kitav_utsav.jpg",
+        link: "/events",
         className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full lg:-ml-32 lg:w-[calc(100%+8rem)] xl:-ml-48 xl:w-[calc(100%+12rem)]",
     },
     {
         id: 2,
-        title: "नयी आमद",
-        subtitle: "Check out our new releases",
+        title: "मुंबई किताब उत्सव",
+        subtitle: "6 फरवरी से 10 फरवरी",
         image: "/events/kitav_itsav.jpg",
+        link: "/events",
         // Specific styling for the second card
         overlayClassName: "bg-black/20 bg-gradient-to-br from-orange-500/20 to-red-500/20",
         className: "min-h-[200px]"
     },
     {
         id: 3,
-        title: "किताब ख़बर",
-        subtitle: "Check out our latest blogs",
+        title: "मुंबई किताब उत्सव",
+        subtitle: "6 फरवरी से 10 फरवरी",
         image: "/events/kitav_utsav_javed.jpg",
+        link: "/events",
         className: "min-h-[200px]"
     }
 ];
@@ -123,6 +126,7 @@ const Hero: React.FC = () => {
                                     title={card.title}
                                     subtitle={card.subtitle}
                                     image={card.image}
+                                    link={card.link}
                                     className={card.className}
                                     overlayClassName={card.overlayClassName}
                                 />
