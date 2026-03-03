@@ -103,7 +103,7 @@ const CategoryCarousel: React.FC = () => {
                             {/* Content */}
                             <div className="absolute bottom-0 left-0 right-0 p-6 z-30 transition-transform duration-300 group-hover:-translate-y-2">
                                 <h3 className="text-white text-2xl font-bold mb-4 leading-tight">{category.title}</h3>
-                                <button className="bg-blue-100 text-blue-900 px-4 py-2 rounded-full text-sm font-semibold flex items-center hover:bg-white transition-colors shadow-md">
+                                <button className="bg-[#E4B9B9] text-[#714040] px-4 py-2 rounded-full text-sm font-semibold flex items-center hover:bg-[#F16F6F] hover:text-white transition-all duration-300 shadow-md">
                                     Explore <ArrowIcon className="ml-2 h-4 w-4" />
                                 </button>
                             </div>
