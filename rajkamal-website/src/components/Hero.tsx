@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
                                 </div>
                                 <div className="flex-grow relative flex items-center h-full px-4">
                                     {!searchValue && (
-                                        <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-6">
+                                        <div className="absolute inset-y-0 -left-1 flex items-center pointer-events-none pl-6 ">
                                             <span className="text-gray-400">Search by</span>
                                             <FlipWords
                                                 words={["Publications", "Story Books", "Best Selling", "Authors"]}
@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
                                     />
                                 </div>
                                 {/* Search button removed as per design */}
-                                <button className="p-2 bg-pink-100 text-primary rounded-full hover:bg-pink-200 transition-colors md:mr-2">
+                                <button className="p-2 bg-pink-100 text-primary rounded-full hover:bg-pink-200 transition-colors md:mr-6">
                                     <Mic className="h-5 w-5" />
                                 </button>
                             </div>
