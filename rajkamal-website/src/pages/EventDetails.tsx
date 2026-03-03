@@ -21,26 +21,42 @@ const EventDetails: React.FC = () => {
 
     return (
         <div className="bg-[#FAFAFA] min-h-screen pb-20">
-            {/* Hero Image Section */}
-            <div className="relative h-[450px] md:h-[550px] w-full overflow-hidden">
+            {/* Hero Image Section with Dual Layer to prevent cropping */}
+            <div className="relative h-[450px] md:h-[600px] w-full overflow-hidden bg-black">
+                {/* Layer 1: Blurred Background */}
                 <motion.img
-                    initial={{ scale: 1.1 }}
-                    animate={{ scale: 1 }}
+                    initial={{ scale: 1.2, opacity: 0 }}
+                    animate={{ scale: 1.1, opacity: 0.5 }}
                     transition={{ duration: 1.5 }}
                     src={event.image}
-                    alt={event.title}
-                    className="w-full h-full object-cover"
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover blur-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
 
-                <div className="absolute bottom-0 left-0 w-full pb-16 pt-32 px-4">
+                {/* Layer 2: Contained Foreground Image */}
+                <div className="absolute inset-0 flex items-center justify-center p-4 md:p-12">
+                    <motion.img
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        src={event.image}
+                        alt={event.title}
+                        className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
+                    />
+                </div>
+
+                {/* Layer 3: Gradient Overlays for Readability */}
+                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/40 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 w-full pb-12 pt-32 px-4 z-10">
                     <div className="max-w-7xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.2 }}
+                            transition={{ delay: 0.4 }}
                         >
-                            <Link to="/events" className="text-white/90 hover:text-white flex items-center gap-2 mb-8 w-fit bg-white/10 backdrop-blur-md px-4 py-2 rounded-full transition-all border border-white/20">
+                            <Link to="/events" className="text-white/90 hover:text-white flex items-center gap-2 mb-6 w-fit bg-white/10 backdrop-blur-md px-4 py-2 rounded-full transition-all border border-white/20">
                                 <ArrowLeft className="h-5 w-5" /> Back to Events
                             </Link>
                         </motion.div>
@@ -48,16 +64,16 @@ const EventDetails: React.FC = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.4 }}
+                            transition={{ delay: 0.6 }}
                             className="space-y-4"
                         >
                             <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg ${event.status === 'Ongoing' ? 'bg-green-500 text-white' :
-                                    event.status === 'Upcoming' ? 'bg-[#F26B5E] text-white' :
-                                        'bg-gray-500 text-white'
+                                event.status === 'Upcoming' ? 'bg-[#F26B5E] text-white' :
+                                    'bg-gray-500 text-white'
                                 }`}>
                                 {event.status}
                             </span>
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-2xl max-w-4xl">
+                            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight drop-shadow-2xl max-w-4xl">
                                 {event.title}
                             </h1>
                         </motion.div>
