@@ -51,9 +51,9 @@ const Hero: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
                     {/* Left Content */}
-                    <div className="flex flex-col justify-center text-left space-y-8 sm:space-y-12 lg:col-span-6 w-full">
-                        <div className="w-full flex flex-col items-start px-4 sm:px-8 lg:px-0">
-                            <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-start gap-3 sm:gap-4 leading-tight w-full">
+                    <div className="flex flex-col justify-center text-center lg:text-left space-y-4 sm:space-y-6 lg:space-y-12 lg:col-span-6 w-full">
+                        <div className="w-full flex flex-col items-center lg:items-start px-4 sm:px-8 lg:px-0">
+                            <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 leading-tight w-full">
                                 <span>साथ</span>
                                 <div className="relative h-[1.24em] md:h-[1em] w-[2ch] md:w-[3ch] text-left">
                                     <AnimatePresence mode="wait">
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
                         </div>
 
                         {/* Search Bar */}
-                        <div className="max-w-sm mr-auto relative w-full px-4 sm:px-0 mt-4 lg:mt-6">
+                        <div className="max-w-sm mx-auto lg:mr-auto lg:ml-0 relative w-full px-4 sm:px-0 mt-3 lg:mt-6">
                             <div className="flex items-center border border-pink-200 rounded-full p-1 shadow-sm hover:shadow-md transition-shadow bg-white w-full">
                                 <div className="pl-4 pr-2 self-end -mb-[5px]">
                                     {/* Placeholder for the red character icon */}
