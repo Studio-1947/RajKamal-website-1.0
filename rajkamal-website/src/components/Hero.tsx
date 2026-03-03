@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
                                     />
                                 </div>
                                 {/* Search button removed as per design */}
-                                <button className="p-2 bg-pink-100 text-primary rounded-full hover:bg-pink-200 transition-colors ml-1">
+                                <button className="p-2 bg-pink-100 text-primary rounded-full hover:bg-pink-200 transition-colors md:mr-2">
                                     <Mic className="h-5 w-5" />
                                 </button>
                             </div>
