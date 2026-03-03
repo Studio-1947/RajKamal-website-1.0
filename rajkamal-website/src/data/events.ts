@@ -19,111 +19,113 @@ export interface Video {
 export const events: EventItem[] = [
   {
     id: "1",
-    title: "Mumbai Kitab Utsav",
-    date: "10th - 18th Feb 2026",
-    location: "Mumbai, Maharashtra",
+    title: "Mumbai Kitab Utsav (मुंबई किताब उत्सव)",
+    date: "6th - 10th Feb 2026",
+    location: "Azad Maidan, Mumbai",
     description:
-      "Join us for the vibrant Mumbai Kitab Utsav! A celebration of literature, culture, and the joy of reading in the heart of the city of dreams. Meet your favorite authors, participate in workshops, and explore a vast collection of books.",
-    image:
-      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "मुंबई की धड़कन में किताबों का महापर्व! Join us for a grand celebration of literature and culture. मुंबई किताब उत्सव provides a platform for readers to engage with their favorite authors and discover new worlds through books.",
+    image: "/events/mumbai utsV.jpg",
     status: "Ongoing",
     link: "/event/1",
   },
   {
     id: "2",
-    title: "New Delhi World Book Fair 2026",
+    title: "New Delhi World Book Fair (नई दिल्ली विश्व पुस्तक मेला)",
     date: "10th - 18th Feb 2026",
     location: "Pragati Maidan, New Delhi",
     description:
-      "The massive World Book Fair returns to Delhi! Rajkamal Prakashan is proud to present its largest collection yet. Visit our stall for exclusive launches, author interactions, and special discounts.",
-    image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "विश्व का सबसे बड़ा पुस्तक मेला अब दिल्ली में! Education, enlightenment, and entertainment await you. Explore thousands of titles from across the globe in this year's World Book Fair.",
+    image: "/events/delhi world book fair.jpg",
     status: "Ongoing",
     link: "/event/2",
   },
   {
     id: "3",
-    title: "Patna Book Fair",
-    date: "15th March 2026",
+    title: "Patna Book Fair (पटना पुस्तक मेला)",
+    date: "15th - 25th March 2026",
     location: "Gandhi Maidan, Patna",
     description:
-      "Get ready for the Patna Book Fair! Specifically curated for the literature lovers of Bihar. Expect a massive gathering of publishers, authors, and readers. Special sessions on regional literature and history.",
-    image:
-      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "बिहार की साहित्यिक विरासत का उत्सव! Bringing together authors, poets, and readers in the heart of Patna. पटना पुस्तक मेला celebrates the rich tradition of Hindi and regional literature.",
+    image: "/events/world book fair.jpg",
     status: "Upcoming",
     link: "/event/3",
   },
   {
     id: "4",
-    title: "Lucknow Kitab Utsav",
+    title: "Lucknow Literature Festival (लखनऊ साहित्य उत्सव)",
     date: "5th - 10th April 2026",
-    location: "Sangeet Natak Akademi, Lucknow",
+    location: "Lucknow, Uttar Pradesh",
     description:
-      "The city of Nawabs welcomes the Kitab Utsav. Immerse yourself in the rich literary heritage of Lucknow. A perfect blend of classic and contemporary literature awaits you.",
-    image:
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "नवाबों के शहर में शब्दों की महफिल! Experience the elegance of Lucknow combined with modern literary discourse. शानदार चर्चाएं और किताबों की नयी आमद.",
+    image: "/events/world book fair books.jpg",
     status: "Upcoming",
     link: "/event/4",
   },
   {
     id: "5",
-    title: "Chandigarh Kitab Utsav",
-    date: "10th - 14th Dec 2025",
-    location: "Punjab Kala Bhawan, Chandigarh",
+    title: "Rajkamal Events (राजकमल आयोजन)",
+    date: "Monthly Events 2026",
+    location: "Various Cities",
     description:
-      "A successful 5-day literary festival in Chandigarh. We celebrated the joy of reading with thousands of visitors. Highlights included poetry sessions and book discussions.",
-    image:
-      "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    status: "Past",
+      "राजकमल प्रकाशन के विशेष साहित्यिक कार्यक्रम. Engaging discussions, book signings, and literary workshops held throughout the year for our beloved readers.",
+    image: "/events/rajkaml-events.jpg",
+    status: "Upcoming",
     link: "/event/5",
   },
   {
     id: "6",
-    title: "Bhopal Kitab Utsav",
-    date: "Nov 2025",
-    location: "Rabindra Bhavan, Bhopal",
+    title: "Entry Poster: Book Fair (प्रवेश द्वार)",
+    date: "Annual Celebration",
+    location: "All Major Cities",
     description:
-      "Bhopal witnessed a grand celebration of books. The event focused on promoting Hindi literature among youth. Author meet-and-greet sessions were a major hit.",
-    image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "साहित्य के द्वार पर आपका स्वागत है! Welcome to the gateway of knowledge and imagination. हमारी प्रदर्शनी में पधारें और किताबों की दुनिया का हिस्सा बनें.",
+    image: "/events/entry poster.jpg",
     status: "Past",
     link: "/event/6",
   },
   {
     id: "7",
-    title: "Bareilly Kitab Utsav",
-    date: "4th - 8th Oct 2025",
-    location: "Bareilly Club Ground, Bareilly",
+    title: "More Book Fairs (अधिक पुस्तक मेले)",
+    date: "2025 Retrospective",
+    location: "Pan India",
     description:
-      "The first-ever Kitab Utsav in Bareilly was a resounding success. Readers from across the region gathered to explore new titles. We thank everyone for the overwhelming response.",
-    image:
-      "https://images.unsplash.com/photo-1476275466078-bd007cd8191f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "देश भर में राजकमल की गूँज! Looking back at our successful participation in various regional book fairs. जहाँ तक शब्द पहुँचते हैं, वहाँ तक राजकमल पहुँचता है.",
+    image: "/events/MORE of book fairs.jpg",
     status: "Past",
     link: "/event/7",
   },
   {
     id: "8",
-    title: "Varanasi Kitab Utsav",
-    date: "Sep 2025",
-    location: "Sanskriti Sankul, Varanasi",
+    title: "Kitab Utsav Highlights (किताब उत्सव झलकियां)",
+    date: "January 2025",
+    location: "Cultural Centers",
     description:
-      "In the spiritual capital of India, we celebrated knowledge and wisdom. The Varanasi Kitab Utsav brought together scholars and young readers alike.",
-    image:
-      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "खूबसूरत यादें और किताबों का साथ! Capturing the most impactful moments from our previous festivals. लेखकों और पाठकों का अद्भुत संगम.",
+    image: "/events/kitav_utsav.jpg",
     status: "Past",
     link: "/event/8",
   },
   {
     id: "9",
-    title: "Annual Online Book Fair",
-    date: "June 2025",
-    location: "Online (rajkamalprakashan.com)",
+    title: "Sahitya Sangam (साहित्य संगम)",
+    date: "December 2025",
+    location: "Special Venues",
     description:
-      "Our annual online book fair made literature accessible to everyone, everywhere. With over 6000 titles and massive discounts, it was a digital festival of books.",
-    image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "कलम और कल्पना का मिलन! Special sessions focused on the future of Hindi literature and the role of young publishers. साहित्य संगम: जहाँ विचार मिलते हैं.",
+    image: "/events/kitav_itsav.jpg",
     status: "Past",
     link: "/event/9",
+  },
+  {
+    id: "10",
+    title: "Javed Akhtar at Kitab Utsav (जावेद अख्तर किताब उत्सव में)",
+    date: "Special Session 2025",
+    location: "Main Stage",
+    description:
+      "दिग्गज रचनाकारों के साथ बातचीत. A memorable evening with Javed Akhtar discussing the nuances of poetry and storytelling in the modern age.",
+    image: "/events/kitav_utsav_javed.jpg",
+    status: "Past",
+    link: "/event/10",
   },
 ];
 
@@ -143,30 +145,26 @@ export const eventFilters = [
 export const videos: Video[] = [
   {
     id: "1",
-    thumbnail:
-      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    thumbnail: "/events/world book fair.jpg",
     videoUrl: "#",
-    title: "Event Highlight 1",
+    title: "Mumbai Kitab Utsav Highlights",
   },
   {
     id: "2",
-    thumbnail:
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    thumbnail: "/events/world book fair books.jpg",
     videoUrl: "#",
-    title: "Event Highlight 2",
+    title: "Authors Discussion Panel",
   },
   {
     id: "3",
-    thumbnail:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    thumbnail: "/events/delhi world book fair.jpg",
     videoUrl: "#",
-    title: "Event Highlight 3",
+    title: "New Releases 2026",
   },
   {
     id: "4",
-    thumbnail:
-      "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    thumbnail: "/events/rajkaml-events.jpg",
     videoUrl: "#",
-    title: "Event Highlight 4",
+    title: "Readers Community Meet",
   },
 ];
