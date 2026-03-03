@@ -38,7 +38,7 @@ const HeroCard: React.FC<HeroCardProps> = ({
                         {subtitle}
                     </p>
                 </div>
-                <button className="flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transition-all duration-300 hover:bg-white hover:text-primary group-hover:scale-110">
+                <button className="flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-full bg-[#E4B9B9] flex items-center justify-center text-[#714040] font-semibold transition-all duration-300 hover:bg-[#F16F6F] hover:text-white group-hover:scale-110 shadow-sm">
                     <ArrowRight size={20} />
                 </button>
             </div>

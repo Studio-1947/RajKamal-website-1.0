@@ -22,7 +22,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
             disabled={disabled}
             className={`
                 p-2 rounded-full shadow-md transition-all duration-300
-                bg-[#CCEAFF] hover:bg-[#B3D9FF] text-[#006BB8]
+                bg-[#E4B9B9] hover:bg-[#F16F6F] text-[#714040] hover:text-white
                 disabled:opacity-50 disabled:cursor-not-allowed
                 flex items-center justify-center
                 ${className}
