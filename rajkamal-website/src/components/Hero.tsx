@@ -9,14 +9,14 @@ const heroCards = [
         id: 1,
         title: "साहित्य उत्सव",
         subtitle: "Check out for new book launches",
-        image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+        image: "/events/kitav_utsav.jpg",
         className: "md:col-span-1 md:row-span-2 min-h-[300px] md:min-h-full lg:-ml-32 lg:w-[calc(100%+8rem)] xl:-ml-48 xl:w-[calc(100%+12rem)]",
     },
     {
         id: 2,
         title: "नयी आमद",
         subtitle: "Check out our new releases",
-        image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e",
+        image: "/events/kitav_itsav.jpg",
         // Specific styling for the second card
         overlayClassName: "bg-black/20 bg-gradient-to-br from-orange-500/20 to-red-500/20",
         className: "min-h-[200px]"
@@ -25,7 +25,7 @@ const heroCards = [
         id: 3,
         title: "किताब ख़बर",
         subtitle: "Check out our latest blogs",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794",
+        image: "/events/kitav_utsav_javed.jpg",
         className: "min-h-[200px]"
     }
 ];
