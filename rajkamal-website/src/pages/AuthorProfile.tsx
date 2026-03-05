@@ -52,23 +52,13 @@ const AuthorProfile = () => {
                 </div>
             </div>
 
-            {/* Hero Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-                <div className="relative bg-white rounded-2xl shadow-sm overflow-hidden">
-                    {/* Gradient Banner */}
-                    <div className="h-48 md:h-56 bg-gradient-to-r from-[#00508A] via-[#0070b8] to-[#00508A] relative overflow-hidden">
-                        <div className="absolute inset-0 opacity-10">
-                            <div className="absolute top-4 left-10 w-32 h-32 border border-white/30 rounded-full" />
-                            <div className="absolute bottom-2 right-20 w-48 h-48 border border-white/20 rounded-full" />
-                            <div className="absolute top-10 right-40 w-20 h-20 border border-white/25 rounded-full" />
-                        </div>
-                    </div>
-
-                    {/* Author Info Overlay */}
-                    <div className="px-6 md:px-10 pb-8 -mt-16 relative z-10">
-                        <div className="flex flex-col items-center text-center gap-5">
-                            {/* Author Image */}
-                            <div className="w-32 h-32 md:w-36 md:h-36 rounded-2xl overflow-hidden border-4 border-white shadow-lg flex-shrink-0 bg-gray-100">
+            {/* Minimalist Pill-Based Identity Card */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 pt-4">
+                <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden">
+                    <div className="p-8 md:p-10 relative z-10">
+                        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+                            {/* Balanced Profile Image */}
+                            <div className="w-full md:w-60 h-60 md:h-60 rounded-2xl overflow-hidden border-4 border-gray-50 shadow-xl flex-shrink-0 bg-gray-50">
                                 <img
                                     src={authorInfo.image}
                                     alt={authorName}
@@ -76,103 +66,85 @@ const AuthorProfile = () => {
                                 />
                             </div>
 
-                            {/* Author Name & Bio */}
-                            <div className="max-w-2xl">
-                                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{authorName}</h1>
-                                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                                    {authorInfo.description}
-                                </p>
+                            {/* Minimalist Content (Right) */}
+                            <div className="flex-1 w-full text-left">
+                                <div className="flex flex-col gap-6">
+                                    <div>
+                                        <div className="flex items-center gap-4 mb-2">
+                                            <h1 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight">{authorName}</h1>
+                                            <div className="hidden lg:flex items-center gap-1 bg-orange-50 text-orange-600 px-3 py-1 rounded-full text-[10px] font-black border border-orange-100">
+                                                <Star className="h-3 w-3 fill-current" />
+                                                <span className="uppercase tracking-widest">TOP RATED</span>
+                                            </div>
+                                        </div>
+                                        <p className="text-gray-500 text-sm md:text-base leading-relaxed max-w-2xl font-medium">
+                                            {authorInfo.description}
+                                        </p>
+                                    </div>
+
+                                    {/* Literary Focus Tags */}
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {['Hindi Literature', 'Fiction', 'Classic', 'Epic Realism', 'Social Reform'].map((tag) => (
+                                            <span key={tag} className="bg-gray-50 text-gray-400 px-3 py-1.5 rounded-lg text-[10px] font-bold tracking-wider uppercase border border-gray-100">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    {/* Compact Metrics & Achievements (Blue Pills) */}
+                                    <div className="flex flex-wrap gap-2 pt-1">
+                                        {[
+                                            { label: 'Books', val: totalBooks, icon: BookOpen },
+                                            { label: 'Rating', val: avgRating, icon: Star },
+                                            { label: 'Readers', val: '1.2M+', icon: Users },
+                                            { label: 'Reviews', val: formatCount(totalReviews), icon: Award },
+                                            { label: 'Sahitya Akademi', val: 'Honored', icon: Award },
+                                            { label: 'Bestseller', val: 'National', icon: Star },
+                                            { label: 'Cultural Icon', val: 'Heritage', icon: Users },
+                                            { label: 'Editor\'s Choice', val: 'Top Pick', icon: Award }
+                                        ].map((stat, i) => (
+                                            <div key={i} className="flex items-center gap-2 bg-[#CCEAFF]/40 text-[#00508A] px-3.5 py-2 rounded-xl text-[10px] font-black border border-[#CCEAFF]/60 hover:bg-[#CCEAFF]/60 transition-colors cursor-default">
+                                                <stat.icon className="h-3 w-3" />
+                                                <span className="opacity-60">{stat.label}:</span>
+                                                <span className="tracking-tight">{stat.val}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Actions Row */}
+                                    <div className="flex flex-wrap gap-3 mt-2">
+                                        <button className="bg-[#D93025] text-white px-8 py-3.5 rounded-xl font-black hover:bg-[#B92015] transition-all transform hover:scale-[1.02] shadow-xl shadow-red-100 text-xs tracking-[0.15em] uppercase">
+                                            FOLLOW AUTHOR
+                                        </button>
+                                        <button className="border-2 border-gray-100 text-gray-400 font-bold px-8 py-3.5 rounded-xl hover:bg-gray-50 hover:text-gray-600 transition-all text-[11px] tracking-[0.15em] uppercase flex items-center justify-center gap-2">
+                                            MEDIA KIT
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-
-                            {/* Follow Button */}
-                            <button className="bg-[#D93025] text-white px-8 py-2.5 rounded-full font-bold hover:bg-[#B92015] transition-all transform hover:scale-105 shadow-md text-sm">
-                                Follow Author
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Stats Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-                <div className="grid grid-cols-3 gap-4 md:gap-6">
-                    <div className="bg-white rounded-xl p-5 text-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                        <div className="inline-flex items-center justify-center w-10 h-10 bg-[#CCEAFF] rounded-full mb-3">
-                            <BookOpen className="h-5 w-5 text-[#00508A]" />
-                        </div>
-                        <p className="text-2xl md:text-3xl font-bold text-gray-900">{totalBooks}</p>
-                        <p className="text-xs md:text-sm text-gray-500 font-medium">Published Books</p>
-                    </div>
-                    <div className="bg-white rounded-xl p-5 text-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                        <div className="inline-flex items-center justify-center w-10 h-10 bg-red-50 rounded-full mb-3">
-                            <Star className="h-5 w-5 text-red-500 fill-current" />
-                        </div>
-                        <p className="text-2xl md:text-3xl font-bold text-gray-900">{avgRating}</p>
-                        <p className="text-xs md:text-sm text-gray-500 font-medium">Avg. Rating</p>
-                    </div>
-                    <div className="bg-white rounded-xl p-5 text-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                        <div className="inline-flex items-center justify-center w-10 h-10 bg-green-50 rounded-full mb-3">
-                            <Users className="h-5 w-5 text-green-600" />
-                        </div>
-                        <p className="text-2xl md:text-3xl font-bold text-gray-900">{formatCount(totalReviews)}</p>
-                        <p className="text-xs md:text-sm text-gray-500 font-medium">Total Reviews</p>
-                    </div>
-                </div>
-            </div>
-
-            {/* About Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-                <div className="bg-white rounded-2xl shadow-sm p-6 md:p-8">
-                    <div className="flex items-center gap-3 mb-4">
-                        <div className="w-1 h-6 bg-red-500 rounded-full" />
-                        <h2 className="text-xl md:text-2xl font-bold text-gray-900">About {authorName}</h2>
-                    </div>
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                        {authorInfo.description}
-                    </p>
-                    <div className="mt-6 flex flex-wrap gap-3">
-                        <span className="bg-[#CCEAFF] text-[#00508A] px-4 py-1.5 rounded-full text-xs font-medium">Hindi Literature</span>
-                        <span className="bg-red-50 text-red-500 px-4 py-1.5 rounded-full text-xs font-medium">Fiction</span>
-                        <span className="bg-green-50 text-green-600 px-4 py-1.5 rounded-full text-xs font-medium">Classic</span>
-                    </div>
-                </div>
-            </div>
-
-            {/* Achievements Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-                <div className="bg-gradient-to-r from-[#00508A] to-[#0070b8] rounded-2xl p-6 md:p-8 text-white">
-                    <div className="flex items-center gap-3 mb-4">
-                        <Award className="h-6 w-6" />
-                        <h2 className="text-xl md:text-2xl font-bold">Literary Achievements</h2>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                            <p className="font-bold text-lg mb-1">Sahitya Akademi</p>
-                            <p className="text-white/70 text-sm">Award for exceptional contribution to Hindi literature</p>
-                        </div>
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                            <p className="font-bold text-lg mb-1">National Bestseller</p>
-                            <p className="text-white/70 text-sm">Multiple works recognized as national bestsellers</p>
-                        </div>
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                            <p className="font-bold text-lg mb-1">Cultural Icon</p>
-                            <p className="text-white/70 text-sm">Widely studied in universities across India</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Books by Author */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center gap-3 mb-6">
-                    <div className="w-1 h-6 bg-red-500 rounded-full" />
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-900">Books by {authorName}</h2>
-                    <span className="ml-auto bg-[#CCEAFF] text-[#00508A] px-3 py-1 rounded-full text-xs font-bold">{totalBooks} Books</span>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {authorBooks.map((book) => (
-                        <BookCard key={book.id} book={book} />
-                    ))}
+                {/* Books Section */}
+                <div className="pt-8">
+                    <div className="flex items-center justify-between mb-12">
+                        <div className="flex items-center gap-5">
+                            <div className="w-2.5 h-10 bg-red-500 rounded-full" />
+                            <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">Books by <span className="text-[#00508A]">{authorName}</span></h2>
+                        </div>
+                        <div className="hidden sm:flex items-center gap-3 bg-[#CCEAFF]/50 text-[#00508A] px-6 py-3 rounded-2xl border border-[#CCEAFF]">
+                            <span className="text-2xl font-black">{totalBooks}</span>
+                            <span className="text-xs font-black uppercase tracking-widest mt-0.5">Collections</span>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+                        {authorBooks.map((book) => (
+                            <BookCard key={book.id} book={book} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
