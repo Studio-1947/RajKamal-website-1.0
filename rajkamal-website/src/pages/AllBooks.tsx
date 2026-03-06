@@ -5,7 +5,19 @@ import BookCard from '../components/BookCard';
 import { newArrivals, hotDeals, genreBooks, bestSellers, superSavingCombos, shopByPriceBooks, examPrepBooks, peopleAlsoBought } from '../data/mockData';
 import type { Book } from '../types';
 
-const getBooksByCategory = (category: string | undefined): { title: string, books: Book[] } => {
+const getBooksByCategory = (category: string | undefined, brand: string | undefined): { title: string, books: Book[] } => {
+    // If brand is provided, filter all books by that brand
+    if (brand) {
+        const decodedBrand = decodeURIComponent(brand);
+        const allBooks = [...newArrivals, ...hotDeals, ...genreBooks, ...bestSellers, ...superSavingCombos, ...shopByPriceBooks, ...examPrepBooks, ...peopleAlsoBought];
+
+        // Remove duplicates by ID
+        const uniqueBooks = Array.from(new Map(allBooks.map(item => [item.id, item])).values());
+
+        const filteredBooks = uniqueBooks.filter(book => book.publication === decodedBrand);
+        return { title: `Publications: ${decodedBrand}`, books: filteredBooks };
+    }
+
     switch (category) {
         case 'new-arrivals':
             return { title: 'New Arrivals', books: newArrivals };
@@ -30,13 +42,13 @@ const getBooksByCategory = (category: string | undefined): { title: string, book
 };
 
 const AllBooks = () => {
-    const { category } = useParams<{ category: string }>();
+    const { category, brand } = useParams<{ category?: string, brand?: string }>();
     const [booksData, setBooksData] = useState<{ title: string, books: Book[] }>({ title: 'Loading...', books: [] });
 
     useEffect(() => {
-        setBooksData(getBooksByCategory(category));
+        setBooksData(getBooksByCategory(category, brand));
         window.scrollTo(0, 0);
-    }, [category]);
+    }, [category, brand]);
 
     return (
         <div className="bg-gray-50 min-h-screen pb-12">

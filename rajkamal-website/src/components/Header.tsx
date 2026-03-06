@@ -1,20 +1,51 @@
-import React, { useState } from 'react';
-import { Menu, X, ShoppingCart, User } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Menu, X, ShoppingCart, User, ChevronDown } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
+
+const publications = [
+    { name: 'Akshar Prakashan', image: '/publication/akshar_lo.png', href: '/publication/Akshar%20Prakashan' },
+    { name: 'Bani Prakashan', image: '/publication/bani.jpg', href: '/publication/Bani%20Prakashan' },
+    { name: 'Fanda', image: '/publication/fanda.jpg', href: '/publication/Fanda' },
+    { name: 'Hans', image: '/publication/han.jpg', href: '/publication/Hans' },
+    { name: 'Lokbharti', image: '/publication/lokh.jpg', href: '/publication/Lokbharti' },
+    { name: 'Purvanchal', image: '/publication/pur.jpg', href: '/publication/Purvanchal' },
+    { name: 'Rajkamal', image: '/publication/ra.jpg', href: '/publication/Rajkamal' },
+    { name: 'Radhakrishna', image: '/publication/radha.jpg', href: '/publication/Radhakrishna' },
+    { name: 'Remadhav', image: '/publication/re.jpg', href: '/publication/Remadhav' },
+    { name: 'Rekhta', image: '/publication/rekhta_1.jpg', href: '/publication/Rekhta' },
+    { name: 'Sahitya', image: '/publication/sahi.jpg', href: '/publication/Sahitya' },
+    { name: 'Saransh', image: '/publication/sarn.jpg', href: '/publication/Saransh' },
+    { name: 'Sarthak', image: '/publication/sart.jpg', href: '/publication/Sarthak' },
+];
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
     const { cartCount, toggleCart } = useCart();
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     const navItems = [
         { name: 'Books', href: '/' },
         { name: 'Authors', href: '/authors' },
         { name: 'E-Books', href: '/ebooks' },
+        { name: 'Publications', href: '/publications', hasDropdown: true },
         { name: 'Student Corner', href: '/student-corner' },
         { name: 'Blog', href: '/blog' },
         { name: 'Events', href: '/events' },
         { name: 'Press Corner', href: '/press' },
     ];
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsDropdownOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     return (
         <header className="bg-white sticky top-0 z-50 py-4 border-b border-gray-200 shadow-sm">
@@ -22,25 +53,70 @@ const Header: React.FC = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <a href="/" className="flex items-center">
+                        <Link to="/" className="flex items-center">
                             <img
                                 src="/rajkamal_logo.svg"
                                 alt="Rajkamal Logo"
                                 className="w-[120px] h-auto sm:w-[150px]"
                             />
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden xl:flex space-x-6">
+                    <nav className="hidden xl:flex space-x-6 items-center">
                         {navItems.map((item) => (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                className="text-gray-600 hover:text-primary px-1 py-2 rounded-md text-sm font-medium transition-colors"
-                            >
-                                {item.name}
-                            </a>
+                            <div key={item.name} className="relative" ref={item.hasDropdown ? dropdownRef : null}>
+                                {item.hasDropdown ? (
+                                    <button
+                                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                        className="text-gray-600 hover:text-primary px-1 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1"
+                                    >
+                                        {item.name}
+                                        <ChevronDown className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                                    </button>
+                                ) : (
+                                    <Link
+                                        to={item.href}
+                                        className="text-gray-600 hover:text-primary px-1 py-2 rounded-md text-sm font-medium transition-colors"
+                                    >
+                                        {item.name}
+                                    </Link>
+                                )}
+
+                                {/* Desktop Dropdown */}
+                                {item.hasDropdown && isDropdownOpen && (
+                                    <div className="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 z-50">
+                                        <div className="grid grid-cols-4 gap-4">
+                                            {publications.map((pub) => (
+                                                <Link
+                                                    key={pub.name}
+                                                    to={pub.href}
+                                                    onClick={() => setIsDropdownOpen(false)}
+                                                    className="flex flex-col items-center justify-center p-3 rounded-xl hover:bg-gray-50 transition-all group border border-transparent hover:border-red-100"
+                                                >
+                                                    <div className="w-12 h-12 flex items-center justify-center mb-2">
+                                                        <img
+                                                            src={pub.image}
+                                                            alt={pub.name}
+                                                            className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all"
+                                                        />
+                                                    </div>
+                                                    <span className="text-[10px] uppercase font-bold text-gray-500 group-hover:text-red-600 text-center tracking-tighter leading-none">
+                                                        {pub.name}
+                                                    </span>
+                                                </Link>
+                                            ))}
+                                            <Link
+                                                to="/publications"
+                                                onClick={() => setIsDropdownOpen(false)}
+                                                className="col-span-4 mt-2 py-2 text-center text-sm font-bold text-red-600 hover:bg-red-50 rounded-lg transition-colors border border-dashed border-red-200"
+                                            >
+                                                View All Publications
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
                         ))}
                     </nav>
 
@@ -90,15 +166,55 @@ const Header: React.FC = () => {
                             <X className="h-6 w-6" />
                         </button>
                     </div>
-                    <div className="flex-1 overflow-y-auto py-4 px-6 space-y-4">
+                    <div className="flex-1 overflow-y-auto py-4 px-6 space-y-2">
                         {navItems.map((item) => (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                className="block text-lg font-medium text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-50 last:border-0"
-                            >
-                                {item.name}
-                            </a>
+                            <React.Fragment key={item.name}>
+                                {item.hasDropdown ? (
+                                    <div className="border-b border-gray-50 last:border-0 py-2">
+                                        <button
+                                            onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                                            className="flex items-center justify-between w-full text-lg font-medium text-gray-800 hover:text-primary transition-colors"
+                                        >
+                                            {item.name}
+                                            <ChevronDown className={`w-5 h-5 transition-transform ${isMobileDropdownOpen ? 'rotate-180' : ''}`} />
+                                        </button>
+                                        {isMobileDropdownOpen && (
+                                            <div className="grid grid-cols-2 gap-3 mt-4 animate-in fade-in slide-in-from-top-2 duration-300">
+                                                {publications.map((pub) => (
+                                                    <Link
+                                                        key={pub.name}
+                                                        to={pub.href}
+                                                        onClick={() => setIsMenuOpen(false)}
+                                                        className="flex items-center gap-2 p-2 rounded-lg bg-gray-50 hover:bg-red-50 transition-colors group"
+                                                    >
+                                                        <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center">
+                                                            <img src={pub.image} alt={pub.name} className="max-w-full max-h-full object-contain" />
+                                                        </div>
+                                                        <span className="text-[10px] font-bold text-gray-600 group-hover:text-red-600 line-clamp-1 uppercase">
+                                                            {pub.name}
+                                                        </span>
+                                                    </Link>
+                                                ))}
+                                                <Link
+                                                    to="/publications"
+                                                    onClick={() => setIsMenuOpen(false)}
+                                                    className="col-span-2 py-2 text-center text-xs font-bold text-red-600 bg-red-50 rounded-lg"
+                                                >
+                                                    View All
+                                                </Link>
+                                            </div>
+                                        )}
+                                    </div>
+                                ) : (
+                                    <Link
+                                        to={item.href}
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="block text-lg font-medium text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-50 last:border-0"
+                                    >
+                                        {item.name}
+                                    </Link>
+                                )}
+                            </React.Fragment>
                         ))}
                     </div>
                     <div className="p-6 border-t border-gray-100 bg-gray-50 space-y-4">

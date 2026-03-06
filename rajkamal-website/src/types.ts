@@ -8,6 +8,7 @@ export interface Book {
   price: number;
   originalPrice: number;
   discount: number;
+  publication?: string;
   isLiked?: boolean;
   formats?: string[]; // e.g., ['Paperback', 'Hardcover', 'E-Book']
   prices?: { [key: string]: number };

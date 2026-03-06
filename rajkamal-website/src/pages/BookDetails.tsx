@@ -104,10 +104,15 @@ const BookDetails = () => {
                                         <h1 className="text-3xl font-bold text-gray-900 mb-1">{book.title}</h1>
                                         <Link
                                             to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
-                                            className="text-lg text-gray-600 mb-2 hover:text-[#00508A] hover:underline"
+                                            className="text-lg text-gray-600 mb-1 hover:text-[#00508A] hover:underline block"
                                         >
                                             {book.author}
                                         </Link>
+                                        {book.publication && (
+                                            <div className="inline-block bg-red-50 text-red-700 text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2">
+                                                {book.publication}
+                                            </div>
+                                        )}
                                     </div>
                                     <button className="text-[#00508A] bg-[#CCEAFF] px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
                                         <Share2 className="h-3 w-3" /> Share
