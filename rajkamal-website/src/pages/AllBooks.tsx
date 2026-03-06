@@ -139,7 +139,7 @@ const AllBooks = () => {
                                 type="checkbox"
                                 checked={selectedFormats.includes(format)}
                                 onChange={() => toggleFormat(format)}
-                                className="w-4 h-4 rounded border-gray-300 text-red-600 focus:ring-red-500 cursor-pointer"
+                                className="w-4 h-4 rounded border-gray-300 accent-primary focus:ring-primary cursor-pointer"
                             />
                             <span className="ml-3 text-sm text-gray-600 group-hover:text-gray-900 transition-colors">{format}</span>
                         </label>
@@ -163,7 +163,7 @@ const AllBooks = () => {
                                 name="price-range"
                                 checked={priceRange?.[0] === item.range[0] && priceRange?.[1] === item.range[1]}
                                 onChange={() => setPriceRange(item.range as [number, number])}
-                                className="w-4 h-4 border-gray-300 text-red-600 focus:ring-red-500 cursor-pointer"
+                                className="w-4 h-4 border-gray-300 accent-primary focus:ring-primary cursor-pointer"
                             />
                             <span className="ml-3 text-sm text-gray-600 group-hover:text-gray-900 transition-colors">{item.label}</span>
                         </label>
@@ -182,7 +182,7 @@ const AllBooks = () => {
                                 name="rating"
                                 checked={minRating === rating}
                                 onChange={() => setMinRating(rating)}
-                                className="w-4 h-4 border-gray-300 text-red-600 focus:ring-red-500 cursor-pointer"
+                                className="w-4 h-4 border-gray-300 accent-primary focus:ring-primary cursor-pointer"
                             />
                             <span className="ml-3 text-sm text-gray-600 group-hover:text-gray-900 flex items-center transition-colors">
                                 {rating}+ <Star className="h-3 w-3 ml-1 fill-yellow-400 text-yellow-400" />
