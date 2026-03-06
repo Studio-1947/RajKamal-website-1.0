@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     const navItems = [
-        { name: 'Books', href: '/' },
+        // { name: 'Books', href: '/' },
         { name: 'Authors', href: '/authors' },
         { name: 'E-Books', href: '/ebooks' },
         { name: 'Publications', href: '/publications', hasDropdown: true },
