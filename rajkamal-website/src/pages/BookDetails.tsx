@@ -4,6 +4,7 @@ import { Star, Heart, Share2, Minus, Plus, ChevronRight, ShoppingCart, Truck, Ta
 import { newArrivals, hotDeals, genreBooks } from '../data/mockData';
 import { useCart } from '../context/CartContext';
 import type { Book } from '../types';
+import { getPublicationLogo } from '../data/publicationData';
 import BookSection from '../components/BookSection';
 
 const BookDetails = () => {
@@ -104,10 +105,20 @@ const BookDetails = () => {
                                         <h1 className="text-3xl font-bold text-gray-900 mb-1">{book.title}</h1>
                                         <Link
                                             to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
-                                            className="text-lg text-gray-600 mb-2 hover:text-[#00508A] hover:underline"
+                                            className="text-lg text-gray-600 mb-1 hover:text-[#00508A] hover:underline block"
                                         >
                                             {book.author}
                                         </Link>
+                                        {book.publication && (
+                                            <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2 border border-red-100">
+                                                {getPublicationLogo(book.publication) && (
+                                                    <div className="w-5 h-5 flex-shrink-0 flex items-center justify-center rounded-sm overflow-hidden bg-white/50 p-0.5">
+                                                        <img src={getPublicationLogo(book.publication)} alt="" className="max-w-full max-h-full object-contain" />
+                                                    </div>
+                                                )}
+                                                {book.publication}
+                                            </div>
+                                        )}
                                     </div>
                                     <button className="text-[#00508A] bg-[#CCEAFF] px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
                                         <Share2 className="h-3 w-3" /> Share
