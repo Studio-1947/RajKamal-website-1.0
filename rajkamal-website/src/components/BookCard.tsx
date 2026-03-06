@@ -88,16 +88,20 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                 <div className="h-[68px] flex flex-col justify-start mb-2 overflow-hidden">
                     {/* Publication Branding */}
                     {book.publication && (
-                        <div className="flex items-center gap-1 mb-1">
+                        <Link
+                            to={`/publication/${encodeURIComponent(book.publication)}`}
+                            className="flex items-center gap-1 mb-1 w-fit group/pub"
+                            onClick={(e) => e.stopPropagation()}
+                        >
                             {pubLogo && (
-                                <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center rounded-sm overflow-hidden bg-gray-50">
+                                <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center rounded-sm overflow-hidden bg-gray-50 border border-gray-100 group-hover/pub:border-red-200 transition-colors">
                                     <img src={pubLogo} alt="" className="max-w-full max-h-full object-contain" />
                                 </div>
                             )}
-                            <div className="text-[10px] font-extrabold text-red-600 uppercase tracking-widest leading-none">
+                            <div className="text-[10px] font-extrabold text-red-600 uppercase tracking-widest leading-none group-hover/pub:underline underline-offset-2 transition-all">
                                 {book.publication}
                             </div>
-                        </div>
+                        </Link>
                     )}
 
                     {/* Title */}
