@@ -4,6 +4,7 @@ import { Star, Heart, Share2, Minus, Plus, ChevronRight, ShoppingCart, Truck, Ta
 import { newArrivals, hotDeals, genreBooks } from '../data/mockData';
 import { useCart } from '../context/CartContext';
 import type { Book } from '../types';
+import { getPublicationLogo } from '../data/publicationData';
 import BookSection from '../components/BookSection';
 
 const BookDetails = () => {
@@ -109,7 +110,12 @@ const BookDetails = () => {
                                             {book.author}
                                         </Link>
                                         {book.publication && (
-                                            <div className="inline-block bg-red-50 text-red-700 text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2">
+                                            <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2 border border-red-100">
+                                                {getPublicationLogo(book.publication) && (
+                                                    <div className="w-5 h-5 flex-shrink-0 flex items-center justify-center rounded-sm overflow-hidden bg-white/50 p-0.5">
+                                                        <img src={getPublicationLogo(book.publication)} alt="" className="max-w-full max-h-full object-contain" />
+                                                    </div>
+                                                )}
                                                 {book.publication}
                                             </div>
                                         )}

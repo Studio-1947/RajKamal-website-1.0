@@ -3,6 +3,7 @@ import { Heart, Star, Minus, Plus } from 'lucide-react';
 import type { Book } from '../types';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
+import { getPublicationLogo } from '../data/publicationData';
 
 const formatReviewCount = (count: number): string => {
     if (count >= 1000) {
@@ -45,8 +46,10 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
         }
     };
 
+    const pubLogo = book.publication ? getPublicationLogo(book.publication) : null;
+
     return (
-        <div className="bg-white rounded-xl p-4 relative group/card h-full flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <div className="bg-white rounded-xl p-3 relative group/card h-full flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             {/* Wishlist Button */}
             <button className="absolute top-6 right-6 z-10 p-1.5 bg-white/80 rounded-full hover:bg-white transition-colors">
                 <Heart
@@ -81,55 +84,74 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     <span className="text-gray-400 text-xs ml-2 font-medium">{formatReviewCount(book.reviews)} Reviews</span>
                 </div>
 
-                {/* Title & Author */}
-                <div className="mb-3">
-                    <Link to={`/book/${book.id}`}>
-                        <h3 className="font-bold text-gray-900 text-lg leading-tight mb-1 line-clamp-1 hover:text-red-500 transition-colors" title={book.title}>{book.title}</h3>
-                    </Link>
-                    <Link
-                        to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
-                        onClick={(e) => e.stopPropagation()}
-                        className="text-gray-500 text-xs line-clamp-1 hover:text-[#00508A] hover:underline transition-colors"
-                        title={book.author.split(',').pop()?.trim()}
-                    >
-                        {book.author.split(',').pop()?.trim()}
-                    </Link>
+                {/* Info Container - Fixed height to ensure card alignment, but tight internal spacing */}
+                <div className="h-[68px] flex flex-col justify-start mb-2 overflow-hidden">
+                    {/* Publication Branding */}
                     {book.publication && (
-                        <div className="text-[10px] font-bold text-red-600 uppercase tracking-tight mt-1">
-                            {book.publication}
+                        <div className="flex items-center gap-1 mb-1">
+                            {pubLogo && (
+                                <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center rounded-sm overflow-hidden bg-gray-50">
+                                    <img src={pubLogo} alt="" className="max-w-full max-h-full object-contain" />
+                                </div>
+                            )}
+                            <div className="text-[10px] font-extrabold text-red-600 uppercase tracking-widest leading-none">
+                                {book.publication}
+                            </div>
                         </div>
                     )}
+
+                    {/* Title */}
+                    <Link to={`/book/${book.id}`} className="block">
+                        <h3 className="font-bold text-gray-900 text-[14px] leading-tight line-clamp-2 hover:text-red-500 transition-colors" title={book.title}>
+                            {book.title}
+                        </h3>
+                    </Link>
+
+                    {/* Author */}
+                    <div className="flex items-center gap-1 mt-1">
+                        <span className="text-[10px] text-gray-400 font-medium uppercase tracking-tighter shrink-0">By</span>
+                        <Link
+                            to={`/author/${encodeURIComponent(book.author.split(',').pop()?.trim() || '')}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-gray-600 text-[11px] font-semibold line-clamp-1 hover:text-[#00508A] hover:underline transition-colors"
+                            title={book.author.split(',').pop()?.trim()}
+                        >
+                            {book.author.split(',').pop()?.trim()}
+                        </Link>
+                    </div>
                 </div>
 
-                {/* Formats */}
-                <div className="flex flex-wrap gap-2 mb-4 mt-auto">
-                    {book.formats?.map((format, index) => (
-                        <button
-                            key={index}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setSelectedFormat(format);
-                            }}
-                            className={`text-[10px] px-2 py-1 rounded-[10px] border font-medium transition-colors ${selectedFormat === format
-                                ? 'bg-[#00508A] text-white border-[#00508A]'
-                                : 'bg-white text-[#00508A] hover:bg-blue-50'
-                                }`}
-                        >
-                            {format}
-                        </button>
-                    ))}
+                {/* Formats - Consistent padding */}
+                <div className="flex flex-wrap gap-2 mb-2">
+                    <div className="flex gap-1.5 min-h-[22px]">
+                        {book.formats?.map((format, index) => (
+                            <button
+                                key={index}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setSelectedFormat(format);
+                                }}
+                                className={`text-[10px] px-1.5 py-0.5 rounded-[8px] border font-medium transition-colors ${selectedFormat === format
+                                    ? 'bg-[#00508A] text-white border-[#00508A]'
+                                    : 'bg-white text-[#00508A] hover:bg-blue-50'
+                                    }`}
+                            >
+                                {format}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Price */}
-                <div className="flex items-baseline mb-4">
-                    <span className="text-red-500 text-xl font-bold">₹{currentPrice}</span>
-                    <span className="text-gray-400 text-sm line-through ml-2">₹{currentOriginalPrice}</span>
-                    <span className="text-green-600 text-xs font-bold ml-2">{currentDiscount}% off</span>
+                <div className="flex items-baseline mb-2">
+                    <span className="text-red-500 text-lg font-bold">₹{currentPrice}</span>
+                    <span className="text-gray-400 text-xs line-through ml-1.5">₹{currentOriginalPrice}</span>
+                    <span className="text-green-600 text-xs font-bold ml-1.5">{currentDiscount}% off</span>
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-3 mt-auto">
-                    <button className="flex-1 bg-[#CCEAFF] text-[#00508A] py-2.5 sm:py-2 rounded-lg font-medium text-sm hover:bg-[#CCEAFF]/80 transition-colors">
+                <div className="flex gap-2 mt-auto">
+                    <button className="flex-1 bg-[#CCEAFF] text-[#00508A] py-2 rounded-lg font-medium text-xs hover:bg-[#CCEAFF]/80 transition-colors">
                         Buy Now
                     </button>
 
@@ -137,22 +159,22 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                         <div className="flex-1 flex items-center justify-between bg-white border border-red-300 rounded-lg px-2 py-1">
                             <button
                                 onClick={handleDecrement}
-                                className="p-1.5 sm:p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
+                                className="p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
                             >
-                                <Minus className="h-4 w-4" />
+                                <Minus className="h-3 w-3" />
                             </button>
-                            <span className="font-medium text-gray-900">{quantityInCart}</span>
+                            <span className="font-medium text-xs text-gray-900">{quantityInCart}</span>
                             <button
                                 onClick={handleIncrement}
-                                className="p-1.5 sm:p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
+                                className="p-1 hover:bg-red-50 text-red-500 rounded transition-colors"
                             >
-                                <Plus className="h-4 w-4" />
+                                <Plus className="h-3 w-3" />
                             </button>
                         </div>
                     ) : (
                         <button
                             onClick={() => addToCart(book)}
-                            className="flex-1 bg-white border border-red-300 text-red-500 py-2.5 sm:py-2 rounded-lg font-medium text-sm hover:bg-red-50 transition-colors"
+                            className="flex-1 bg-white border border-red-300 text-red-500 py-2 rounded-lg font-medium text-xs hover:bg-red-50 transition-colors"
                         >
                             Add to Cart
                         </button>

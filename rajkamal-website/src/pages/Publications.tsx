@@ -1,21 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ChevronRight, LayoutGrid } from 'lucide-react';
-
-const publications = [
-    { name: 'Akshar Prakashan', image: '/publication/akshar_lo.png' },
-    { name: 'Bani Prakashan', image: '/publication/bani.jpg' },
-    { name: 'Fanda', image: '/publication/fanda.jpg' },
-    { name: 'Hans', image: '/publication/han.jpg' },
-    { name: 'Lokbharti', image: '/publication/lokh.jpg' },
-    { name: 'Purvanchal', image: '/publication/pur.jpg' },
-    { name: 'Rajkamal', image: '/publication/ra.jpg' },
-    { name: 'Radhakrishna', image: '/publication/radha.jpg' },
-    { name: 'Remadhav', image: '/publication/re.jpg' },
-    { name: 'Rekhta', image: '/publication/rekhta_1.jpg' },
-    { name: 'Sahitya', image: '/publication/sahi.jpg' },
-    { name: 'Saransh', image: '/publication/sarn.jpg' },
-    { name: 'Sarthak', image: '/publication/sart.jpg' },
-];
+import { publications } from '../data/publicationData';
 
 const Publications = () => {
     return (
@@ -53,8 +38,9 @@ const Publications = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                     {publications.map((pub) => (
-                        <div
+                        <Link
                             key={pub.name}
+                            to={pub.href}
                             className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-red-200 transition-all group flex flex-col items-center justify-center text-center aspect-square"
                         >
                             <div className="w-full h-full flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
@@ -65,7 +51,7 @@ const Publications = () => {
                                 />
                             </div>
                             <h2 className="mt-4 text-sm font-semibold text-gray-700 group-hover:text-red-600 transition-colors uppercase tracking-wider">{pub.name}</h2>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
