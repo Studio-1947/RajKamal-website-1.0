@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
                                     </AnimatePresence>
                                 </div>
                             </h1>
-                            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 font-medium px-4 sm:px-0 mt-2 lg:-mt-2">
+                            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 font-medium px-4 sm:px-0 mt-2 lg:-mt-2 -mt-2">
                                 हर किताब में है एक नई दुनिया
                             </p>
                         </div>
@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
                                     />
                                 </div>
                                 {/* Search button removed as per design */}
-                                <button className="p-2 bg-pink-100 text-primary rounded-full hover:bg-pink-200 transition-colors md:mr-6">
+                                <button className="p-2 bg-pink-100 text-primary rounded-full hover:bg-pink-200 transition-colors md:mr-6 mr-4">
                                     <Mic className="h-5 w-5" />
                                 </button>
                             </div>
