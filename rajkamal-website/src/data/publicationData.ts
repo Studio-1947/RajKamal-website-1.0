@@ -11,7 +11,7 @@ export const publications: Publication[] = [
     href: "/publication/Akshar%20Prakashan",
   },
   {
-    name: "Banyan Tree",
+    name: "Banyan Tree Books",
     image: "/publication/bani.jpg",
     href: "/publication/Bani%20Prakashan",
   },
