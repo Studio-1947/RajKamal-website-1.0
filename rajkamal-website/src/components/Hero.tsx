@@ -33,8 +33,9 @@ const heroCards = [
     }
 ];
 
+const words = ["जुड़ें", "पढ़ें"];
+
 const Hero: React.FC = () => {
-    const words = ["जुड़ें", "पढ़ें"];
     const [index, setIndex] = useState(0);
     const [searchValue, setSearchValue] = useState("");
 

@@ -18,16 +18,19 @@ const BookDetails = () => {
     const [promoCode, setPromoCode] = useState('');
 
     useEffect(() => {
-        const allBooks = [...newArrivals, ...hotDeals, ...genreBooks];
-        const foundBook = allBooks.find(b => b.id === Number(id));
+        const fetchBook = async () => {
+            const allBooks = [...newArrivals, ...hotDeals, ...genreBooks];
+            const foundBook = allBooks.find(b => b.id === Number(id));
 
-        if (foundBook) {
-            setBook(foundBook);
-            setSelectedImage(foundBook.image);
-            if (foundBook.formats && foundBook.formats.length > 0) {
-                setSelectedFormat(foundBook.formats[0]);
+            if (foundBook) {
+                setBook(foundBook);
+                setSelectedImage(foundBook.image);
+                if (foundBook.formats && foundBook.formats.length > 0) {
+                    setSelectedFormat(foundBook.formats[0]);
+                }
             }
-        }
+        };
+        fetchBook();
     }, [id]);
 
     if (!book) {

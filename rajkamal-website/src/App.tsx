@@ -15,6 +15,9 @@ import PressCorner from './pages/PressCorner';
 import AuthorProfile from './pages/AuthorProfile';
 import AllBooks from './pages/AllBooks';
 import Publications from './pages/Publications';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import Account from './pages/Account';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
@@ -40,6 +43,9 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/press" element={<PressCorner />} />
             <Route path="/publications" element={<Publications />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/account" element={<Account />} />
           </Routes>
           <Footer />
         </Layout>

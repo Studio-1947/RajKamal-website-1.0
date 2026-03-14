@@ -107,10 +107,10 @@ const Header: React.FC = () => {
 
                     {/* Right Side Actions */}
                     <div className="hidden md:flex items-center space-x-6">
-                        <a href="#" className="flex items-center text-gray-500 hover:text-primary transition-colors text-sm font-medium">
+                        <Link to="/account" className="flex items-center text-gray-500 hover:text-primary transition-colors text-sm font-medium">
                             <User className="h-5 w-5 mr-2" />
                             My Account
-                        </a>
+                        </Link>
                         <button
                             onClick={toggleCart}
                             className="flex items-center bg-primary text-white px-5 py-2 rounded-full hover:bg-red-700 transition-colors shadow-md relative"
@@ -203,10 +203,10 @@ const Header: React.FC = () => {
                         ))}
                     </div>
                     <div className="p-6 border-t border-gray-100 bg-gray-50 space-y-4">
-                        <a href="#" className="flex items-center justify-center w-full py-3 px-4 rounded-xl border border-gray-200 text-gray-700 font-medium hover:bg-white hover:border-gray-300 transition-all shadow-sm">
+                        <Link to="/account" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center w-full py-3 px-4 rounded-xl border border-gray-200 text-gray-700 font-medium hover:bg-white hover:border-gray-300 transition-all shadow-sm">
                             <User className="h-5 w-5 mr-2" />
                             My Account
-                        </a>
+                        </Link>
                         <button
                             onClick={() => {
                                 setIsMenuOpen(false);
