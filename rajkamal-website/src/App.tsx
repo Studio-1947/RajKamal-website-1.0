@@ -11,6 +11,7 @@ import Authors from './pages/Authors';
 import EBooks from './pages/EBooks';
 import StudentCorner from './pages/StudentCorner';
 import Blog from './pages/Blog';
+import BlogDetail from './pages/BlogDetail';
 import PressCorner from './pages/PressCorner';
 import AuthorProfile from './pages/AuthorProfile';
 import AllBooks from './pages/AllBooks';
@@ -41,6 +42,7 @@ function App() {
             <Route path="/ebooks" element={<EBooks />} />
             <Route path="/student-corner" element={<StudentCorner />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
             <Route path="/press" element={<PressCorner />} />
             <Route path="/publications" element={<Publications />} />
             <Route path="/login" element={<Login />} />

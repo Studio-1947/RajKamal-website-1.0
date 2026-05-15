@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Clock, User } from 'lucide-react';
 import type { BlogPost } from '../data/blogData';
 
@@ -19,7 +20,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, variant = 'default' }) => {
 
     if (variant === 'featured') {
         return (
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all group cursor-pointer lg:grid lg:grid-cols-2">
+            <Link to={`/blog/${post.id}`} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all group cursor-pointer lg:grid lg:grid-cols-2">
                 <div className="relative overflow-hidden h-64 lg:h-auto">
                     <img
                         src={post.image}
@@ -61,17 +62,17 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, variant = 'default' }) => {
                             <p className="text-sm font-semibold text-gray-800">{post.author}</p>
                             <p className="text-xs text-gray-400">{post.authorRole}</p>
                         </div>
-                        <button className="ml-auto text-sm font-semibold text-[#C41E3A] hover:underline">
+                        <span className="ml-auto text-sm font-semibold text-[#C41E3A] group-hover:underline">
                             Read More →
-                        </button>
+                        </span>
                     </div>
                 </div>
-            </div>
+            </Link>
         );
     }
 
     return (
-        <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md hover:border-red-100 transition-all group cursor-pointer flex flex-col h-full">
+        <Link to={`/blog/${post.id}`} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md hover:border-red-100 transition-all group cursor-pointer flex flex-col h-full">
             <div className="relative overflow-hidden h-48">
                 <img
                     src={post.image}
@@ -113,7 +114,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, variant = 'default' }) => {
                     <User className="w-3.5 h-3.5 text-gray-300 flex-shrink-0" />
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
