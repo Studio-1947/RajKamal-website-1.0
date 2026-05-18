@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { ArrowRight, Mail, Phone, MapPin, BookOpen, Quote } from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin, Quote } from 'lucide-react';
 import { connectWithUs, aboutUs, quickLinks, policies, socialPlatformsData } from '../data/footerData';
 
 // ─── Shared Icon Components ──────────────────────────────────────────────────
