@@ -20,6 +20,7 @@ const Header: React.FC = () => {
         { name: 'Blog', href: '/blog' },
         { name: 'Events', href: '/events' },
         { name: 'Press Corner', href: '/press' },
+        { name: 'Footer Styles', href: '/footer-designs' },
     ];
 
     useEffect(() => {
