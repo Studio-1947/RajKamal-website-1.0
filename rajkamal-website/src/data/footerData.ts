@@ -30,6 +30,58 @@ export const policies = [
     { label: 'Terms of Service', href: '#' },
 ];
 
+export const brandSocialData = [
+    {
+        brand: 'Rajkamal Prakashan',
+        socials: [
+            { platform: 'YouTube', url: 'https://www.youtube.com/@RajkamalBooks' },
+            { platform: 'Instagram', url: 'https://www.instagram.com/rajkamalbooks' },
+            { platform: 'Facebook', url: 'https://www.facebook.com/RajkamalPrakashanSamooh' },
+            { platform: 'X (Twitter)', url: 'https://x.com/RajkamalBooks' },
+            { platform: 'LinkedIn', url: 'https://in.linkedin.com/company/rajkamalbooks' },
+            { platform: 'Threads', url: 'https://www.threads.com/@rajkamalbooks' },
+        ],
+    },
+    {
+        brand: 'Radhakrishna Prakashan',
+        socials: [
+            { platform: 'Instagram', url: 'https://www.instagram.com/radhakrishnaprakashan' },
+            { platform: 'Facebook', url: 'https://www.facebook.com/RadhakrishnaPrakashan' },
+            { platform: 'X (Twitter)', url: 'https://x.com/RadhakrishnaPub' },
+        ],
+    },
+    {
+        brand: 'Lokbharti Prakashan',
+        socials: [
+            { platform: 'Instagram', url: 'https://www.instagram.com/lokbhartiprakashan' },
+            { platform: 'Facebook', url: 'https://www.facebook.com/LokbhartiBooks' },
+            { platform: 'X (Twitter)', url: 'https://x.com/LokbhartiBooks' },
+        ],
+    },
+    {
+        brand: 'Saath Judein Saath Padhein',
+        socials: [
+            { platform: 'Instagram', url: 'https://www.instagram.com/sathjudeinsathpadhein' },
+            { platform: 'Facebook', url: 'https://www.facebook.com/sathjudeinsathpadhein' },
+        ],
+    },
+    {
+        brand: 'Kitab Utsav',
+        socials: [
+            { platform: 'Instagram', url: 'https://www.instagram.com/kitab.utsav' },
+            { platform: 'Facebook', url: 'https://www.facebook.com/kitabutsav' },
+        ],
+    },
+    {
+        brand: 'Rajkamal Urdu',
+        socials: [
+            { platform: 'Instagram', url: 'https://www.instagram.com/rajkamalurdu' },
+            { platform: 'Facebook', url: 'https://www.facebook.com/rajkamalurdu' },
+            { platform: 'X (Twitter)', url: 'https://x.com/RajkamalUrdu' },
+        ],
+    },
+];
+
 export const socialPlatformsData = [
     {
         platform: 'YouTube',
