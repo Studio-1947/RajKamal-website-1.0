@@ -746,9 +746,19 @@ export const Design8: React.FC = () => (
 // ─── Design 9: Brand-Wise Social (Penguin-Inspired) ─────────────────────────
 export const Design9: React.FC = () => (
     <footer className="w-full">
-        {/* Top nav — icon + all four columns */}
-        <div className="bg-[#FAF7F2] pt-16 pb-0 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        {/* Top nav — icon + all four columns with watermark in background */}
+        <div className="bg-[#FAF7F2] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            {/* Background Watermark */}
+            <div className="absolute inset-x-0 bottom-[-2%] flex items-center justify-center pointer-events-none select-none z-0">
+                <span
+                    className="font-extrabold text-center leading-none text-[#EDE6DD] whitespace-nowrap select-none tracking-widest"
+                    style={{ fontSize: 'clamp(6rem, 14vw, 18rem)' }}
+                >
+                    साथ जुड़े साथ पढ़े
+                </span>
+            </div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
                     {/* Icon only, no text logo */}
                     <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
@@ -762,8 +772,8 @@ export const Design9: React.FC = () => (
                     <ConnectWithUsColumn
                         titleClassName="text-[#1A1A1A] font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-[#E2D9CE]"
                         brandTitleClassName="text-[#6B5E52] text-xs font-semibold leading-none"
-                        iconContainerClassName="w-7 h-7 bg-[#1A1A1A] hover:bg-[#A4343A] text-white rounded transition-all duration-200"
-                        iconClassName="w-3.5 h-3.5"
+                        iconContainerClassName="w-6 h-6 bg-[#EFE8DF] hover:bg-[#A4343A] text-[#6B5E52] hover:text-white rounded transition-all duration-200"
+                        iconClassName="w-3 h-3"
                     />
                     <NavColumn title="About Us" links={aboutUs} />
                     <NavColumn title="Quick Links" links={quickLinks} />
@@ -771,18 +781,9 @@ export const Design9: React.FC = () => (
                 </div>
             </div>
         </div>
-        {/* Watermark section — sits above the copyright bar */}
-        <div className="bg-[#EDE5DB] border-t border-[#D8CFC5] py-14 flex items-center justify-center select-none overflow-hidden px-4">
-            <span
-                className="font-bold text-center leading-none w-full text-[#1A1A1A]/10"
-                style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}
-            >
-                साथ जुड़े साथ पढ़े
-            </span>
-        </div>
 
         {/* Copyright Bar */}
-        <div className="bg-[#FAF7F2] border-t border-[#D8CFC5] py-8 px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#FAF7F2] border-t border-[#E2D9CE] py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p className="text-center text-[#6B5E52] text-xs tracking-wide">© 2025 राजकमल प्रकाशन समूह. All rights reserved.</p>
                 <a href="/footer-designs" className="text-[#A4343A]/70 hover:text-[#A4343A] transition-colors text-xs font-semibold">Footer Styles</a>
