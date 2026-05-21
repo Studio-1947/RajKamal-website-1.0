@@ -746,9 +746,19 @@ export const Design8: React.FC = () => (
 // ─── Design 9: Brand-Wise Social (Penguin-Inspired) ─────────────────────────
 export const Design9: React.FC = () => (
     <footer className="w-full">
-        {/* Top nav — icon + all four columns */}
-        <div className="bg-[#FAF7F2] pt-16 pb-0 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        {/* Top nav — icon + all four columns with watermark in background */}
+        <div className="bg-[#FAF7F2] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            {/* Background Watermark */}
+            <div className="absolute inset-x-0 bottom-4 flex items-center justify-center pointer-events-none select-none z-0">
+                <span
+                    className="font-extrabold text-center leading-none text-[#EDE6DD] whitespace-nowrap select-none tracking-widest"
+                    style={{ fontSize: 'clamp(4.5rem, 10vw, 12rem)' }}
+                >
+                    साथ जुड़े साथ पढ़े
+                </span>
+            </div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
                     {/* Icon only, no text logo */}
                     <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
@@ -762,8 +772,8 @@ export const Design9: React.FC = () => (
                     <ConnectWithUsColumn
                         titleClassName="text-[#1A1A1A] font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-[#E2D9CE]"
                         brandTitleClassName="text-[#6B5E52] text-xs font-semibold leading-none"
-                        iconContainerClassName="w-7 h-7 bg-[#1A1A1A] hover:bg-[#A4343A] text-white rounded transition-all duration-200"
-                        iconClassName="w-3.5 h-3.5"
+                        iconContainerClassName="w-6 h-6 bg-[#EFE8DF] hover:bg-[#A4343A] text-[#6B5E52] hover:text-white rounded transition-all duration-200"
+                        iconClassName="w-3 h-3"
                     />
                     <NavColumn title="About Us" links={aboutUs} />
                     <NavColumn title="Quick Links" links={quickLinks} />
@@ -771,21 +781,206 @@ export const Design9: React.FC = () => (
                 </div>
             </div>
         </div>
-        {/* Watermark section — sits above the copyright bar */}
-        <div className="bg-[#EDE5DB] border-t border-[#D8CFC5] py-14 flex items-center justify-center select-none overflow-hidden px-4">
-            <span
-                className="font-bold text-center leading-none w-full text-[#1A1A1A]/10"
-                style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}
-            >
-                साथ जुड़े साथ पढ़े
-            </span>
-        </div>
 
         {/* Copyright Bar */}
-        <div className="bg-[#FAF7F2] border-t border-[#D8CFC5] py-8 px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#FAF7F2] border-t border-[#E2D9CE] py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p className="text-center text-[#6B5E52] text-xs tracking-wide">© 2025 राजकमल प्रकाशन समूह. All rights reserved.</p>
                 <a href="/footer-designs" className="text-[#A4343A]/70 hover:text-[#A4343A] transition-colors text-xs font-semibold">Footer Styles</a>
+            </div>
+        </div>
+    </footer>
+);
+
+// ─── Design 10: Brand-Wise Social - Brand Red ───────────────────────────────
+export const Design10: React.FC = () => (
+    <footer className="w-full">
+        {/* Top nav — icon + all four columns with watermark in background */}
+        <div className="bg-[#A4343A] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            {/* Background Watermark */}
+            <div className="absolute inset-x-0 bottom-4 flex items-center justify-center pointer-events-none select-none z-0">
+                <span
+                    className="font-extrabold text-center leading-none text-[#8B1F25] whitespace-nowrap select-none tracking-widest opacity-90"
+                    style={{ fontSize: 'clamp(4.5rem, 10vw, 12rem)' }}
+                >
+                    साथ जुड़े साथ पढ़े
+                </span>
+            </div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
+                    {/* Icon only, logo inverted to white on red background */}
+                    <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
+                        <img src="/LogoIcon2_rajkamallogo.svg" alt="Rajkamal Prakashan" className="w-48 h-24 object-contain brightness-0 invert opacity-95" />
+                        <div className="space-y-2.5">
+                            <div className="flex items-start gap-2">
+                                <Mail className="w-4 h-4 text-white/60 mt-0.5 flex-shrink-0" />
+                                <a href="mailto:info@rajkamalprakashan.com" className="text-white/70 text-sm hover:text-white transition-colors">info@rajkamalprakashan.com</a>
+                            </div>
+                            <div className="flex items-start gap-2">
+                                <Phone className="w-4 h-4 text-white/60 mt-0.5 flex-shrink-0" />
+                                <span className="text-white/70 text-sm">+91 11 2327 2783</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                                <MapPin className="w-4 h-4 text-white/60 mt-0.5 flex-shrink-0" />
+                                <span className="text-white/70 text-sm leading-snug">1-B, नेताजी सुभाष मार्ग,<br />दरियागंज, नई दिल्ली — 110002</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ConnectWithUsColumn
+                        titleClassName="text-white font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/20"
+                        brandTitleClassName="text-white/60 text-xs font-semibold leading-none"
+                        iconContainerClassName="w-6 h-6 bg-white/10 hover:bg-white text-white/80 hover:text-[#A4343A] rounded transition-all duration-200"
+                        iconClassName="w-3 h-3"
+                    />
+                    <div>
+                        <h3 className="text-white font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/20">
+                            About Us
+                        </h3>
+                        <ul className="space-y-3">
+                            {aboutUs.map(({ label, href }) => (
+                                <li key={label}>
+                                    <a href={href} className="text-white/70 text-sm hover:text-white transition-colors leading-snug">
+                                        {label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="text-white font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/20">
+                            Quick Links
+                        </h3>
+                        <ul className="space-y-3">
+                            {quickLinks.map(({ label, href }) => (
+                                <li key={label}>
+                                    <a href={href} className="text-white/70 text-sm hover:text-white transition-colors leading-snug">
+                                        {label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="text-white font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/20">
+                            Policies
+                        </h3>
+                        <ul className="space-y-3">
+                            {policies.map(({ label, href }) => (
+                                <li key={label}>
+                                    <a href={href} className="text-white/70 text-sm hover:text-white transition-colors leading-snug">
+                                        {label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Copyright Bar */}
+        <div className="bg-[#8B1F25] border-t border-white/10 py-8 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p className="text-center text-white/50 text-xs tracking-wide">© 2025 राजकमल प्रकाशन समूह. All rights reserved.</p>
+                <a href="/footer-designs" className="text-white/60 hover:text-white transition-colors text-xs font-semibold">Footer Styles</a>
+            </div>
+        </div>
+    </footer>
+);
+
+// ─── Design 11: Brand-Wise Social - Dark Mode ───────────────────────────────
+export const Design11: React.FC = () => (
+    <footer className="w-full">
+        {/* Top nav — icon + all four columns with watermark in background */}
+        <div className="bg-[#121212] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            {/* Background Watermark */}
+            <div className="absolute inset-x-0 bottom-4 flex items-center justify-center pointer-events-none select-none z-0">
+                <span
+                    className="font-extrabold text-center leading-none text-[#1E1E1E] whitespace-nowrap select-none tracking-widest"
+                    style={{ fontSize: 'clamp(4.5rem, 10vw, 12rem)' }}
+                >
+                    साथ जुड़े साथ पढ़े
+                </span>
+            </div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
+                    {/* Icon only, logo inverted to white on dark background */}
+                    <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
+                        <img src="/LogoIcon2_rajkamallogo.svg" alt="Rajkamal Prakashan" className="w-48 h-24 object-contain brightness-0 invert opacity-90" />
+                        <div className="space-y-2.5">
+                            <div className="flex items-start gap-2">
+                                <Mail className="w-4 h-4 text-[#A4343A] mt-0.5 flex-shrink-0" />
+                                <a href="mailto:info@rajkamalprakashan.com" className="text-white/60 text-sm hover:text-white transition-colors">info@rajkamalprakashan.com</a>
+                            </div>
+                            <div className="flex items-start gap-2">
+                                <Phone className="w-4 h-4 text-[#A4343A] mt-0.5 flex-shrink-0" />
+                                <span className="text-white/60 text-sm">+91 11 2327 2783</span>
+                            </div>
+                            <div className="flex items-start gap-2">
+                                <MapPin className="w-4 h-4 text-[#A4343A] mt-0.5 flex-shrink-0" />
+                                <span className="text-white/60 text-sm leading-snug">1-B, नेताजी सुभाष मार्ग,<br />दरियागंज, नई दिल्ली — 110002</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ConnectWithUsColumn
+                        titleClassName="text-white font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/10"
+                        brandTitleClassName="text-white/50 text-xs font-semibold leading-none"
+                        iconContainerClassName="w-6 h-6 bg-white/5 hover:bg-[#A4343A] text-white/60 hover:text-white rounded transition-all duration-200"
+                        iconClassName="w-3 h-3"
+                    />
+                    <div>
+                        <h3 className="text-white font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/10">
+                            About Us
+                        </h3>
+                        <ul className="space-y-3">
+                            {aboutUs.map(({ label, href }) => (
+                                <li key={label}>
+                                    <a href={href} className="text-white/60 text-sm hover:text-white transition-colors leading-snug">
+                                        {label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="text-white font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/10">
+                            Quick Links
+                        </h3>
+                        <ul className="space-y-3">
+                            {quickLinks.map(({ label, href }) => (
+                                <li key={label}>
+                                    <a href={href} className="text-white/60 text-sm hover:text-white transition-colors leading-snug">
+                                        {label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="text-white font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-white/10">
+                            Policies
+                        </h3>
+                        <ul className="space-y-3">
+                            {policies.map(({ label, href }) => (
+                                <li key={label}>
+                                    <a href={href} className="text-white/60 text-sm hover:text-white transition-colors leading-snug">
+                                        {label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Copyright Bar */}
+        <div className="bg-[#0b0b0b] border-t border-white/5 py-8 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p className="text-center text-white/30 text-xs tracking-wide">© 2025 राजकमल प्रकाशन समूह. All rights reserved.</p>
+                <a href="/footer-designs" className="text-white/55 hover:text-white transition-colors text-xs font-semibold">Footer Styles</a>
             </div>
         </div>
     </footer>
@@ -802,6 +997,8 @@ export const designs = [
     { id: 7, name: 'Editorial Crimson', description: 'Serif fonts, deep brand-crimson back, prominent quote block, elegant style', component: Design7 },
     { id: 8, name: 'Neo-Brutalist', description: 'Retro-modern sand style, thick borders, high-contrast block layouts', component: Design8 },
     { id: 9, name: 'Brand-Wise Social', description: 'Icon-only logo, brand-wise social icons, Hindi watermark — Penguin-inspired', component: Design9 },
+    { id: 10, name: 'Brand-Wise Red', description: 'Icon-only logo, brand-wise social icons, Hindi watermark — Brand Red version', component: Design10 },
+    { id: 11, name: 'Brand-Wise Dark', description: 'Icon-only logo, brand-wise social icons, Hindi watermark — Dark version', component: Design11 },
 ];
 
 const Footer: React.FC = () => {
