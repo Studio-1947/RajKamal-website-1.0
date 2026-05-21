@@ -749,7 +749,7 @@ export const Design9: React.FC = () => (
         {/* Top nav — icon + all four columns with watermark in background */}
         <div className="bg-[#FAF7F2] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             {/* Background Watermark */}
-            <div className="absolute inset-x-0 bottom-[-2%] flex items-center justify-center pointer-events-none select-none z-0">
+            <div className="absolute inset-x-0 bottom-4 flex items-center justify-center pointer-events-none select-none z-0">
                 <span
                     className="font-extrabold text-center leading-none text-[#EDE6DD] whitespace-nowrap select-none tracking-widest"
                     style={{ fontSize: 'clamp(4.5rem, 10vw, 12rem)' }}
