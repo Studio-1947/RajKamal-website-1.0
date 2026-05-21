@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin, Quote } from 'lucide-react';
-import { connectWithUs, aboutUs, quickLinks, policies, socialPlatformsData } from '../data/footerData';
+import { connectWithUs, aboutUs, quickLinks, policies, socialPlatformsData, brandSocialData } from '../data/footerData';
 
 // ─── Shared Icon Components ──────────────────────────────────────────────────
 type IconProps = { className?: string };
@@ -71,6 +71,46 @@ const NavColumn: React.FC<{ title: string; links: { label: string; href: string 
     </div>
 );
 
+const ConnectWithUsColumn: React.FC<{
+    titleClassName?: string;
+    brandTitleClassName?: string;
+    iconContainerClassName?: string;
+    iconClassName?: string;
+}> = ({
+    titleClassName = "text-[#1A1A1A] font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-[#E2D9CE]",
+    brandTitleClassName = "text-[#6B5E52] text-xs font-semibold leading-none",
+    iconContainerClassName = "w-7 h-7 bg-[#1A1A1A] hover:bg-[#A4343A] text-white rounded transition-all duration-200",
+    iconClassName = "w-3.5 h-3.5"
+}) => (
+    <div>
+        <h3 className={titleClassName}>Connect With Us</h3>
+        <div className="space-y-4">
+            {brandSocialData.map(({ brand, socials }) => (
+                <div key={brand} className="space-y-2">
+                    <p className={brandTitleClassName}>{brand.toUpperCase()}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                        {socials.map(({ platform, url }) => {
+                            const Icon = getSocialIcon(platform);
+                            return (
+                                <a
+                                    key={platform}
+                                    href={url}
+                                    title={platform}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`flex items-center justify-center ${iconContainerClassName}`}
+                                >
+                                    <Icon className={iconClassName} />
+                                </a>
+                            );
+                        })}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+);
+
 // ─── Design 1: Warm Classic ──────────────────────────────────────────────────
 export const Design1: React.FC = () => (
     <footer className="w-full">
@@ -94,9 +134,9 @@ export const Design1: React.FC = () => (
                     <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
                         <div>
                             <img src="/rajkamal_logo.svg" alt="Logo" className="w-44 h-auto mb-3" />
-                            <p className="text-[#A4343A] text-sm font-semibold tracking-wide">साहित्य की सेवा में</p>
+                            <p className="text-[#A4343A] text-sm font-semibold tracking-wide">साथ जुड़े साथ पढ़े</p>
                         </div>
-                        <p className="text-[#6B5E52] text-sm leading-relaxed">भारत का अग्रणी हिंदी प्रकाशन समूह — दशकों से श्रेष्ठ साहित्य को पाठकों तक पहुँचाने में समर्पित।</p>
+
                         <div className="pt-1 space-y-2">
                             <div className="flex items-start gap-2"><span className="text-[#A4343A] mt-0.5"><Mail className="w-4 h-4 inline" /></span><a href="mailto:info@rajkamalprakashan.com" className="text-[#6B5E52] text-sm hover:text-[#A4343A]">info@rajkamalprakashan.com</a></div>
                             <div className="flex items-start gap-2"><span className="text-[#A4343A] mt-0.5"><Phone className="w-4 h-4 inline" /></span><span className="text-[#6B5E52] text-sm">+91 11 2327 2783</span></div>
@@ -159,9 +199,9 @@ export const Design2: React.FC = () => (
                     <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
                         <div>
                             <img src="/rajkamal_logo.svg" alt="Logo" className="w-44 h-auto mb-3 brightness-0 invert opacity-80" />
-                            <p className="text-[#A4343A] text-sm font-semibold tracking-wide">साहित्य की सेवा में</p>
+                            <p className="text-[#A4343A] text-sm font-semibold tracking-wide">साथ जुड़े साथ पढ़े</p>
                         </div>
-                        <p className="text-[#6A5A50] text-sm leading-relaxed">भारत का अग्रणी हिंदी प्रकाशन समूह — दशकों से श्रेष्ठ साहित्य को पाठकों तक पहुँचाने में समर्पित।</p>
+
                         <div className="pt-1 space-y-2">
                             <div className="flex items-start gap-2"><span className="text-[#A4343A] mt-0.5"><Mail className="w-4 h-4 text-primary" /></span><a href="mailto:info@rajkamalprakashan.com" className="text-[#6A5A50] text-sm hover:text-white transition-colors">info@rajkamalprakashan.com</a></div>
                             <div className="flex items-start gap-2"><span className="text-[#A4343A] mt-0.5"><Phone className="w-4 h-4 text-primary" /></span><span className="text-[#6A5A50] text-sm">+91 11 2327 2783</span></div>
@@ -226,9 +266,9 @@ export const Design3: React.FC = () => (
                     <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
                         <div>
                             <img src="/rajkamal_logo.svg" alt="Logo" className="w-44 h-auto mb-3 brightness-0 invert" />
-                            <p className="text-white/60 text-sm font-semibold tracking-wide">साहित्य की सेवा में</p>
+                            <p className="text-white/60 text-sm font-semibold tracking-wide">साथ जुड़े साथ पढ़े</p>
                         </div>
-                        <p className="text-white/50 text-sm leading-relaxed">भारत का अग्रणी हिंदी प्रकाशन समूह — दशकों से श्रेष्ठ साहित्य को पाठकों तक पहुँचाने में समर्पित।</p>
+
                         <div className="pt-1 space-y-2">
                             <div className="flex items-start gap-2"><span className="text-white/60 mt-0.5"><Mail className="w-4 h-4 text-white/70" /></span><a href="mailto:info@rajkamalprakashan.com" className="text-white/60 text-sm hover:text-white transition-colors">info@rajkamalprakashan.com</a></div>
                             <div className="flex items-start gap-2"><span className="text-white/60 mt-0.5"><Phone className="w-4 h-4 text-white/70" /></span><span className="text-white/60 text-sm">+91 11 2327 2783</span></div>
@@ -291,8 +331,8 @@ export const Design4: React.FC = () => (
             {/* Dark left */}
             <div className="bg-[#1C1510] lg:w-[340px] xl:w-[380px] flex-shrink-0 px-8 xl:px-12 py-14 flex flex-col">
                 <img src="/rajkamal_logo.svg" alt="Logo" className="w-44 h-auto mb-3 brightness-0 invert opacity-80" />
-                <p className="text-[#A4343A] text-sm font-semibold tracking-wide mb-5">साहित्य की सेवा में</p>
-                <p className="text-[#7A6A60] text-sm leading-relaxed mb-10">भारत का अग्रणी हिंदी प्रकाशन समूह — दशकों से श्रेष्ठ साहित्य को पाठकों तक पहुँचाने में समर्पित।</p>
+                <p className="text-[#A4343A] text-sm font-semibold tracking-wide mb-5">साथ जुड़े साथ पढ़े</p>
+
                 <div className="space-y-3 mb-10">
                     <div className="flex items-start gap-3"><span className="text-[#A4343A] mt-0.5 flex-shrink-0"><Mail className="w-4 h-4" /></span><a href="mailto:info@rajkamalprakashan.com" className="text-[#7A6A60] text-sm hover:text-white transition-colors">info@rajkamalprakashan.com</a></div>
                     <div className="flex items-start gap-3"><span className="text-[#A4343A] mt-0.5 flex-shrink-0"><Phone className="w-4 h-4" /></span><span className="text-[#7A6A60] text-sm">+91 11 2327 2783</span></div>
@@ -378,8 +418,8 @@ export const Design5: React.FC = () => (
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 mb-12">
                     <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-4">
                         <img src="/rajkamal_logo.svg" alt="Logo" className="w-40 h-auto" />
-                        <p className="text-[#A4343A] text-xs font-semibold uppercase tracking-widest">साहित्य की सेवा में</p>
-                        <p className="text-gray-500 text-sm leading-relaxed">भारत का अग्रणी हिंदी प्रकाशन समूह।</p>
+                        <p className="text-[#A4343A] text-xs font-semibold uppercase tracking-widest">साथ जुड़े साथ पढ़े</p>
+
                         <div className="space-y-1.5 text-sm text-gray-500">
                             <div><a href="mailto:info@rajkamalprakashan.com" className="hover:text-[#A4343A] transition-colors">info@rajkamalprakashan.com</a></div>
                             <div>+91 11 2327 2783</div>
@@ -451,7 +491,7 @@ export const Design6: React.FC = () => (
                         <img src="/rajkamal_logo.svg" alt="Logo" className="w-40 h-auto mb-3 brightness-0 invert opacity-90" />
                         <span className="inline-block text-[10px] uppercase font-bold tracking-widest text-red-500 bg-red-500/10 px-2 py-0.5 rounded">Est. 1947</span>
                     </div>
-                    <p className="text-slate-400 text-sm leading-relaxed">भारत का अग्रणी हिंदी प्रकाशन समूह — दशकों से श्रेष्ठ साहित्य को पाठकों तक पहुँचाने में समर्पित।</p>
+
                     <div className="space-y-3.5 text-sm text-slate-400 pt-1">
                         <div className="flex items-center gap-2.5 hover:text-white transition-colors"><Mail className="w-4 h-4 text-red-500" /><a href="mailto:info@rajkamalprakashan.com">info@rajkamalprakashan.com</a></div>
                         <div className="flex items-center gap-2.5"><Phone className="w-4 h-4 text-red-500" /><span>+91 11 2327 2783</span></div>
@@ -535,11 +575,9 @@ export const Design7: React.FC = () => (
                 <div className="lg:col-span-1 space-y-6">
                     <div>
                         <img src="/rajkamal_logo.svg" alt="Logo" className="w-44 h-auto mb-3 brightness-0 invert opacity-95" />
-                        <h4 className="font-serif italic text-[#F3D5B5] text-sm">साहित्य की अनवरत सेवा में</h4>
+                        <h4 className="font-serif italic text-[#F3D5B5] text-sm">साथ जुड़े साथ पढ़े</h4>
                     </div>
-                    <p className="text-[#FAF7F2]/70 text-sm leading-relaxed font-light">
-                        भारत का अग्रणी हिंदी प्रकाशन समूह — दशकों से श्रेष्ठ साहित्य को पाठकों तक पहुँचाने में समर्पित।
-                    </p>
+
                     <div className="pt-2 space-y-3 text-sm text-[#FAF7F2]/60 font-light">
                         <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-[#F3D5B5]" /><a href="mailto:info@rajkamalprakashan.com" className="hover:underline hover:text-white">info@rajkamalprakashan.com</a></div>
                         <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-[#F3D5B5]" /><span>+91 11 2327 2783</span></div>
@@ -640,9 +678,7 @@ export const Design8: React.FC = () => (
                     <div className="border-4 border-black p-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] inline-block">
                         <img src="/rajkamal_logo.svg" alt="Logo" className="w-36 h-auto" />
                     </div>
-                    <p className="text-sm font-semibold uppercase leading-relaxed">
-                        भारत का अग्रणी हिंदी प्रकाशन समूह — साहित्य की सेवा में समर्पित।
-                    </p>
+
                     <div className="space-y-2 text-xs font-bold uppercase pt-1">
                         <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-black flex-shrink-0" /><a href="mailto:info@rajkamalprakashan.com" className="hover:underline">info@rajkamalprakashan.com</a></div>
                         <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-black flex-shrink-0" /><span>+91 11 2327 2783</span></div>
@@ -707,6 +743,54 @@ export const Design8: React.FC = () => (
     </footer>
 );
 
+// ─── Design 9: Brand-Wise Social (Penguin-Inspired) ─────────────────────────
+export const Design9: React.FC = () => (
+    <footer className="w-full">
+        {/* Top nav — icon + all four columns */}
+        <div className="bg-[#FAF7F2] pt-16 pb-0 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
+                    {/* Icon only, no text logo */}
+                    <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
+                        <img src="/LogoIcon2_rajkamallogo.svg" alt="Rajkamal Prakashan" className="w-48 h-24 object-contain" />
+                        <div className="space-y-2.5">
+                            <div className="flex items-start gap-2"><Mail className="w-4 h-4 text-[#A4343A] mt-0.5 flex-shrink-0" /><a href="mailto:info@rajkamalprakashan.com" className="text-[#6B5E52] text-sm hover:text-[#A4343A] transition-colors">info@rajkamalprakashan.com</a></div>
+                            <div className="flex items-start gap-2"><Phone className="w-4 h-4 text-[#A4343A] mt-0.5 flex-shrink-0" /><span className="text-[#6B5E52] text-sm">+91 11 2327 2783</span></div>
+                            <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-[#A4343A] mt-0.5 flex-shrink-0" /><span className="text-[#6B5E52] text-sm leading-snug">1-B, नेताजी सुभाष मार्ग,<br />दरियागंज, नई दिल्ली — 110002</span></div>
+                        </div>
+                    </div>
+                    <ConnectWithUsColumn
+                        titleClassName="text-[#1A1A1A] font-bold text-xs uppercase tracking-widest mb-5 pb-2 border-b border-[#E2D9CE]"
+                        brandTitleClassName="text-[#6B5E52] text-xs font-semibold leading-none"
+                        iconContainerClassName="w-7 h-7 bg-[#1A1A1A] hover:bg-[#A4343A] text-white rounded transition-all duration-200"
+                        iconClassName="w-3.5 h-3.5"
+                    />
+                    <NavColumn title="About Us" links={aboutUs} />
+                    <NavColumn title="Quick Links" links={quickLinks} />
+                    <NavColumn title="Policies" links={policies} />
+                </div>
+            </div>
+        </div>
+        {/* Watermark section — sits above the copyright bar */}
+        <div className="bg-[#EDE5DB] border-t border-[#D8CFC5] py-14 flex items-center justify-center select-none overflow-hidden px-4">
+            <span
+                className="font-bold text-center leading-none w-full text-[#1A1A1A]/10"
+                style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}
+            >
+                साथ जुड़े साथ पढ़े
+            </span>
+        </div>
+
+        {/* Copyright Bar */}
+        <div className="bg-[#FAF7F2] border-t border-[#D8CFC5] py-8 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p className="text-center text-[#6B5E52] text-xs tracking-wide">© 2025 राजकमल प्रकाशन समूह. All rights reserved.</p>
+                <a href="/footer-designs" className="text-[#A4343A]/70 hover:text-[#A4343A] transition-colors text-xs font-semibold">Footer Styles</a>
+            </div>
+        </div>
+    </footer>
+);
+
 // ─── Design registry ──────────────────────────────────────────────────────────
 export const designs = [
     { id: 1, name: 'Warm Classic', description: 'Current design — warm cream tones, approachable & timeless', component: Design1 },
@@ -717,6 +801,7 @@ export const designs = [
     { id: 6, name: 'Modern Slate Grid', description: 'Slate blue back, glassmorphic card, clean cards & grid layout', component: Design6 },
     { id: 7, name: 'Editorial Crimson', description: 'Serif fonts, deep brand-crimson back, prominent quote block, elegant style', component: Design7 },
     { id: 8, name: 'Neo-Brutalist', description: 'Retro-modern sand style, thick borders, high-contrast block layouts', component: Design8 },
+    { id: 9, name: 'Brand-Wise Social', description: 'Icon-only logo, brand-wise social icons, Hindi watermark — Penguin-inspired', component: Design9 },
 ];
 
 const Footer: React.FC = () => {
