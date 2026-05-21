@@ -752,7 +752,7 @@ export const Design9: React.FC = () => (
             <div className="absolute inset-x-0 bottom-[-2%] flex items-center justify-center pointer-events-none select-none z-0">
                 <span
                     className="font-extrabold text-center leading-none text-[#EDE6DD] whitespace-nowrap select-none tracking-widest"
-                    style={{ fontSize: 'clamp(6rem, 14vw, 18rem)' }}
+                    style={{ fontSize: 'clamp(4.5rem, 10vw, 12rem)' }}
                 >
                     साथ जुड़े साथ पढ़े
                 </span>
