@@ -104,6 +104,68 @@ const getRecommendedBooks = (post: BlogPost): Book[] => {
     return matched.slice(0, 3);
 };
 
+const bookTitlesToMatch = ['Godan', 'Rashmirathi', 'Nirmala', 'Gaban', 'Rag Darbari', 'Aapka Bunti', 'Tamas', 'Sofi Ka Sansar'];
+
+const findReferencedBook = (paragraph: string): Book | null => {
+    const allBooks = [
+        ...newArrivals,
+        ...hotDeals,
+        ...genreBooks,
+        ...bestSellers,
+        ...superSavingCombos,
+        ...shopByPriceBooks,
+        ...examPrepBooks,
+        ...peopleAlsoBought
+    ];
+    
+    for (const title of bookTitlesToMatch) {
+        if (
+            paragraph.includes(`'${title}'`) || 
+            paragraph.includes(`"${title}"`) || 
+            paragraph.toLowerCase().includes(` ${title.toLowerCase()} `) ||
+            paragraph.toLowerCase().includes(` ${title.toLowerCase()},`) ||
+            paragraph.toLowerCase().includes(` ${title.toLowerCase()}.`)
+        ) {
+            const matchedBook = allBooks.find(b => b.title.toLowerCase() === title.toLowerCase());
+            if (matchedBook) return matchedBook;
+        }
+    }
+    return null;
+};
+
+const postIllustrations: Record<number, Record<number, { url: string; caption: string }>> = {
+    1: { // Post 1: Premchand
+        0: {
+            url: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop",
+            caption: "The rural landscapes of Varanasi, India, which deeply inspired Munshi Premchand's writing."
+        }
+    },
+    2: { // Post 2: Arundhati Roy
+        1: {
+            url: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop",
+            caption: "The slow and patient craft of literary writing."
+        }
+    },
+    4: { // Post 4: Habits of Writers
+        0: {
+            url: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800&auto=format&fit=crop",
+            caption: "A curated collection representing diverse, multi-disciplinary reading habits."
+        }
+    },
+    5: { // Post 5: Kitab Utsav
+        0: {
+            url: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&auto=format&fit=crop",
+            caption: "Kitab Utsav brings together thousands of avid book lovers and leading authors annually."
+        }
+    },
+    10: { // Post 10: World Book Day
+        1: {
+            url: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&auto=format&fit=crop",
+            caption: "Community libraries and reading groups celebrating the power of books."
+        }
+    }
+};
+
 const BlogDetail = () => {
     const { id } = useParams<{ id: string }>();
     const post = blogPosts.find(p => p.id === Number(id));
@@ -221,12 +283,79 @@ const BlogDetail = () => {
                         </p>
 
                         {/* Content paragraphs */}
-                        <div className="prose prose-gray max-w-none space-y-6">
-                            {post.content.map((para, i) => (
-                                <p key={i} className="text-gray-700 leading-8 text-base md:text-[17px]">
-                                    {para}
-                                </p>
-                            ))}
+                        <div className="prose prose-gray max-w-none space-y-8">
+                            {post.content.map((para, i) => {
+                                const illustration = postIllustrations[post.id]?.[i];
+                                const refBook = findReferencedBook(para);
+                                
+                                return (
+                                    <div key={i} className="space-y-6">
+                                        <p className="text-gray-700 leading-8 text-base md:text-[17px]">
+                                            {para}
+                                        </p>
+                                        
+                                        {/* Dynamic referenced book highlights */}
+                                        {refBook && (
+                                            <div className="my-8 p-5 bg-gradient-to-r from-red-50/50 to-amber-50/30 rounded-2xl border border-red-100/60 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                                                <div className="w-24 h-36 flex-shrink-0 bg-white rounded-lg shadow-md overflow-hidden relative border border-gray-100">
+                                                    <img 
+                                                        src={refBook.image} 
+                                                        alt={refBook.title} 
+                                                        className="w-full h-full object-cover" 
+                                                    />
+                                                    {refBook.discount > 0 && (
+                                                        <span className="absolute top-1 left-1 bg-red-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">
+                                                            -{refBook.discount}%
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <div className="flex-1 min-w-0 text-center sm:text-left">
+                                                    <span className="inline-block px-2.5 py-0.5 bg-red-100 text-[#C41E3A] text-[9px] font-extrabold uppercase rounded-full tracking-wider mb-2">
+                                                        Featured Book Reference
+                                                    </span>
+                                                    <h4 className="text-base font-bold text-gray-900 leading-tight">
+                                                        {refBook.title}
+                                                    </h4>
+                                                    <p className="text-xs text-gray-500 mt-1">
+                                                        by {refBook.author.includes(',') ? refBook.author.split(',').pop()?.trim() : refBook.author}
+                                                    </p>
+                                                    <p className="text-xs text-gray-600 mt-2 line-clamp-2 leading-relaxed">
+                                                        {refBook.description || "A canonical work of literature discussed in the article above. Available now on Rajkamal."}
+                                                    </p>
+                                                    <div className="mt-3 flex items-center justify-center sm:justify-start gap-4">
+                                                        <div className="flex items-center gap-1.5">
+                                                            <span className="text-sm font-bold text-[#C41E3A]">₹{refBook.price}</span>
+                                                            {refBook.originalPrice > refBook.price && (
+                                                                <span className="text-xs text-gray-400 line-through">₹{refBook.originalPrice}</span>
+                                                            )}
+                                                        </div>
+                                                        <Link 
+                                                            to={`/book/${refBook.id}`} 
+                                                            className="text-xs font-bold text-[#C41E3A] hover:text-red-700 transition-colors flex items-center gap-1 hover:underline"
+                                                        >
+                                                            View details &rarr;
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
+                                        
+                                        {/* Optional beautiful illustrative images */}
+                                        {illustration && (
+                                            <div className="my-8 rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-white p-2">
+                                                <img 
+                                                    src={illustration.url} 
+                                                    alt={illustration.caption} 
+                                                    className="w-full h-[320px] object-cover rounded-xl"
+                                                />
+                                                <p className="text-xs text-gray-500 italic mt-2 text-center px-4">
+                                                    {illustration.caption}
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            })}
                         </div>
 
                         {/* Tags */}
