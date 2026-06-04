@@ -130,7 +130,7 @@ const FooterWatermark: React.FC<{ textColor: string; opacity?: string }> = ({ te
             style={{ opacity }}
         >
             <span
-                className="font-extrabold select-none tracking-widest whitespace-nowrap leading-none"
+                className="font-extrabold select-none tracking-normal whitespace-nowrap leading-none"
                 style={{ 
                     fontSize: 'clamp(4.5rem, 10vw, 12rem)',
                     color: textColor
@@ -139,26 +139,30 @@ const FooterWatermark: React.FC<{ textColor: string; opacity?: string }> = ({ te
                 साथ
             </span>
             <div
-                className="relative select-none tracking-widest font-extrabold whitespace-nowrap overflow-visible"
+                className="relative inline-grid grid-cols-1 grid-rows-1 select-none tracking-normal font-extrabold whitespace-nowrap overflow-visible"
                 style={{ 
                     fontSize: 'clamp(4.5rem, 10vw, 12rem)',
                     color: textColor,
-                    width: '3.5ch',
-                    height: '1.4em'
                 }}
             >
-                <AnimatePresence mode="wait">
-                    <motion.span
-                        key={index}
-                        initial={{ y: 30, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: -30, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="absolute left-0 bottom-0 leading-none"
-                    >
-                        {words[index]}
-                    </motion.span>
-                </AnimatePresence>
+                {/* Hidden templates to establish grid width based on the longest word to prevent layout shifting */}
+                <span className="col-start-1 row-start-1 invisible leading-none">जुड़े</span>
+                <span className="col-start-1 row-start-1 invisible leading-none">पढ़े</span>
+
+                <div className="col-start-1 row-start-1 relative w-full h-full">
+                    <AnimatePresence mode="wait">
+                        <motion.span
+                            key={index}
+                            initial={{ y: 30, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -30, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="absolute left-0 bottom-0 leading-none"
+                        >
+                            {words[index]}
+                        </motion.span>
+                    </AnimatePresence>
+                </div>
             </div>
         </div>
     );
