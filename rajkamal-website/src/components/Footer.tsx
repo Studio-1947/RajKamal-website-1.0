@@ -805,10 +805,10 @@ export const Design9: React.FC = () => (
     <footer className="w-full">
         {/* Top nav — icon + all four columns with watermark in background */}
         <div className="bg-[#FAF7F2] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-            {/* Background Watermark */}
-            <FooterWatermark textColor="#EDE6DD" />
-
             <div className="max-w-7xl mx-auto relative z-10">
+                {/* Background Watermark */}
+                <FooterWatermark textColor="#EDE6DD" />
+
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
                     {/* Icon only, no text logo */}
                     <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
@@ -847,10 +847,10 @@ export const Design10: React.FC = () => (
     <footer className="w-full">
         {/* Top nav — icon + all four columns with watermark in background */}
         <div className="bg-[#A4343A] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-            {/* Background Watermark */}
-            <FooterWatermark textColor="#8B1F25" opacity="0.9" />
-
             <div className="max-w-7xl mx-auto relative z-10">
+                {/* Background Watermark */}
+                <FooterWatermark textColor="#8B1F25" opacity="0.9" />
+
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
                     {/* Icon only, logo inverted to white on red background */}
                     <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
@@ -937,10 +937,10 @@ export const Design11: React.FC = () => (
     <footer className="w-full">
         {/* Top nav — icon + all four columns with watermark in background */}
         <div className="bg-[#121212] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-            {/* Background Watermark */}
-            <FooterWatermark textColor="#1E1E1E" />
-
             <div className="max-w-7xl mx-auto relative z-10">
+                {/* Background Watermark */}
+                <FooterWatermark textColor="#1E1E1E" />
+
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
                     {/* Icon only, logo inverted to white on dark background */}
                     <div className="col-span-2 sm:col-span-3 lg:col-span-1 space-y-5">
