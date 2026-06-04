@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin, Quote } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { connectWithUs, aboutUs, quickLinks, policies, socialPlatformsData, brandSocialData } from '../data/footerData';
 
 // ─── Shared Icon Components ──────────────────────────────────────────────────
@@ -110,6 +111,58 @@ const ConnectWithUsColumn: React.FC<{
         </div>
     </div>
 );
+
+// ─── Watermark component ──────────────────────────────────────────────────────
+const FooterWatermark: React.FC<{ textColor: string; opacity?: string }> = ({ textColor, opacity = "1" }) => {
+    const words = ["जुड़े", "पढ़े"];
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % words.length);
+        }, 2000);
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <div 
+            className="absolute right-4 sm:right-8 lg:right-12 bottom-6 pointer-events-none select-none z-0 flex items-end gap-x-2 sm:gap-x-4"
+            style={{ opacity }}
+        >
+            <span
+                className="font-extrabold select-none tracking-widest whitespace-nowrap leading-none"
+                style={{ 
+                    fontSize: 'clamp(4.5rem, 10vw, 12rem)',
+                    color: textColor
+                }}
+            >
+                साथ
+            </span>
+            <div
+                className="relative select-none tracking-widest font-extrabold whitespace-nowrap overflow-visible"
+                style={{ 
+                    fontSize: 'clamp(4.5rem, 10vw, 12rem)',
+                    color: textColor,
+                    width: '3.5ch',
+                    height: '1.4em'
+                }}
+            >
+                <AnimatePresence mode="wait">
+                    <motion.span
+                        key={index}
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -30, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute left-0 bottom-0 leading-none"
+                    >
+                        {words[index]}
+                    </motion.span>
+                </AnimatePresence>
+            </div>
+        </div>
+    );
+};
 
 // ─── Design 1: Warm Classic ──────────────────────────────────────────────────
 export const Design1: React.FC = () => (
@@ -749,14 +802,7 @@ export const Design9: React.FC = () => (
         {/* Top nav — icon + all four columns with watermark in background */}
         <div className="bg-[#FAF7F2] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             {/* Background Watermark */}
-            <div className="absolute inset-x-0 bottom-4 flex items-center justify-center pointer-events-none select-none z-0">
-                <span
-                    className="font-extrabold text-center leading-none text-[#EDE6DD] whitespace-nowrap select-none tracking-widest"
-                    style={{ fontSize: 'clamp(4.5rem, 10vw, 12rem)' }}
-                >
-                    साथ जुड़े साथ पढ़े
-                </span>
-            </div>
+            <FooterWatermark textColor="#EDE6DD" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
@@ -798,14 +844,7 @@ export const Design10: React.FC = () => (
         {/* Top nav — icon + all four columns with watermark in background */}
         <div className="bg-[#A4343A] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             {/* Background Watermark */}
-            <div className="absolute inset-x-0 bottom-4 flex items-center justify-center pointer-events-none select-none z-0">
-                <span
-                    className="font-extrabold text-center leading-none text-[#8B1F25] whitespace-nowrap select-none tracking-widest opacity-90"
-                    style={{ fontSize: 'clamp(4.5rem, 10vw, 12rem)' }}
-                >
-                    साथ जुड़े साथ पढ़े
-                </span>
-            </div>
+            <FooterWatermark textColor="#8B1F25" opacity="0.9" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
@@ -895,14 +934,7 @@ export const Design11: React.FC = () => (
         {/* Top nav — icon + all four columns with watermark in background */}
         <div className="bg-[#121212] pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             {/* Background Watermark */}
-            <div className="absolute inset-x-0 bottom-4 flex items-center justify-center pointer-events-none select-none z-0">
-                <span
-                    className="font-extrabold text-center leading-none text-[#1E1E1E] whitespace-nowrap select-none tracking-widest"
-                    style={{ fontSize: 'clamp(4.5rem, 10vw, 12rem)' }}
-                >
-                    साथ जुड़े साथ पढ़े
-                </span>
-            </div>
+            <FooterWatermark textColor="#1E1E1E" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 pb-14">
