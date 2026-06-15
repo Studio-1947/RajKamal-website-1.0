@@ -39,47 +39,50 @@ const ShippingDelivery: React.FC = () => {
                 <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-white/5 blur-3xl pointer-events-none" />
                 <div className="absolute -bottom-10 right-10 w-96 h-96 rounded-full bg-black/10 blur-3xl pointer-events-none" />
 
-                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: -8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-white/60 text-[10px] font-bold uppercase tracking-[0.25em] mb-4 flex items-center gap-3"
-                    >
-                        <span className="w-6 h-px bg-white/20" />
-                        Rajkamal Prakashan Samuh
-                        <span className="w-6 h-px bg-white/20" />
-                    </motion.div>
+                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-10">
+                    {/* Left: text */}
+                    <div className="flex flex-col items-start">
+                        <motion.div
+                            initial={{ opacity: 0, y: -8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="text-white/60 text-[10px] font-bold uppercase tracking-[0.25em] mb-5 flex items-center gap-3"
+                        >
+                            <span className="w-6 h-px bg-white/20" />
+                            Rajkamal Prakashan Samuh
+                        </motion.div>
 
+                        <motion.h1
+                            initial={{ opacity: 0, y: 12 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1, duration: 0.4 }}
+                            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4 leading-tight"
+                        >
+                            Shipping &amp;<br />Delivery
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 8 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.18, duration: 0.4 }}
+                            className="text-white/70 text-xs sm:text-sm font-semibold tracking-wider uppercase"
+                        >
+                            Fast. Reliable. Safe Delivery of Books to Your Doorstep.
+                        </motion.p>
+                    </div>
+
+                    {/* Right: large logo */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
+                        initial={{ opacity: 0, scale: 0.85 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.05, type: 'spring' }}
-                        className="mb-4"
+                        transition={{ delay: 0.05, type: 'spring', stiffness: 120 }}
+                        className="flex-shrink-0"
                     >
                         <img
                             src="/LogoIcon2_rajkamallogo.svg"
                             alt="Rajkamal Prakashan Logo"
-                            className="h-10 w-auto object-contain brightness-0 invert opacity-95"
+                            className="h-36 sm:h-44 lg:h-52 w-auto object-contain brightness-0 invert opacity-90"
                         />
                     </motion.div>
-
-                    <motion.h1
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1, duration: 0.4 }}
-                        className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-3"
-                    >
-                        Shipping &amp; Delivery
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: 8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.18, duration: 0.4 }}
-                        className="text-white/70 text-xs sm:text-sm font-semibold tracking-wider uppercase"
-                    >
-                        Fast. Reliable. Safe Delivery of Books to Your Doorstep.
-                    </motion.p>
                 </div>
             </div>
 
