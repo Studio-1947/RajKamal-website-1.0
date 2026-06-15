@@ -25,7 +25,7 @@ export const quickLinks = [
 export const policies = [
     { label: 'Return & Exchange', href: '/return-refund-policy' },
     { label: 'Cancellation Policy', href: '#' },
-    { label: 'Shipping Policy', href: '#' },
+    { label: 'Shipping Policy', href: '/shipping-delivery' },
     { label: 'Privacy Policy', href: '#' },
     { label: 'Terms of Service', href: '#' },
 ];

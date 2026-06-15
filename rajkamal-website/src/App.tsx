@@ -21,6 +21,7 @@ import SignUp from './pages/SignUp';
 import Account from './pages/Account';
 import FooterDesigns from './pages/FooterDesigns';
 import ReturnRefundPolicy from './pages/ReturnRefundPolicy';
+import ShippingDelivery from './pages/ShippingDelivery';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
@@ -57,6 +58,7 @@ function App() {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/account" element={<Account />} />
                 <Route path="/return-refund-policy" element={<ReturnRefundPolicy />} />
+                <Route path="/shipping-delivery" element={<ShippingDelivery />} />
               </Routes>
               <Footer />
             </Layout>
