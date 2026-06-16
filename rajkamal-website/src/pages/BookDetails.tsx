@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Star, Heart, Share2, Minus, Plus, ChevronRight, ShoppingCart, Truck, Tag, ThumbsUp, Play } from 'lucide-react';
+import { Star, Heart, Share2, Minus, Plus, ChevronRight, ShoppingCart, Truck, Tag, ThumbsUp, Play, Clock, BadgePercent, ShieldCheck, Banknote, RotateCcw } from 'lucide-react';
 import { newArrivals, hotDeals, genreBooks } from '../data/mockData';
 import { useCart } from '../context/CartContext';
 import type { Book } from '../types';
@@ -235,12 +235,12 @@ const BookDetails = () => {
                                         Check
                                     </button>
                                 </div>
-                                <div className="space-y-1 text-xs text-gray-500">
-                                    <p>Delivered within 7 days</p>
-                                    <p>Delivery Free above ₹1000</p>
-                                    <p>100% Original Products</p>
-                                    <p>Pay on delivery might be available</p>
-                                    <p>Return Available</p>
+                                <div className="space-y-2 text-xs text-gray-500">
+                                    <p className="flex items-center gap-2"><Clock size={13} className="text-blue-400 shrink-0" />Delivered within 7 days</p>
+                                    <p className="flex items-center gap-2"><BadgePercent size={13} className="text-green-500 shrink-0" />Delivery Free above ₹1000</p>
+                                    <p className="flex items-center gap-2"><ShieldCheck size={13} className="text-emerald-500 shrink-0" />100% Original Products</p>
+                                    <p className="flex items-center gap-2"><Banknote size={13} className="text-amber-500 shrink-0" />Pay on delivery might be available</p>
+                                    <p className="flex items-center gap-2"><RotateCcw size={13} className="text-purple-400 shrink-0" />Return Available</p>
                                 </div>
                             </div>
 
