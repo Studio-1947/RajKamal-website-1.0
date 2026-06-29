@@ -22,6 +22,7 @@ import Account from './pages/Account';
 import FooterDesigns from './pages/FooterDesigns';
 import ReturnRefundPolicy from './pages/ReturnRefundPolicy';
 import ShippingDelivery from './pages/ShippingDelivery';
+import IconPreview from './pages/IconPreview';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
@@ -34,6 +35,7 @@ function App() {
         <Routes>
           {/* Standalone — no site Header or Footer interfering */}
           <Route path="/footer-designs" element={<FooterDesigns />} />
+          <Route path="/icon-preview" element={<IconPreview />} />
 
           {/* All other routes wrapped in Layout */}
           <Route path="/*" element={

@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Star, Heart, Share2, Minus, Plus, ChevronRight, ShoppingCart, Truck, Tag, ThumbsUp, Play, Clock, BadgePercent, ShieldCheck, Banknote, RotateCcw } from 'lucide-react';
+import { Star, Heart, Share2, Minus, Plus, ChevronRight, ChevronLeft, ShoppingCart, Truck, Tag, ThumbsUp, Play } from 'lucide-react';
+import { DeliveryTruckIcon, OriginalSealIcon, EasyReturnsIcon, PayOnDeliveryIcon, FreeTagIcon } from '../components/DeliveryIcons';
 import { newArrivals, hotDeals, genreBooks } from '../data/mockData';
 import { useCart } from '../context/CartContext';
 import type { Book } from '../types';
@@ -235,12 +236,28 @@ const BookDetails = () => {
                                         Check
                                     </button>
                                 </div>
-                                <div className="space-y-2 text-xs text-gray-500">
-                                    <p className="flex items-center gap-2"><Clock size={13} className="text-blue-400 shrink-0" />Delivered within 7 days</p>
-                                    <p className="flex items-center gap-2"><BadgePercent size={13} className="text-green-500 shrink-0" />Delivery Free above ₹1000</p>
-                                    <p className="flex items-center gap-2"><ShieldCheck size={13} className="text-emerald-500 shrink-0" />100% Original Products</p>
-                                    <p className="flex items-center gap-2"><Banknote size={13} className="text-amber-500 shrink-0" />Pay on delivery might be available</p>
-                                    <p className="flex items-center gap-2"><RotateCcw size={13} className="text-purple-400 shrink-0" />Return Available</p>
+                                <h3 className="text-lg font-bold text-gray-900 mb-4">Delivered within 7 days</h3>
+                                <div className="relative flex items-center">
+                                    <button className="flex-shrink-0 w-9 h-9 rounded-full bg-gray-400 hover:bg-gray-500 flex items-center justify-center transition-colors mr-2">
+                                        <ChevronLeft className="w-5 h-5 text-white" />
+                                    </button>
+                                    <div className="flex-1 grid grid-cols-5 gap-2 text-center">
+                                        {([
+                                            { icon: <DeliveryTruckIcon size={64} />, label: 'Ships in\n7 Days' },
+                                            { icon: <OriginalSealIcon size={64} />, label: '100%\nOriginal' },
+                                            { icon: <EasyReturnsIcon size={64} />, label: 'Easy\nReturns' },
+                                            { icon: <PayOnDeliveryIcon size={64} />, label: 'Pay on\nDelivery' },
+                                            { icon: <FreeTagIcon size={64} />, label: 'Free above\n₹1200' },
+                                        ] as { icon: React.ReactNode; label: string }[]).map(({ icon, label }) => (
+                                            <div key={label} className="flex flex-col items-center gap-3">
+                                                {icon}
+                                                <span className="text-sm font-semibold text-gray-800 leading-tight whitespace-pre-line">{label}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <button className="flex-shrink-0 w-9 h-9 rounded-full bg-gray-400 hover:bg-gray-500 flex items-center justify-center transition-colors ml-2">
+                                        <ChevronRight className="w-5 h-5 text-white" />
+                                    </button>
                                 </div>
                             </div>
 
