@@ -243,7 +243,7 @@ const BookDetails = () => {
                                         { icon: <OriginalSealIcon size={38} />, label: '100%\nOriginal' },
                                         { icon: <EasyReturnsIcon size={38} />, label: 'Easy\nReturns' },
                                         { icon: <PayOnDeliveryIcon size={38} />, label: 'Pay on\nDelivery' },
-                                        { icon: <FreeTagIcon size={38} />, label: 'Free above\n₹1000' },
+                                        { icon: <FreeTagIcon size={38} />, label: 'Free above\n₹1200' },
                                     ] as { icon: React.ReactNode; label: string }[]).map(({ icon, label }) => (
                                         <div key={label} className="flex flex-col items-center gap-2">
                                             {icon}
