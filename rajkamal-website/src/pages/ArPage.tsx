@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { IMAGES } from '../data/arData';
 
 const CONFIG = {
-  price: 1499,
+  price: 550,
   totalCopies: 1500,
   copiesLeftInitial: 417,
   maxPerPerson: 5,
@@ -568,8 +568,8 @@ const ArPage: React.FC = () => {
                 </div>
               </div>
               <p className="hero-copy">
-                <span className="hi">बुकर पुरस्कार विजेता अरुंधति रॉय की पहली स्मृति-कथा — अपनी माँ मेरी रॉय के बारे में, जिन्हें वे प्यार से “मेरी गैंगस्टर” कहती हैं। शरणस्थली भी, तूफ़ान भी। अब हिंदी में, लेखिका के हाथ से हस्ताक्षरित सीमित संस्करण में।</span>
-                <span className="en">The first memoir from Booker Prize–winning Arundhati Roy — about her mother, Mary Roy, whom she lovingly calls “my gangster.” Her shelter and her storm. Now in Hindi, in a limited edition signed by the author’s own hand.</span>
+                <span className="hi">बुकर पुरस्कार विजेता अरुंधति रॉय की पहली स्मृति-कथा — अपनी माँ मेरी रॉय (“मेरी गैंगस्टर”) के बारे में। अब हिंदी में, लेखिका द्वारा हस्ताक्षरित सीमित संस्करण में।</span>
+                <span className="en">Booker Prize-winner Arundhati Roy's first memoir about her mother, Mary Roy (“my gangster”). Now in Hindi, in a limited edition signed by the author.</span>
               </p>
               <div className="hero-cta">
                 <a href="#order" className="btn btn--onred">
@@ -578,7 +578,7 @@ const ArPage: React.FC = () => {
                   <span className="arw"> →</span>
                 </a>
                 <div className="hero-price">
-                  ₹ <b>1499</b> <s>₹1999</s> · <span className="hi">निःशुल्क डिलीवरी</span><span className="en">free delivery</span>
+                  ₹ <b>550</b> <s>₹799</s> · <span className="hi">निःशुल्क डिलीवरी</span><span className="en">free delivery</span>
                 </div>
               </div>
             </div>
@@ -997,7 +997,7 @@ const ArPage: React.FC = () => {
               {/* Booking Summary */}
               <div className="summary">
                 <div className="sline">
-                  <span><span className="hi">मूल्य (₹1499 × </span><span className="en">Subtotal ({qty} copy × </span>{qty})</span>
+                  <span><span className="hi">मूल्य (₹550 × </span><span className="en">Subtotal ({qty} copy × </span>{qty})</span>
                   <span>₹<span id="sSub">{CONFIG.price * qty}</span></span>
                 </div>
                 <div className="sline">
@@ -1065,7 +1065,7 @@ const ArPage: React.FC = () => {
       <div className="mobile-cta">
         <div className="mc-left">
           <span data-stock-pill>{copiesLeft}/1500</span> <span className="hi">शेष</span><span className="en">left</span><br/>
-          <b>₹1499</b> · <span className="hi">हस्ताक्षरित</span><span className="en">signed</span>
+          <b>₹550</b> · <span className="hi">हस्ताक्षरित</span><span className="en">signed</span>
         </div>
         <a href="#order" className="btn btn--red">
           <span className="hi">बुक करें</span>
