@@ -14,13 +14,14 @@ const Header: React.FC = () => {
     const navItems = [
         // { name: 'Books', href: '/' },
         { name: 'Authors', href: '/authors' },
-        { name: 'E-Books', href: '/ebooks' },
+        // { name: 'E-Books', href: '/ebooks' },
         { name: 'Publications', href: '/publications', hasDropdown: true },
-        { name: 'Student Corner', href: '/student-corner' },
+        { name: 'Limited Edition', href: '/ar' },
+        // { name: 'Student Corner', href: '/student-corner' },
         { name: 'Blog', href: '/blog' },
         { name: 'Events', href: '/events' },
-        { name: 'Press Corner', href: '/press' },
-        { name: 'Footer Styles', href: '/footer-designs' },
+        // { name: 'Press Corner', href: '/press' },
+        // { name: 'Footer Styles', href: '/footer-designs' },
     ];
 
     useEffect(() => {
