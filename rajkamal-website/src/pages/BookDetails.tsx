@@ -239,7 +239,7 @@ const BookDetails = () => {
                                 <p className="text-xs font-semibold text-gray-700 mb-4">Delivered within 7 days</p>
                                 <div className="grid grid-cols-5 gap-1 text-center">
                                     {([
-                                        { icon: <DeliveryTruckIcon size={38} />, label: 'Ships in\n7 Days' },
+                                        { icon: <DeliveryTruckIcon size={38} />, label: 'Dispatch in\n2 Days' },
                                         { icon: <OriginalSealIcon size={38} />, label: '100%\nOriginal' },
                                         { icon: <EasyReturnsIcon size={38} />, label: 'Easy\nReturns' },
                                         { icon: <PayOnDeliveryIcon size={38} />, label: 'Pay on\nDelivery' },

@@ -4,7 +4,7 @@ const COLOR = '#C41E3A'
 const SIZE = 64
 
 const icons = [
-  { icon: <DeliveryTruckIcon size={SIZE} color={COLOR} />, label: 'Ships in\n7 Days' },
+  { icon: <DeliveryTruckIcon size={SIZE} color={COLOR} />, label: 'Dispatch in\n2 Days' },
   { icon: <OriginalSealIcon size={SIZE} color={COLOR} />, label: '100%\nOriginal' },
   { icon: <EasyReturnsIcon size={SIZE} color={COLOR} />, label: 'Easy\nReturns' },
   { icon: <PayOnDeliveryIcon size={SIZE} color={COLOR} />, label: 'Pay on\nDelivery' },
