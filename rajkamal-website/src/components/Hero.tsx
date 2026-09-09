@@ -56,20 +56,33 @@ const Hero: React.FC = () => {
                         <div className="w-full flex flex-col items-center lg:items-start px-4 sm:px-8 lg:px-0">
                             <h1 className="text-4xl sm:text-6xl lg:text-[70px] xl:text-[85px] font-bold text-primary mb-4 sm:mb-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 leading-tight w-full">
                                 <span>साथ</span>
-                                <div className="relative h-[1.24em] md:h-[1em] w-[2ch] md:w-[3ch] text-left">
-                                    <AnimatePresence mode="wait">
-                                        <motion.span
-                                            key={index}
-                                            initial={{ y: 20, opacity: 0 }}
-                                            animate={{ y: 0, opacity: 1 }}
-                                            exit={{ y: -20, opacity: 0 }}
-                                            transition={{ duration: 0.3 }}
-                                            className="absolute left-0"
+                                {/* Sizer layer keeps the box as wide/tall as the longest word so
+                                    the flip never clips matras or shifts "साथ" sideways. */}
+                                <span className="relative inline-grid text-left align-baseline">
+                                    {words.map((word) => (
+                                        <span
+                                            key={word}
+                                            aria-hidden="true"
+                                            className="col-start-1 row-start-1 invisible whitespace-nowrap"
                                         >
-                                            {words[index]}
-                                        </motion.span>
-                                    </AnimatePresence>
-                                </div>
+                                            {word}
+                                        </span>
+                                    ))}
+                                    <span className="col-start-1 row-start-1 relative whitespace-nowrap">
+                                        <AnimatePresence mode="wait" initial={false}>
+                                            <motion.span
+                                                key={words[index]}
+                                                initial={{ y: '0.4em', opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                exit={{ y: '-0.4em', opacity: 0 }}
+                                                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                                                className="absolute inset-0 whitespace-nowrap"
+                                            >
+                                                {words[index]}
+                                            </motion.span>
+                                        </AnimatePresence>
+                                    </span>
+                                </span>
                             </h1>
                             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-600 font-medium px-4 sm:px-0 mt-2 lg:-mt-2 -mt-2">
                                 हर किताब में है एक नई दुनिया
