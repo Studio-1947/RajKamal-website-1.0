@@ -1,0 +1,2219 @@
+{
+  "title": "Hindi Literature MCQ Seed",
+  "version": 1,
+  "totalQuestions": 79,
+  "questions": [
+    {
+      "id": 1,
+      "question": "'क्या भूलूँ क्या याद करूँ' किस लेखक की कृति है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "सुमित्रानंदन पंत",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "महादेवी वर्मा",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "हरिवंश राय बच्चन",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "जयशंकर प्रसाद",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "हरिवंश राय बच्चन"
+    },
+    {
+      "id": 2,
+      "question": "'बिहारी' मुख्यतः किस रस के कवि हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "शांत रस",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "भक्ति रस",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "श्रृंगार रस",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "करुण रस",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "श्रृंगार रस"
+    },
+    {
+      "id": 3,
+      "question": "'अंधा युग' किस विधा की रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "उपन्यास",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "कहानी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "नाटक",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "निबंध",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "नाटक"
+    },
+    {
+      "id": 4,
+      "question": "इनमें से जयशंकर प्रसाद द्वारा रचित कौन सी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "मधुशाला",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "कामायनी",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "साहित्य देवता",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "प्रेम प्रलाप",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "कामायनी"
+    },
+    {
+      "id": 5,
+      "question": "इनमें से कौन सी रचना सुमित्रानंदन पंत की नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "कुकुरमुत्ता",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "ग्राम्या",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "युगति",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "रजत-रश्मि",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "कुकुरमुत्ता"
+    },
+    {
+      "id": 6,
+      "question": "हिंदी का पहला उपन्यास कौन सा है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "गोदान",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "परीक्षा गुरु",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "राग दरबारी",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "झूठा सच",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "परीक्षा गुरु"
+    },
+    {
+      "id": 7,
+      "question": "'अतीत के चलचित्र' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "मन्नू भंडारी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "कृष्णा सोबती",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "महाश्वेता देवी",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "महादेवी वर्मा",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "महादेवी वर्मा"
+    },
+    {
+      "id": 8,
+      "question": "तुलसीदास द्वारा रचित लोकप्रिय महाकाव्य कौन सा है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "रामचरितमानस",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "रामायण",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "भगवत गीता",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "महाभारत",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "रामचरितमानस"
+    },
+    {
+      "id": 9,
+      "question": "'उसने कहा था' कहानी के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "आचार्य रामचंद्र शुक्ल",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "चन्द्रधर शर्मा 'गुलेरी'",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "सूर्यकांत त्रिपाठी 'निराला'",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "भारतेंदु हरिश्चंद्र",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "चन्द्रधर शर्मा 'गुलेरी'"
+    },
+    {
+      "id": 10,
+      "question": "आधुनिक युग की मीरा किसे कहा जाता है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "लता मंगेशकर",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "महादेवी वर्मा",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "सुभद्रा कुमारी चौहान",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "महाश्वेता देवी",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "महादेवी वर्मा"
+    },
+    {
+      "id": 11,
+      "question": "इनमें से कबीर की भाषा कौन सी है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "खड़ी बोली",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "अवधी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ब्रज",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "सधुक्कड़ी",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "सधुक्कड़ी"
+    },
+    {
+      "id": 12,
+      "question": "'कलम का सिपाही' किसे कहा जाता है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "रामधारी सिंह दिनकर",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "प्रेमचंद",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "यशपाल",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "जयशंकर प्रसाद",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "प्रेमचंद"
+    },
+    {
+      "id": 13,
+      "question": "प्रेमचंद ने इनमें से किस विधा में रचना नहीं की है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "कविता",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "कहानी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "उपन्यास",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "निबंध-लेख",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "कविता"
+    },
+    {
+      "id": 14,
+      "question": "'चिंतामणि' किसका निबंध संग्रह है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "भारतेंदु हरिश्चंद्र",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "रामचंद्र शुक्ल",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "हजारी प्रसाद द्विवेदी",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "महावीर प्रसाद द्विवेदी",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "रामचंद्र शुक्ल"
+    },
+    {
+      "id": 15,
+      "question": "'कलम का सिपाही' क्या है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "आत्मकथा",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "जीवनी",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "उपन्यास",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "खंड काव्य",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "जीवनी"
+    },
+    {
+      "id": 16,
+      "question": "इनमें से कौन सा उपन्यास प्रेमचंद का नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "गबन",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "सेवासदन",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "वैशाली की नगरवधू",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "निर्मला",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "वैशाली की नगरवधू"
+    },
+    {
+      "id": 17,
+      "question": "भोजपुरी बोली किस क्षेत्र में बोली जाती है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "दरभंगा",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "आजमगढ़",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "पटना",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "पूर्णिया",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "दरभंगा"
+    },
+    {
+      "id": 18,
+      "question": "'आपका बंटी' क्या है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "कहानी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "कविता",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "उपन्यास",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "जीवनी",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "उपन्यास"
+    },
+    {
+      "id": 19,
+      "question": "'मेघदूत' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "कालिदास",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "हरिशचन्द्र",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "मैथिलीशरण गुप्त",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "भारतेन्दु",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "कालिदास"
+    },
+    {
+      "id": 20,
+      "question": "'चित्रलेखा' उपन्यास के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "कमलेश्वर",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "श्रीलाल शुक्ल",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "भगवतीचरण वर्मा",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "काशीनाथ सिंह",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "भगवतीचरण वर्मा"
+    },
+    {
+      "id": 21,
+      "question": "'ईदगाह' क्या है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "कहानी",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "उपन्यास",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "निबंध",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "कविता",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "कहानी"
+    },
+    {
+      "id": 22,
+      "question": "अवधी बोली का केंद्र स्थान क्या है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "बस्ती",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "बाराबंकी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "बहराइच",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "अयोध्या",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "अयोध्या"
+    },
+    {
+      "id": 23,
+      "question": "'राम की शक्ति-पूजा' के रचनाकार कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "जयशंकर प्रसाद",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "सूर्यकांत त्रिपाठी 'निराला'",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "रामधारी सिंह 'दिनकर'",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "सुमित्रानंदन पंत",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "सूर्यकांत त्रिपाठी 'निराला'"
+    },
+    {
+      "id": 24,
+      "question": "इनमें से कौन सी रचना 'दिनकर' की नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "रश्मिरथी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "कुरुक्षेत्र",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "उर्वशी",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "कामायनी",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "कामायनी"
+    },
+    {
+      "id": 25,
+      "question": "'संस्कृति के चार अध्याय' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "सुभद्रा कुमारी चौहान",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "माखन लाल चतुर्वेदी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "भगवती चरण वर्मा",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "रामधारी सिंह 'दिनकर'",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "रामधारी सिंह 'दिनकर'"
+    },
+    {
+      "id": 26,
+      "question": "'तमस' उपन्यास के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "भीष्म साहनी",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "हरिमोहन झा",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "मनोहर श्याम जोशी",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "रघुवीर सहाय",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "भीष्म साहनी"
+    },
+    {
+      "id": 27,
+      "question": "इनमें से कौन सी रचना हरिशंकर परसाई की नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "विकलांग श्रद्धा का दौर",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "निठल्ले की डायरी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ठिठुरता हुआ गणतंत्र",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "एक गधे की आत्मकथा",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "एक गधे की आत्मकथा"
+    },
+    {
+      "id": 28,
+      "question": "'शेखर : एक जीवनी' के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "नामवर सिंह",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "मुक्तिबोध",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "अज्ञेय",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "कमलेश्वर",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "अज्ञेय"
+    },
+    {
+      "id": 29,
+      "question": "'झूठा सच' उपन्यास के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "मन्नू भंडारी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "यशपाल",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "विष्णु खरे",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "श्रीलाल शुक्ल",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "यशपाल"
+    },
+    {
+      "id": 30,
+      "question": "'पचपन खम्भे लाल दीवारें' किसका उपन्यास है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "अलका सरावगी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "उषा प्रियम्वदा",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "गीतांजलि श्री",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ममता कालिया",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "उषा प्रियम्वदा"
+    },
+    {
+      "id": 31,
+      "question": "इनमें से 'रेणु' का लोकप्रिय उपन्यास कौन सा है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "तमस",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "टोपी शुक्ला",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "मैला आँचल",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "कोहबर की शर्त",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "मैला आँचल"
+    },
+    {
+      "id": 32,
+      "question": "इनमें से कौन सी पुस्तक 'लप्रेक' शृंखला में शामिल नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "इश्क में शहर होना",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "इश्क कोई न्यूज़ नहीं",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "कुछ इश्क किया कुछ काम किया",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "इश्क में माटी सोना",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "कुछ इश्क किया कुछ काम किया"
+    },
+    {
+      "id": 33,
+      "question": "प्रेमचंद का मूल नाम क्या था?",
+      "options": [
+        {
+          "id": "A",
+          "text": "नवाब राय",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "धनपत राय",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "गोपाल दास",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "प्रेम सिंह",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "नवाब राय"
+    },
+    {
+      "id": 34,
+      "question": "इनमें से कौन सी रचना तुलसीदास की नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "रामचरितमानस",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "कवितावली",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "गीतावली",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "प्रेम वर्तिका",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "प्रेम वर्तिका"
+    },
+    {
+      "id": 35,
+      "question": "'झांसी की रानी' नामक लंबी कविता किसकी कृति है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "रामधारी सिंह दिनकर",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "सुभद्रा कुमारी चौहान",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "महादेवी वर्मा",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "माखनलाल चतुर्वेदी",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "सुभद्रा कुमारी चौहान"
+    },
+    {
+      "id": 36,
+      "question": "'पंच परमेश्वर' कहानी किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "अमरकांत",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "जैनेंद्र",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "प्रेमचंद",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "यशपाल",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "प्रेमचंद"
+    },
+    {
+      "id": 37,
+      "question": "'बाणभट्ट की आत्मकथा' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "हजारी प्रसाद द्विवेदी",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "बाणभट्ट",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "मुद्राराक्षस",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "नामवर सिंह",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "हजारी प्रसाद द्विवेदी"
+    },
+    {
+      "id": 38,
+      "question": "'मैं नीर भरी दुख की बदली' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "महादेवी वर्मा",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "सुभद्रा कुमारी चौहान",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "मीराबाई",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "कबीर",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "महादेवी वर्मा"
+    },
+    {
+      "id": 39,
+      "question": "हिंदी भाषा किस लिपि में लिखी जाती है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "गुरुमुखी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "अरबी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "देवनागरी",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "रोमन",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "देवनागरी"
+    },
+    {
+      "id": 40,
+      "question": "हिंदी दिवस कब मनाया जाता है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "14 नवम्बर",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "14 सितंबर",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "14 अगस्त",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "14 जनवरी",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "14 सितंबर"
+    },
+    {
+      "id": 41,
+      "question": "'मेरी जीवन यात्रा' किस रचनाकार की आत्मकथा है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "यशपाल",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "राहुल सांकृत्यायन",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "मोहन राकेश",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "केशवदास",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "राहुल सांकृत्यायन"
+    },
+    {
+      "id": 42,
+      "question": "'आषाढ़ का एक दिन' क्या है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "कहानी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "उपन्यास",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "कविता",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "नाटक",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "नाटक"
+    },
+    {
+      "id": 43,
+      "question": "'दो बैलों की कथा' किसकी कहानी है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "फणीश्वरनाथ रेणु",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "जयशंकर प्रसाद",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "प्रेमचंद",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "रवीन्द्रनाथ ठाकुर",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "प्रेमचंद"
+    },
+    {
+      "id": 44,
+      "question": "इनमें से कौन से उपन्यास के लेखक अज्ञेय हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "महाभोज",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "लौटे हुए मुसाफिर",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "नदी के द्वीप",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "स्वामी",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "नदी के द्वीप"
+    },
+    {
+      "id": 45,
+      "question": "'यही सच है' किसकी कहानी है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "शिवानी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "मोहन राकेश",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "राजेन्द्र यादव",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "मन्नू भंडारी",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "मन्नू भंडारी"
+    },
+    {
+      "id": 46,
+      "question": "'नौकर की कमीज' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "नामवर सिंह",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "निर्मल वर्मा",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "विनोद कुमार शुक्ल",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "भीष्म साहनी",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "विनोद कुमार शुक्ल"
+    },
+    {
+      "id": 47,
+      "question": "'अंधेर नगरी' नाटक के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "भीष्म साहनी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "मोहन राकेश",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "सुरेन्द्र वर्मा",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "भारतेंदु हरिश्चंद्र",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "भारतेंदु हरिश्चंद्र"
+    },
+    {
+      "id": 48,
+      "question": "इनमें से कौन सी रचना मोहन राकेश की नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "सूरज का सातवां घोड़ा",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "लहरों के राजहंस",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "आधे-अधूरे",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "आषाढ़ का एक दिन",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "सूरज का सातवां घोड़ा"
+    },
+    {
+      "id": 49,
+      "question": "'लिहाफ' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "अमृता प्रीतम",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "परवीन शाकिर",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "इस्मत चुगताई",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "कृष्णा सोबती",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "इस्मत चुगताई"
+    },
+    {
+      "id": 50,
+      "question": "'आनंदमठ' के रचनाकार कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "रवीन्द्र नाथ ठाकुर",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "आचार्य रामचंद्र शुक्ल",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "बंकिमचंद्र चट्टोपाध्याय",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "जयशंकर प्रसाद",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "बंकिमचंद्र चट्टोपाध्याय"
+    },
+    {
+      "id": 51,
+      "question": "'काशी का अस्सी' के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "केदारनाथ सिंह",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "काशीनाथ सिंह",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "केशव प्रसाद मिश्र",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "केशवचंद्र",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "काशीनाथ सिंह"
+    },
+    {
+      "id": 52,
+      "question": "'आधा गाँव' के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "भीष्म साहनी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "फणीश्वरनाथ रेणु",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "राही मासूम रज़ा",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "अमृतलाल नागर",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "राही मासूम रज़ा"
+    },
+    {
+      "id": 53,
+      "question": "'काबुलीवाला' कहानी के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "प्रेमचंद",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "मोहन राकेश",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "रवीन्द्रनाथ ठाकुर",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "बंकिमचंद्र चट्टोपाध्याय",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "रवीन्द्रनाथ ठाकुर"
+    },
+    {
+      "id": 54,
+      "question": "'पूस की रात' किस रचनाकार की रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "धर्मवीर भारती",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "जयशंकर प्रसाद",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "प्रेमचंद",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "मन्नू भंडारी",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "प्रेमचंद"
+    },
+    {
+      "id": 55,
+      "question": "हिंदी के अतिरिक्त इनमें से कौन सी भाषा देवनागरी में लिखी जाती है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "पंजाबी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "उर्दू",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "मराठी",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "बंगाली",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "मराठी"
+    },
+    {
+      "id": 56,
+      "question": "इनमें से कौन सी रचना कृष्णा सोबती की नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "यही सच है",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "गुजरात पाकिस्तान से गुजरात हिंदुस्तान",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "मित्रो मरजानी",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "ऐ लड़की",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "यही सच है"
+    },
+    {
+      "id": 57,
+      "question": "'एक जिंदगी काफी नहीं' के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "खुशवंत सिंह",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "कुलदीप नैयर",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "कमलेश्वर",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "निर्मल वर्मा",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "कुलदीप नैयर"
+    },
+    {
+      "id": 58,
+      "question": "'साकेत' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "हजारी प्रसाद द्विवेदी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "जयशंकर प्रसाद",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "सूर्यकांत त्रिपाठी 'निराला'",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "मैथिलीशरण गुप्त",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "मैथिलीशरण गुप्त"
+    },
+    {
+      "id": 59,
+      "question": "'गांधीवाद की शव-परीक्षा' निबंध-संग्रह इनमें से किसका है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "धर्मवीर भारती",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "यशपाल",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "रायकृष्ण दास",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "जैनेन्द्र",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "यशपाल"
+    },
+    {
+      "id": 60,
+      "question": "इनमें से कौन मूल रूप से हिंदी के लेखक हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "हृषीकेश सुलभ",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "गिरीश कर्नाड",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "अरुंधति राय",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "दया पवार",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "हृषीकेश सुलभ"
+    },
+    {
+      "id": 61,
+      "question": "इनमें से कौन सा प्रकाशन 'राजकमल प्रकाशन समूह' का हिस्सा नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "राधाकृष्ण प्रकाशन",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "लोकभारती प्रकाशन",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "अक्षर",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "देवनागरी प्रकाशन",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "देवनागरी प्रकाशन"
+    },
+    {
+      "id": 62,
+      "question": "'होरी' किस उपन्यास के एक पात्र का नाम है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "गबन",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "सेवासदन",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "मंगलसूत्र",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "गोदान",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "गोदान"
+    },
+    {
+      "id": 63,
+      "question": "इनमें से कौन सा पात्र 'चित्रलेखा' उपन्यास में नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "यशोधरा",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "स्कन्दगुप्त",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "बीजगुप्त",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "कुमारगिरि",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "स्कन्दगुप्त"
+    },
+    {
+      "id": 64,
+      "question": "पुरुषोत्तम अग्रवाल की पुस्तक 'अकथ कहानी प्रेम की' इनमें से किस पर आधारित है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "तुलसी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "जायसी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "रहीम",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "कबीर",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "कबीर"
+    },
+    {
+      "id": 65,
+      "question": "'अंतिम ऊंचाई' किसकी कविता का शीर्षक है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "वीरेन डंगवाल",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "मंगलेश डबराल",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "राजेश जोशी",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "कुंअर नारायण",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "कुंअर नारायण"
+    },
+    {
+      "id": 66,
+      "question": "'मैं जग-जीवन का भार लिए फिरता हूँ' पंक्ति किस कवि की कविता से है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "सोहनलाल द्विवेदी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "हरिवंश राय बच्चन",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "जयशंकर प्रसाद",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "रामधारी सिंह दिनकर",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "हरिवंश राय बच्चन"
+    },
+    {
+      "id": 67,
+      "question": "दिनकर की कौन सी रचना 'कर्ण' के चरित्र पर आधारित है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "कुरुक्षेत्र",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "उर्वशी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "परशुराम की प्रतीक्षा",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "रश्मिरथी",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "रश्मिरथी"
+    },
+    {
+      "id": 68,
+      "question": "इनमें से कौन प्रेमचंद की कहानी 'ईदगाह' का मुख्य पात्र है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "सलीम",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "हफ़ीज़",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "हामिद",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "समीर",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "हामिद"
+    },
+    {
+      "id": 69,
+      "question": "'एक दुनिया समानांतर' पुस्तक के संपादक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "दूधनाथ सिंह",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "नीलाभ",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "राजेन्द्र यादव",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "ज्ञानरंजन",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "राजेन्द्र यादव"
+    },
+    {
+      "id": 70,
+      "question": "'मानसरोवर' किसकी कहानियों का संकलन है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "जयशंकर प्रसाद",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "भीष्म साहनी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "प्रेमचंद",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "अज्ञेय",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "प्रेमचंद"
+    },
+    {
+      "id": 71,
+      "question": "'दिव्या' उपन्यास के रचनाकार कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "श्रीलाल शुक्ल",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "भीष्म साहनी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "यशपाल",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "नागार्जुन",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "यशपाल"
+    },
+    {
+      "id": 72,
+      "question": "'एक कहानी यह भी' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "कृष्णा सोबती",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "महाश्वेता देवी",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "अमृता प्रीतम",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "मन्नू भंडारी",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "मन्नू भंडारी"
+    },
+    {
+      "id": 73,
+      "question": "इनमें से कौन सी रचना भगवतीचरण वर्मा की नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "रेखा",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "चित्रलेखा",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "टेढ़े-मेढ़े रास्ते",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "कुल्लीभाट",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "D",
+      "correctAnswerText": "कुल्लीभाट"
+    },
+    {
+      "id": 74,
+      "question": "'नीम का पेड़' किसकी रचना है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "विनोद कुमार शुक्ल",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "मंजूर एहतेशाम",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "राही मासूम रज़ा",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "मनोहर श्याम जोशी",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "राही मासूम रज़ा"
+    },
+    {
+      "id": 75,
+      "question": "इनमें से कौन सी रचना कमलेश्वर की नहीं है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "काले उजले दिन",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "पति, पत्नी और वह",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "आगामी अतीत",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "वही बात",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "correctAnswerText": "काले उजले दिन"
+    },
+    {
+      "id": 76,
+      "question": "'कोहबर की शर्त' उपन्यास के लेखक कौन हैं?",
+      "options": [
+        {
+          "id": "A",
+          "text": "विद्यानिवास मिश्र",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "केशव प्रसाद मिश्र",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "केशव प्रसाद मौर्य",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "द्रोणवीर कोहली",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "केशव प्रसाद मिश्र"
+    },
+    {
+      "id": 77,
+      "question": "'सलाम आखिरी' किसका उपन्यास है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "अलका सरावगी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "मैत्रेयी पुष्पा",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "मधु कांकरिया",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "उषा प्रियम्वदा",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "मधु कांकरिया"
+    },
+    {
+      "id": 78,
+      "question": "इनमें से किस रचना के अंग्रेजी अनुवाद को अंतरराष्ट्रीय बुकर पुरस्कार से सम्मानित किया गया है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "राग पहाड़ी",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "शिखर की ढलान",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "रेत समाधि",
+          "isCorrect": true
+        },
+        {
+          "id": "D",
+          "text": "अपार खुशी का घराना",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "correctAnswerText": "रेत समाधि"
+    },
+    {
+      "id": 79,
+      "question": "इनमें से कौन सी श्रृंखला राजकमल प्रकाशन से प्रकाशित नहीं होती है?",
+      "options": [
+        {
+          "id": "A",
+          "text": "प्रतिनिधि कविताएँ",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "प्रतिनिधि चुटकुले",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "प्रतिनिधि कहानियाँ",
+          "isCorrect": false
+        },
+        {
+          "id": "D",
+          "text": "प्रतिनिधि व्यंग्य",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "B",
+      "correctAnswerText": "प्रतिनिधि चुटकुले"
+    }
+  ]
+}
