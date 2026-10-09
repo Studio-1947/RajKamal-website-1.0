@@ -18,14 +18,14 @@
           "isCorrect": false
         },
         {
-          "id": "C",
-          "text": "हरिवंश राय बच्चन",
-          "isCorrect": true
+      "id": "C",
+      "text": "हरिवंश राय बच्चन",
+      "isCorrect": true
         },
         {
-          "id": "D",
-          "text": "जयशंकर प्रसाद",
-          "isCorrect": false
+      "id": "D",
+      "text": "जयशंकर प्रसाद",
+      "isCorrect": false
         }
       ],
       "correctAnswer": "C",
@@ -456,14 +456,14 @@
       "question": "भोजपुरी बोली किस क्षेत्र में बोली जाती है?",
       "options": [
         {
-          "id": "A",
-          "text": "दरभंगा",
-          "isCorrect": true
+      "id": "A",
+      "text": "दरभंगा",
+      "isCorrect": false
         },
         {
-          "id": "B",
-          "text": "आजमगढ़",
-          "isCorrect": false
+      "id": "B",
+      "text": "आजमगढ़",
+      "isCorrect": true
         },
         {
           "id": "C",
@@ -476,8 +476,8 @@
           "isCorrect": false
         }
       ],
-      "correctAnswer": "A",
-      "correctAnswerText": "दरभंगा"
+  "correctAnswer": "B",
+  "correctAnswerText": "आजमगढ़"
     },
     {
       "id": 18,
@@ -494,14 +494,14 @@
           "isCorrect": false
         },
         {
-          "id": "C",
-          "text": "उपन्यास",
-          "isCorrect": true
+      "id": "C",
+      "text": "उपन्यास",
+      "isCorrect": true
         },
         {
-          "id": "D",
-          "text": "जीवनी",
-          "isCorrect": false
+      "id": "D",
+      "text": "जीवनी",
+      "isCorrect": false
         }
       ],
       "correctAnswer": "C",
@@ -904,14 +904,14 @@
       "question": "प्रेमचंद का मूल नाम क्या था?",
       "options": [
         {
-          "id": "A",
-          "text": "नवाब राय",
-          "isCorrect": true
+      "id": "A",
+      "text": "नवाब राय",
+      "isCorrect": false
         },
         {
-          "id": "B",
-          "text": "धनपत राय",
-          "isCorrect": false
+      "id": "B",
+      "text": "धनपत राय",
+      "isCorrect": true
         },
         {
           "id": "C",
@@ -924,8 +924,8 @@
           "isCorrect": false
         }
       ],
-      "correctAnswer": "A",
-      "correctAnswerText": "नवाब राय"
+  "correctAnswer": "B",
+  "correctAnswerText": "धनपत राय"
     },
     {
       "id": 34,
